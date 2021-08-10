@@ -13,4 +13,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*commented to test*/
+
+
+    public void Ok{}
 }
