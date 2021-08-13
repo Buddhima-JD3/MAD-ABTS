@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/fredoka_one</item>
+        <item>@font/lemonada_light</item>
+        <item>@font/permanent_marker</item>
+        <item>@font/rammetto_one</item>
+    </array>
+</resources>
