@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">ABTS</string>
+    <string name="matchheading1">Match 1</string>
+    <string name="matchheading2">Match 2</string>
+    <string name="team1">Colombo Kings</string>
+    <string name="team2">Kandy Tuskers</string>
+    <string name="team1img">Colombo Kings</string>
+    <string name="team2img">Kandy Tuskers</string>
+    <string name="score">120/2</string>
+    <string name="overs">20 Ov.</string>
+    <string name="bowler">D Chameera - 10/2(3)</string>
+    <string name="score2">102/4</string>
+    <string name="overs2">15.1 Ov.</string>
+    <string name="bat2">K Perera - 40* B Taylor - 10*</string>
+    <string name="status">Kandy Tuskers Need 19 Runs to Win in 29 Balls</string>
+    <string name="img2team">Kandy Tuskers</string>
+    <string name="headingoerc">Win Perc.%</string>
+    <string name="team11">Galle Gladiators</string>
+    <string name="team22">Jaffna Stallions</string>
+    <string name="team11img">Galle Gladiators</string>
+    <string name="percheading2">Win Perc.%</string>
+    <string name="team22img">Jaffna Stallions</string>
+    <string name="score12">150/5</string>
+    <string name="score22">112/4</string>
+    <string name="overs21">20 Ov.</string>
+    <string name="overs22">13.1 Ov.</string>
+    <string name="play2">S Afridi 20/1(3)</string>
+    <string name="play21">S Afridi - 20/2(3)</string>
+    <string name="play22">T Perera - 30*  S Malik - 16*</string>
+    <string name="status2">Jaffna Stallions Need 39 Runs to Win in 41 Balls</string>
 </resources>
