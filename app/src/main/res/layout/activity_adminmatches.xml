@@ -7,51 +7,16 @@
     tools:context=".adminmatches">
 
     <RelativeLayout
-        android:id="@+id/headeradmin"
-        android:layout_width="390dp"
-        android:layout_height="88dp"
-        android:background="#A6A4A4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/admintext"
-            android:layout_width="278dp"
-            android:layout_height="39dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="57dp"
-            android:layout_marginLeft="57dp"
-            android:layout_marginTop="27dp"
-            android:layout_marginEnd="55dp"
-            android:layout_marginRight="55dp"
-            android:layout_marginBottom="22dp"
-            android:gravity="center"
-            android:text="@string/admintext"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <RelativeLayout
         android:id="@+id/inputmatch"
         android:layout_width="336dp"
         android:layout_height="394dp"
         android:background="#E4E0E0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691">
+        app:layout_constraintVertical_bias="0.712">
 
         <EditText
             android:id="@+id/inteam1"
@@ -303,10 +268,10 @@
         app:backgroundTint="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintHorizontal_bias="0.704"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintVertical_bias="0.18" />
 
     <Button
         android:layout_width="110dp"
@@ -315,8 +280,9 @@
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintHorizontal_bias="0.312"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintVertical_bias="0.18" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
