@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context=".productdetails">
+
+    <ImageView
+        android:id="@+id/orderview"
+        android:layout_width="204dp"
+        android:layout_height="237dp"
+        android:contentDescription="@string/orderview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071"
+        app:srcCompat="@drawable/s1" />
+
+    <EditText
+        android:id="@+id/orderqty"
+        android:layout_width="54dp"
+        android:layout_height="41dp"
+        android:autofillHints="@string/orderqty"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/orderqtyvalue"
+        android:inputType="number"
+        android:text="@string/orderqty"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderdis1"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <TextView
+        android:id="@+id/orderdis1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orderdis1"
+        android:textColor="@color/labels"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descrip"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <TextView
+        android:id="@+id/descrip"
+        android:layout_width="298dp"
+        android:layout_height="111dp"
+        android:gravity="center"
+        android:text="@string/descrip"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623" />
+
+    <TextView
+        android:id="@+id/pricedis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pricedis"
+        android:textColor="@color/labels"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471" />
+
+    <TextView
+        android:id="@+id/orderdis2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orderdis2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderqty"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <TextView
+        android:id="@+id/orderdis3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orderdis3"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderqty"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <Button
+        android:id="@+id/orderbtn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shopbtn_background"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/orderbtn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/shopbtns"
+        android:textSize="13.5sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/design_default_color_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderqty"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <ImageButton
+        android:id="@+id/orderqtyplus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/btn_circle1"
+        android:contentDescription="@string/oderqtyplus"
+        android:src="@drawable/ic_action_add"
+        app:layout_constraintBottom_toBottomOf="@+id/orderqty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toEndOf="@+id/orderqty"
+        app:layout_constraintTop_toTopOf="@+id/orderqty"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <ImageButton
+        android:id="@+id/orderqtyminus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/btn_circle1"
+        android:contentDescription="@string/orderqtyminus"
+        android:src="@drawable/ic_action_minus"
+        app:layout_constraintBottom_toBottomOf="@+id/orderqty"
+        app:layout_constraintEnd_toStartOf="@+id/orderqty"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderdis1"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <ImageButton
+        android:id="@+id/ordermvbtn_L"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_circle2"
+        android:contentDescription="@string/ordermvbtn_L"
+        android:src="@drawable/ic_action_arrow_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <ImageButton
+        android:id="@+id/odermvbtn_R"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_circle2"
+        android:contentDescription="@string/ordermvbtn_R"
+        android:src="@drawable/ic_action_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -103,4 +103,17 @@
     <string name="matchdatein">match date</string>
     <string name="submitmatch">Submit</string>
     <string name="matchnoin">match no</string>
+    <string name="pricedis">LKR 400</string>
+    <string name="descrip">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an urandomised words which don't look even slightly believable.</string>
+    <string name="orderdis1">Quantity</string>
+    <string name="orderdis2">**Free Shipping</string>
+    <string name="orderdis3">Remaining = 3</string>
+    <string name="orderqty">3</string>
+    <string name="orderbtn">ADD TO CART</string>
+    <string name="orderview">Product image</string>
+    <string name="oderqtyplus">Increase qty</string>
+    <string name="orderqtyminus">Decrease qty</string>
+    <string name="orderqtyvalue">Quantity</string>
+    <string name="ordermvbtn_L">Get left product</string>
+    <string name="ordermvbtn_R">Get right button</string>
 </resources>
