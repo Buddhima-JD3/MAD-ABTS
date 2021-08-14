@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ABTS</string>
+    <string name="app_name">LPL T20</string>
     <string name="matchheading1">Match 1</string>
     <string name="matchheading2">Match 2</string>
     <string name="team1">Colombo Kings</string>
@@ -132,4 +132,17 @@
     <string name="wicketsin1">wickets</string>
     <string name="bowlin1">r/w/o</string>
     <string name="submitlive">Submit</string>
+    <string name="productimg1">shirt1</string>
+    <string name="productprice">LKR 400</string>
+    <string name="productdetails">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="productqty">Quantity</string>
+    <string name="productqty_number">3</string>
+    <string name="productqtyN">3</string>
+    <string name="productqtyNhint">quantity</string>
+    <string name="productdetailsbtn1">ADD TO CART</string>
+    <string name="productdetailsbtn">ADD TO CART</string>
+    <string name="productqtyadd">add to quantity</string>
+    <string name="productqtyremove">remove quantity</string>
+    <string name="productdetbtnleft">get product on left</string>
+    <string name="productdetbtnright">Get the next product</string>
 </resources>

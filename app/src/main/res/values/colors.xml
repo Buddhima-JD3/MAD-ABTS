@@ -8,4 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="team1s">#97F0FC</color>
+    <color name="shop_labels">#185ADB</color>
+    <color name="productdetbtn">#666666</color>
+    <color name="backgroundclr">#F2F2F2</color>
+    <color name="productdetailsbtn">#666666</color>
 </resources>
