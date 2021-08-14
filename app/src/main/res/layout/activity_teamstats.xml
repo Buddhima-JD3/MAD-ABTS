@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".teamstats">
+
     <RelativeLayout
         android:id="@+id/headeradmin"
-        android:layout_width="390dp"
-        android:layout_height="88dp"
+        android:layout_width="404dp"
+        android:layout_height="78dp"
         android:background="#A6A4A4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,8 +20,8 @@
 
         <TextView
             android:id="@+id/admintext"
-            android:layout_width="278dp"
-            android:layout_height="39dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -29,10 +30,10 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="57dp"
             android:layout_marginLeft="57dp"
-            android:layout_marginTop="27dp"
-            android:layout_marginEnd="55dp"
-            android:layout_marginRight="55dp"
-            android:layout_marginBottom="22dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="13dp"
             android:gravity="center"
             android:text="@string/admintext"
             android:textColor="@color/black"
@@ -42,14 +43,15 @@
 
     <RelativeLayout
         android:id="@+id/inputmatch"
-        android:layout_width="343dp"
-        android:layout_height="390dp"
+        android:layout_width="346dp"
+        android:layout_height="384dp"
         android:background="#E4E0E0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.719">
+        app:layout_constraintVertical_bias="0.63">
 
         <TextView
             android:id="@+id/teammatch"
@@ -152,20 +154,20 @@
 
         <Button
             android:id="@+id/submitmatch"
-            android:layout_width="95dp"
-            android:layout_height="39dp"
+            android:layout_width="102dp"
+            android:layout_height="51dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="222dp"
-            android:layout_marginLeft="222dp"
-            android:layout_marginTop="316dp"
-            android:layout_marginEnd="19dp"
-            android:layout_marginRight="19dp"
-            android:layout_marginBottom="39dp"
+            android:layout_marginStart="226dp"
+            android:layout_marginLeft="226dp"
+            android:layout_marginTop="272dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="61dp"
             android:text="@string/submitmatch"
             android:textColor="@color/black"
             app:backgroundTint="@color/teal_200"
@@ -189,8 +191,8 @@
             android:layout_marginBottom="327dp"
             android:ems="10"
             android:hint="@string/teammatchin"
-            android:inputType="number"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/teamwonenter"
@@ -210,8 +212,8 @@
             android:layout_marginBottom="264dp"
             android:ems="10"
             android:hint="@string/teamwonenter2"
-            android:inputType="number"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/teamnorenter"
@@ -231,8 +233,8 @@
             android:layout_marginBottom="152dp"
             android:ems="10"
             android:hint="@string/teamnorenter"
-            android:inputType="number"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="number" />
     </RelativeLayout>
 
     <TextView
@@ -244,10 +246,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.162" />
 
     <EditText
         android:id="@+id/inteamstats"
@@ -256,25 +258,25 @@
         android:ems="10"
         android:gravity="center"
         android:hint="@string/inteamstats"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:text="team"
         android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/teamenterstats"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/teamstatbut"
         android:layout_width="80dp"
-        android:layout_height="61dp"
+        android:layout_height="44dp"
         android:text="@string/teamstatbut"
         android:textColor="@color/black"
         android:textSize="8sp"
         app:backgroundTint="@color/team1s"
         app:layout_constraintBaseline_toBaselineOf="@+id/inteamstats"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintHorizontal_bias="0.984"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
