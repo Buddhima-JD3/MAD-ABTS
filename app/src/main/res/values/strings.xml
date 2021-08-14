@@ -126,4 +126,9 @@
     <string name="inteamstats">team</string>
     <string name="enterstatsteam">Enter Stats</string>
     <string name="teamstatbut">Enter Stats</string>
+    <string name="passwordtext">Password</string>
+    <string name="profimage">User Image</string>
+    <string name="ortext">or</string>
+    <string name="remember">REMEMBER MY PASSWORD</string>
+    <string name="username1">Username</string>
 </resources>
