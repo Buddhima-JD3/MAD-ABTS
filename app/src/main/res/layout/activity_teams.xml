@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9">
+
+    <RelativeLayout
+        android:id="@+id/team1"
+        android:layout_width="335dp"
+        android:layout_height="93dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144">
+
+        <ImageView
+            android:id="@+id/teamlogo1"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/teamlogo1"
+            app:srcCompat="@drawable/ck" />
+
+        <TextView
+            android:id="@+id/teamname1"
+            android:layout_width="177dp"
+            android:layout_height="39dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="124dp"
+            android:layout_marginLeft="124dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginBottom="29dp"
+            android:text="@string/teamname1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team2"
+        android:layout_width="338dp"
+        android:layout_height="93dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683">
+
+        <ImageView
+            android:id="@+id/teamlogo2"
+            android:layout_width="108dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/teamlogo2"
+            app:srcCompat="@drawable/gg" />
+
+        <TextView
+            android:id="@+id/teamname2"
+            android:layout_width="186dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="125dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginBottom="26dp"
+            android:text="@string/teamname2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team3"
+        android:layout_width="338dp"
+        android:layout_height="93dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/teamlogo3"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/teamlogo3"
+            app:srcCompat="@drawable/js" />
+
+        <TextView
+            android:id="@+id/teamname3"
+            android:layout_width="163dp"
+            android:layout_height="39dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="130dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="29dp"
+            android:text="@string/teamname3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team4"
+        android:layout_width="338dp"
+        android:layout_height="93dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315">
+
+        <ImageView
+            android:id="@+id/teamlogo4"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/teamlogo4"
+            app:srcCompat="@drawable/kt" />
+
+        <TextView
+            android:id="@+id/teamname4"
+            android:layout_width="176dp"
+            android:layout_height="41dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="128dp"
+            android:layout_marginLeft="128dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginBottom="28dp"
+            android:text="@string/teamname4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team5"
+        android:layout_width="338dp"
+        android:layout_height="93dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865">
+
+        <ImageView
+            android:id="@+id/teamlogo5"
+            android:layout_width="106dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/teamlogo5"
+            app:srcCompat="@drawable/dv" />
+
+        <TextView
+            android:id="@+id/teamname5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="127dp"
+            android:layout_marginLeft="127dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="35dp"
+            android:text="@string/teamname5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VENUES"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <RelativeLayout
+        android:id="@+id/venue1"
+        android:layout_width="328dp"
+        android:layout_height="79dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.208">
+
+        <ImageView
+            android:id="@+id/venpic1"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/venpic1"
+            app:srcCompat="@drawable/edit_image" />
+
+        <TextView
+            android:id="@+id/venname1"
+            android:layout_width="171dp"
+            android:layout_height="26dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="113dp"
+            android:layout_marginLeft="113dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            android:layout_marginBottom="26dp"
+            android:background="#FFFFFF"
+            android:text="@string/venname1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/venue2"
+        android:layout_width="330dp"
+        android:layout_height="79dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345">
+
+        <ImageView
+            android:id="@+id/venpic2"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/venpic2"
+            app:srcCompat="@drawable/edit_image" />
+
+        <TextView
+            android:id="@+id/venname2"
+            android:layout_width="169dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="116dp"
+            android:layout_marginLeft="116dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="34dp"
+            android:background="#FFFFFF"
+            android:text="@string/venname2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/venue3"
+        android:layout_width="330dp"
+        android:layout_height="83dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.483">
+
+        <ImageView
+            android:id="@+id/venpic3"
+            android:layout_width="83dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/venpic3"
+            app:srcCompat="@drawable/edit_image" />
+
+        <TextView
+            android:id="@+id/venname3"
+            android:layout_width="166dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="119dp"
+            android:layout_marginLeft="119dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="25dp"
+            android:background="#FFFFFF"
+            android:text="@string/venname3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/venue4"
+        android:layout_width="328dp"
+        android:layout_height="82dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625">
+
+        <ImageView
+            android:id="@+id/venpic4"
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/venpic4"
+            app:srcCompat="@drawable/edit_image" />
+
+        <TextView
+            android:id="@+id/venname4"
+            android:layout_width="168dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="119dp"
+            android:layout_marginLeft="119dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginRight="41dp"
+            android:layout_marginBottom="25dp"
+            android:background="#FFFFFF"
+            android:text="@string/venname4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/venue5"
+        android:layout_width="328dp"
+        android:layout_height="81dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.764">
+
+        <ImageView
+            android:id="@+id/venpic5"
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/venpic5"
+            app:srcCompat="@drawable/edit_image" />
+
+        <TextView
+            android:id="@+id/venname5"
+            android:layout_width="167dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginRight="41dp"
+            android:layout_marginBottom="29dp"
+            android:background="#FFFFFF"
+            android:text="@string/venname5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="131dp"
+        android:layout_height="35dp"
+        android:background="#FFFFFF"
+        android:text="@string/button2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.852" />
+</androidx.constraintlayout.widget.ConstraintLayout>
