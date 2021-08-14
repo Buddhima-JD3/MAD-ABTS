@@ -150,7 +150,7 @@
     <string name="home">home</string>
     <string name="matchesicon1">matches</string>
     <string name="teamicon1">team</string>
-        <string name="tname">Enter Team 1</string>
+    <string name="tname">Enter Team 1</string>
     <string name="logoimage1" />
     <string name="tnameedit2">Enter Team 2</string>
     <string name="logoimage2" />
@@ -215,4 +215,20 @@
     <string name="teamlogo5" />
     <string name="teamname5">Dambulla Vikings</string>
     <string name="stadium4">M. R. INternational Cricket Stadium - Hambantota</string>
+    <string name="profile">profile</string>
+    <string name="addimg">add</string>
+    <string name="fullname">Full Name</string>
+    <string name="myprofile">My Profile</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="phonenumberin">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="emailin">email</string>
+    <string name="password">Password</string>
+    <string name="passwordin">Password</string>
+    <string name="confirpassword">Confirm Password</string>
+    <string name="terms">Terms and Conditions</string>
+    <string name="create">Create Account</string>
+    <string name="phonenumberinput" />
+    <string name="confirmpasswordin">Confirm Password</string>
+    <string name="phonenumberenter">Phone Number</string>
 </resources>
