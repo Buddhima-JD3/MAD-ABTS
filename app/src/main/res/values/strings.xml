@@ -126,4 +126,10 @@
     <string name="inteamstats">team</string>
     <string name="enterstatsteam">Enter Stats</string>
     <string name="teamstatbut">Enter Stats</string>
+    <string name="entermatchno">"Enter Match No: "</string>
+    <string name="runsin1">runs</string>
+    <string name="oversin">overs</string>
+    <string name="wicketsin1">wickets</string>
+    <string name="bowlin1">r/w/o</string>
+    <string name="submitlive">Submit</string>
 </resources>
