@@ -47,10 +47,9 @@
         android:background="#E4E0E0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498">
+        app:layout_constraintVertical_bias="0.719">
 
         <TextView
             android:id="@+id/teammatch"
@@ -190,7 +189,8 @@
             android:layout_marginBottom="327dp"
             android:ems="10"
             android:hint="@string/teammatchin"
-            android:inputType="number" />
+            android:inputType="number"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/teamwonenter"
@@ -210,7 +210,8 @@
             android:layout_marginBottom="264dp"
             android:ems="10"
             android:hint="@string/teamwonenter2"
-            android:inputType="number" />
+            android:inputType="number"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/teamnorenter"
@@ -230,7 +231,8 @@
             android:layout_marginBottom="152dp"
             android:ems="10"
             android:hint="@string/teamnorenter"
-            android:inputType="number" />
+            android:inputType="number"
+            android:importantForAutofill="no" />
     </RelativeLayout>
 
     <TextView
@@ -260,7 +262,8 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/teamenterstats"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/teamstatbut"
@@ -272,7 +275,6 @@
         app:backgroundTint="@color/team1s"
         app:layout_constraintBaseline_toBaselineOf="@+id/inteamstats"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

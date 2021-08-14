@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABTS">
         <activity android:name=".login"></activity>
+        <activity android:name=".createaccount"></activity>
+        <activity android:name=".productdetails" />
         <activity android:name=".teamstats" />
         <activity android:name=".adminlive" />
         <activity android:name=".adminmatches" />
