@@ -145,4 +145,9 @@
     <string name="productqtyremove">remove quantity</string>
     <string name="productdetbtnleft">get product on left</string>
     <string name="productdetbtnright">Get the next product</string>
+    <string name="shopicon">shop</string>
+    <string name="moreicon">more</string>
+    <string name="home">home</string>
+    <string name="matchesicon1">matches</string>
+    <string name="teamicon1">team</string>
 </resources>
