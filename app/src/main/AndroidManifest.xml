@@ -11,6 +11,8 @@
         android:theme="@style/Theme.ABTS">
         <activity android:name=".paymentdetails"></activity>
         <activity android:name=".Cart" />
+        <activity android:name=".login"></activity>
+        <activity android:name=".createaccount"></activity>
         <activity android:name=".productdetails" />
         <activity android:name=".teamstats" />
         <activity android:name=".adminlive" />

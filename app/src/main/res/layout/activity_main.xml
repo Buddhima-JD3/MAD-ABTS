@@ -13,6 +13,7 @@
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -114,7 +115,7 @@
             android:layout_marginRight="9dp"
             android:layout_marginBottom="3dp"
             android:text="MORE"
-            android:textColor="#3282B8"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <ImageView
@@ -182,8 +183,8 @@
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="78dp"
-            android:layout_marginRight="78dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/shopicon"
             app:srcCompat="@drawable/shop" />
@@ -208,5 +209,8 @@
             app:srcCompat="@drawable/more" />
 
     </RelativeLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -150,11 +150,11 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="103dp"
-            android:layout_marginLeft="103dp"
+            android:layout_marginStart="105dp"
+            android:layout_marginLeft="105dp"
             android:layout_marginTop="17dp"
-            android:layout_marginEnd="112dp"
-            android:layout_marginRight="112dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginRight="110dp"
             android:layout_marginBottom="66dp" />
 
         <TextView
@@ -519,7 +519,7 @@
             app:srcCompat="@drawable/kt" />
 
         <TextView
-            android:id="@+id/team2"
+            android:id="@+id/team4"
             android:layout_width="105dp"
             android:layout_height="28dp"
             android:layout_alignParentTop="true"
