@@ -103,4 +103,27 @@
     <string name="matchdatein">match date</string>
     <string name="submitmatch">Submit</string>
     <string name="matchnoin">match no</string>
+    <string name="matchnolive">"Enter Match No: "</string>
+    <string name="matchnoinlive">enter match</string>
+    <string name="editscorelive">Edit Score</string>
+    <string name="deletematch">Delete Match</string>
+    <string name="team1name" />
+    <string name="teamimg1">img1</string>
+    <string name="teamimg2">img2</string>
+    <string name="inruns1">runs</string>
+    <string name="inwickets1">Wickets</string>
+    <string name="inwickets2">wickets</string>
+    <string name="inovers1">overs</string>
+    <string name="entermatches">enter matches</string>
+    <string name="enterwon">"Enter Won: "</string>
+    <string name="teammatchin">matches</string>
+    <string name="teamwonenter" />
+    <string name="teamlostenter">lost</string>
+    <string name="teamnrenter">n/r</string>
+    <string name="teamwonenter2">won</string>
+    <string name="teamnorenter">n/r</string>
+    <string name="teamenterstats">"Enter Team: "</string>
+    <string name="inteamstats">team</string>
+    <string name="enterstatsteam">Enter Stats</string>
+    <string name="teamstatbut">Enter Stats</string>
 </resources>
