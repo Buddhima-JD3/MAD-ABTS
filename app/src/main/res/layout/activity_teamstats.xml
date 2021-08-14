@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adminmatches">
-
+    tools:context=".teamstats">
     <RelativeLayout
         android:id="@+id/headeradmin"
         android:layout_width="390dp"
@@ -48,9 +47,10 @@
         android:background="#E4E0E0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606">
+        app:layout_constraintVertical_bias="0.498">
 
         <TextView
             android:id="@+id/teammatch"
@@ -272,6 +272,7 @@
         app:backgroundTint="@color/team1s"
         app:layout_constraintBaseline_toBaselineOf="@+id/inteamstats"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
