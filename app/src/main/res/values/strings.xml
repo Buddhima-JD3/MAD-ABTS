@@ -132,4 +132,9 @@
     <string name="wicketsin1">wickets</string>
     <string name="bowlin1">r/w/o</string>
     <string name="submitlive">Submit</string>
+    <string name="shopicon">shop</string>
+    <string name="moreicon">more</string>
+    <string name="home">home</string>
+    <string name="matchesicon1">matches</string>
+    <string name="teamicon1">team</string>
 </resources>
