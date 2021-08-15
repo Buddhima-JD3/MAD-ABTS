@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundclr"
+    tools:context=".addnewproduct">
+
+    <TextView
+        android:id="@+id/newproductview"
+        android:layout_width="269dp"
+        android:layout_height="50dp"
+        android:text="@string/newproductview"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:id="@+id/newproductview1"
+        android:layout_width="184dp"
+        android:layout_height="35dp"
+        android:text="@string/newproductview1"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductview"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <EditText
+        android:id="@+id/newproductname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/productname"
+        android:ems="10"
+        android:hint="@string/productname"
+        android:inputType="textPersonName"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductview1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/newproductview2"
+        android:layout_width="204dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="416dp"
+        android:text="@string/newproductview2"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductname"
+        app:layout_constraintVertical_bias="0.009" />
+
+    <TextView
+        android:id="@+id/newproductview3"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:text="@string/newproductview3"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductdescription"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <EditText
+        android:id="@+id/newproductquantity"
+        android:layout_width="126dp"
+        android:layout_height="48dp"
+        android:autofillHints="@string/newproductquantity"
+        android:ems="10"
+        android:hint="@string/newproductquantity"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductview3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/newproductview4"
+        android:layout_width="99dp"
+        android:layout_height="43dp"
+        android:text="@string/newproductview4"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/newproductview3"
+        app:layout_constraintTop_toBottomOf="@+id/newproductdescription"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <EditText
+        android:id="@+id/newproductprice"
+        android:layout_width="136dp"
+        android:layout_height="44dp"
+        android:autofillHints="@string/newproductprice"
+        android:ems="10"
+        android:hint="@string/newproductprice"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintStart_toEndOf="@+id/newproductquantity"
+        app:layout_constraintTop_toBottomOf="@+id/newproductview4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/newproductview5"
+        android:layout_width="158dp"
+        android:layout_height="36dp"
+        android:text="@string/newproductview5"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductquantity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/newproductcategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:text="@string/newproductcategory"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductview5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/newproductcategory2"
+        android:layout_width="69dp"
+        android:layout_height="44dp"
+        android:text="@string/newproductcategory2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toEndOf="@+id/newproductcategory"
+        app:layout_constraintTop_toBottomOf="@+id/newproductview5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/newproductdescription"
+        android:layout_width="315dp"
+        android:layout_height="62dp"
+        android:autofillHints="@string/newproductdescription"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/newproductdescription"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductview2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/newproductimg"
+        android:layout_width="105dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/newproductimg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductcategory2"
+        app:layout_constraintVertical_bias="0.094"
+        app:srcCompat="@drawable/s1" />
+
+    <Button
+        android:id="@+id/newproductuploadbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/productdetails"
+        android:text="@string/newpeoductuploadbtn"
+        android:textColor="@color/productdetailsbtn"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductimg"
+        app:layout_constraintVertical_bias="0.447" />
+
+    <Button
+        android:id="@+id/savebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/productdetails"
+        android:text="@string/savebtn"
+        android:textColor="@color/productdetailsbtn"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toEndOf="@+id/newproductuploadbtn"
+        app:layout_constraintTop_toBottomOf="@+id/newproductimg"
+        app:layout_constraintVertical_bias="0.47" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
