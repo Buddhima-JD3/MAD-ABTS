@@ -266,4 +266,20 @@
     <string name="paymentmeth1">Cash On Delivery</string>
     <string name="paymentmethod2">Card On Delivery</string>
     <string name="checkout">Check Out</string>
+    <string name="newproductview">Add New Product</string>
+    <string name="newproductview1">Product Name</string>
+    <string name="productname">Jaffna Stallions</string>
+    <string name="newproductview2">Description</string>
+    <string name="newproductdescription">Dry fit type, very comfortable</string>
+    <string name="newproductview3">Quantity</string>
+    <string name="newproductquantity">45</string>
+    <string name="newproductview4">Price</string>
+    <string name="newproductprice">400.00</string>
+    <string name="newproductview5">Select Category</string>
+    <string name="newproductcategory">Shirts</string>
+    <string name="newproductcategory2">Caps</string>
+    <string name="newproductview6">Upload Picture</string>
+    <string name="newproductimg">uploaded image</string>
+    <string name="newpeoductuploadbtn">Upload Image</string>
+    <string name="savebtn">Save</string>
 </resources>
