@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SquadPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9F9F9">
@@ -73,103 +74,15 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="357dp"
-        android:layout_height="205dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.389">
-
-        <ImageView
-            android:id="@+id/member1"
-            android:layout_width="155dp"
-            android:layout_height="145dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="198dp"
-            android:layout_marginRight="198dp"
-            android:layout_marginBottom="58dp"
-            android:contentDescription="@string/member1"
-            app:srcCompat="@drawable/angelo_mathews" />
-
-        <TextView
-            android:id="@+id/membername1"
-            android:layout_width="124dp"
-            android:layout_height="27dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="31dp"
-            android:layout_marginLeft="31dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginEnd="202dp"
-            android:layout_marginRight="202dp"
-            android:layout_marginBottom="28dp"
-            android:text="@string/membername1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-        <ImageView
-            android:id="@+id/member2"
-            android:layout_width="160dp"
-            android:layout_height="148dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="191dp"
-            android:layout_marginLeft="191dp"
-            android:layout_marginTop="-1dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginRight="6dp"
-            android:layout_marginBottom="58dp"
-            android:contentDescription="@string/member2"
-            app:srcCompat="@drawable/manpreet_gony" />
-
-        <TextView
-            android:id="@+id/membername2"
-            android:layout_width="143dp"
-            android:layout_height="29dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="215dp"
-            android:layout_marginLeft="215dp"
-            android:layout_marginTop="149dp"
-            android:layout_marginEnd="-1dp"
-            android:layout_marginRight="-1dp"
-            android:layout_marginBottom="27dp"
-            android:text="@string/membername2"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
+        android:id="@+id/rl2"
         android:layout_width="348dp"
         android:layout_height="206dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.799">
+        app:layout_constraintVertical_bias="0.735">
 
         <ImageView
             android:id="@+id/member3"
@@ -209,25 +122,6 @@
             android:text="@string/membername3"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-        <ImageView
-            android:id="@+id/mem4"
-            android:layout_width="166dp"
-            android:layout_height="162dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="185dp"
-            android:layout_marginLeft="185dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="-3dp"
-            android:layout_marginRight="-3dp"
-            android:layout_marginBottom="38dp"
-            android:contentDescription="@string/mem4"
-            app:srcCompat="@drawable/andre_russell" />
-
         <TextView
             android:id="@+id/membername4"
             android:layout_width="110dp"
@@ -246,6 +140,114 @@
             android:layout_marginBottom="11dp"
             android:text="@string/membername4"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/membername1"
+            android:layout_width="124dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="444dp"
+            android:layout_marginEnd="186dp"
+            android:layout_marginRight="186dp"
+            android:layout_marginBottom="-266dp"
+            android:text="@string/membername1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="136dp"
+            android:layout_height="163dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="209dp"
+            android:layout_marginLeft="209dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="39dp"
+            app:srcCompat="@drawable/andre_russell" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/xyz1"
+        android:layout_width="342dp"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351">
+
+        <ImageView
+            android:id="@+id/member2"
+            android:layout_width="141dp"
+            android:layout_height="133dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="199dp"
+            android:layout_marginLeft="199dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="37dp"
+            android:contentDescription="@string/member2"
+            app:srcCompat="@drawable/manpreet_gony" />
+
+        <ImageView
+            android:id="@+id/member1"
+            android:layout_width="138dp"
+            android:layout_height="135dp"
+            android:contentDescription="@string/member1"
+            app:srcCompat="@drawable/angelo_mathews" />
+
+        <TextView
+            android:id="@+id/membername2"
+            android:layout_width="143dp"
+            android:layout_height="29dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="201dp"
+            android:layout_marginLeft="201dp"
+            android:layout_marginTop="138dp"
+            android:layout_marginEnd="-2dp"
+            android:layout_marginRight="-2dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/membername2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/mn234"
+            android:layout_width="142dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-1dp"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="139dp"
+            android:layout_marginEnd="201dp"
+            android:layout_marginRight="201dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/mn234"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
