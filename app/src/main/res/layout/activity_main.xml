@@ -9,7 +9,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/relativelayout"
         android:layout_width="412dp"
         android:layout_height="70dp"
         android:background="#FFFFFF"
