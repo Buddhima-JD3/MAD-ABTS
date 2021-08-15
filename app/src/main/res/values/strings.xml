@@ -346,4 +346,15 @@
     <string name="homedesc3">Enter image description</string>
     <string name="penciledit17" />
     <string name="mn234">Angelo Mathews</string>
+    <string name="admin">Admin</string>
+    <string name="enterplayername">Enter Player Name</string>
+    <string name="enterteamname">Enter Team Name</string>
+    <string name="profiletext">Player Profile</string>
+    <string name="savebutton">SAVE</string>
+    <string name="bowlingname">Bowling</string>
+    <string name="oversadmin1">Overs</string>
+    <string name="LPLadmin">LPL Statistics</string>
+    <string name="battingadmin1">Batting</string>
+    <string name="roleadmin1">Role</string>
+    <string name="fouradmin1">4s/6s</string>
 </resources>
