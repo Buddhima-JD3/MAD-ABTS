@@ -12,4 +12,5 @@
     <color name="productdetbtn">#666666</color>
     <color name="backgroundclr">#F2F2F2</color>
     <color name="productdetailsbtn">#666666</color>
+    <color name="tabselected">#414BB2</color>
 </resources>
