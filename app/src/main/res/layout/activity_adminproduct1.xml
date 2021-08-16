@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundclr"
+    tools:context=".adminproduct1">
+
+    <TextView
+        android:id="@+id/orders"
+        android:layout_width="62dp"
+        android:layout_height="41dp"
+        android:text="@string/orders"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/products2"
+        android:layout_width="99dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:text="@string/products"
+        android:textColor="@color/shop_labels"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/orders"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/adminprodview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adminprodview1"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.131" />
+
+    <RelativeLayout
+        android:id="@+id/adminproduct1"
+        android:layout_width="383dp"
+        android:layout_height="102dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="94dp"
+            android:layout_height="98dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="279dp"
+            android:layout_marginRight="279dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:contentDescription="@string/addproduct"
+            app:srcCompat="@drawable/s1" />
+
+        <TextView
+            android:id="@+id/adminproducts1sh"
+            android:layout_width="144dp"
+            android:layout_height="26dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="87dp"
+            android:layout_marginLeft="87dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="142dp"
+            android:layout_marginRight="142dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/productimgsh1"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/adminproduct1qty"
+            android:layout_width="43dp"
+            android:autofillHints="@string/adminproductqty"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginRight="84dp"
+            android:layout_marginBottom="30dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/adminproductqty"
+            android:inputType="textPersonName"
+            android:text="@string/productqty1" />
+
+        <ImageButton
+            android:id="@+id/adminproduct1qtyadd"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="298dp"
+            android:layout_marginLeft="298dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginRight="66dp"
+            android:layout_marginBottom="39dp"
+            android:background="@drawable/shop_circlebtn2"
+            android:contentDescription="@string/productqtyadd"
+            app:backgroundTint="@color/productdetailsbtn"
+            app:srcCompat="@drawable/ic_action_addqty" />
+
+        <ImageButton
+            android:id="@+id/adminqtyminus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="127dp"
+            android:layout_marginRight="127dp"
+            android:layout_marginBottom="39dp"
+            android:background="@drawable/shop_circlebtn1"
+            android:contentDescription="@string/productqtyremove"
+            app:backgroundTint="@color/productdetailsbtn"
+            app:srcCompat="@drawable/ic_action_removeqty" />
+
+        <ImageButton
+            android:id="@+id/admindelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginBottom="38dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/admindelete"
+            app:srcCompat="@drawable/ic_action_delete"
+            app:tint="#F60808" />
+
+        <ImageButton
+            android:id="@+id/adminedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="39dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/adminedit"
+            app:srcCompat="@drawable/ic_action_edit" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/adminproduct2"
+        android:layout_width="383dp"
+        android:layout_height="102dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.399">
+
+        <ImageView
+            android:id="@+id/adminimageView2"
+            android:layout_width="94dp"
+            android:layout_height="98dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="279dp"
+            android:layout_marginRight="279dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:contentDescription="@string/adminprodview1"
+            app:srcCompat="@drawable/s1" />
+
+        <TextView
+            android:id="@+id/adminproductsimg2sh"
+            android:layout_width="144dp"
+            android:layout_height="26dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="87dp"
+            android:layout_marginLeft="87dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="142dp"
+            android:layout_marginRight="142dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/productimgsh1"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/adminproduct2qty"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginRight="84dp"
+            android:layout_marginBottom="30dp"
+            android:autofillHints="@string/adminproductqty"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/adminproductqty"
+            android:inputType="textPersonName"
+            android:text="@string/productqty1" />
+
+        <ImageButton
+            android:id="@+id/adminproduct2qtyadd"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="298dp"
+            android:layout_marginLeft="298dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginRight="66dp"
+            android:layout_marginBottom="39dp"
+            android:background="@drawable/shop_circlebtn2"
+            android:contentDescription="@string/productqtyadd"
+            app:backgroundTint="@color/productdetailsbtn"
+            app:srcCompat="@drawable/ic_action_addqty" />
+
+        <ImageButton
+            android:id="@+id/adminqtyminus1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="127dp"
+            android:layout_marginRight="127dp"
+            android:layout_marginBottom="39dp"
+            android:background="@drawable/shop_circlebtn1"
+            android:contentDescription="@string/productqtyremove"
+            app:backgroundTint="@color/productdetailsbtn"
+            app:srcCompat="@drawable/ic_action_removeqty" />
+
+        <ImageButton
+            android:id="@+id/admindelte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginBottom="38dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/admindelete"
+            app:srcCompat="@drawable/ic_action_delete"
+            app:tint="#F60808" />
+
+        <ImageButton
+            android:id="@+id/adminedit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="39dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/adminedit"
+            app:srcCompat="@drawable/ic_action_edit" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/productscaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/productcaps"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <RelativeLayout
+        android:id="@+id/product3"
+        android:layout_width="383dp"
+        android:layout_height="102dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.632">
+
+        <ImageView
+            android:id="@+id/adminimageView3"
+            android:layout_width="94dp"
+            android:layout_height="98dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="279dp"
+            android:layout_marginRight="279dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:contentDescription="@string/adminprodview1"
+            app:srcCompat="@drawable/s1" />
+
+        <TextView
+            android:id="@+id/adminproductsimg3sh"
+            android:layout_width="144dp"
+            android:layout_height="26dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="87dp"
+            android:layout_marginLeft="87dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="142dp"
+            android:layout_marginRight="142dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/productimgsh1"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/adminproduct3qty"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginRight="84dp"
+            android:layout_marginBottom="30dp"
+            android:autofillHints="@string/adminproductqty"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/adminproductqty"
+            android:inputType="textPersonName"
+            android:text="@string/productqty1" />
+
+        <ImageButton
+            android:id="@+id/adminproduct3qtyadd"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="298dp"
+            android:layout_marginLeft="298dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginRight="66dp"
+            android:layout_marginBottom="39dp"
+            android:background="@drawable/shop_circlebtn2"
+            android:contentDescription="@string/productqtyadd"
+            app:backgroundTint="@color/productdetailsbtn"
+            app:srcCompat="@drawable/ic_action_addqty" />
+
+        <ImageButton
+            android:id="@+id/adminbutton5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="127dp"
+            android:layout_marginRight="127dp"
+            android:layout_marginBottom="39dp"
+            android:background="@drawable/shop_circlebtn1"
+            android:contentDescription="@string/productqtyremove"
+            app:backgroundTint="@color/productdetailsbtn"
+            app:srcCompat="@drawable/ic_action_removeqty" />
+
+        <ImageButton
+            android:id="@+id/adminimageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginBottom="38dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/admindelete"
+            app:srcCompat="@drawable/ic_action_delete"
+            app:tint="#F60808" />
+
+        <ImageButton
+            android:id="@+id/adminimageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="39dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/adminedit"
+            app:srcCompat="@drawable/ic_action_edit" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/product1"
+        android:layout_width="383dp"
+        android:layout_height="102dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.806">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="94dp"
+            android:layout_height="98dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="279dp"
+            android:layout_marginRight="279dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:contentDescription="@string/adminprodview1"
+            app:srcCompat="@drawable/s1" />
+
+        <TextView
+            android:id="@+id/productsimg1sh"
+            android:layout_width="144dp"
+            android:layout_height="26dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="87dp"
+            android:layout_marginLeft="87dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="142dp"
+            android:layout_marginRight="142dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/productimgsh1"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/product1qty"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginRight="84dp"
+            android:layout_marginBottom="30dp"
+            android:autofillHints="@string/adminproductqty"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/adminproductqty"
+            android:inputType="textPersonName"
+            android:text="@string/productqty1" />
+
+        <ImageButton
+            android:id="@+id/product1qtyadd"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="298dp"
+            android:layout_marginLeft="298dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginRight="66dp"
+            android:layout_marginBottom="39dp"
+            android:background="@drawable/shop_circlebtn2"
+            android:contentDescription="@string/productqtyadd"
+            app:backgroundTint="@color/productdetailsbtn"
+            app:srcCompat="@drawable/ic_action_addqty" />
+
+        <ImageButton
+            android:id="@+id/button5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="127dp"
+            android:layout_marginRight="127dp"
+            android:layout_marginBottom="39dp"
+            android:background="@drawable/shop_circlebtn1"
+            android:contentDescription="@string/productqtyremove"
+            app:backgroundTint="@color/productdetailsbtn"
+            app:srcCompat="@drawable/ic_action_removeqty" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginBottom="38dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/admindelete"
+            app:srcCompat="@drawable/ic_action_delete"
+            app:tint="#F60808" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="39dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/adminedit"
+            app:srcCompat="@drawable/ic_action_edit" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/addproduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/productdetails"
+        android:text="@string/addproduct"
+        android:textColor="@color/productdetailsbtn"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
