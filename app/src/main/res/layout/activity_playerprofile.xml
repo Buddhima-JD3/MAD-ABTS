@@ -7,7 +7,7 @@
     android:background="#F9F9F9">
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/relativelayout"
         android:layout_width="176dp"
         android:layout_height="199dp"
         android:background="#FED049"

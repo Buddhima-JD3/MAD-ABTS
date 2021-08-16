@@ -2,21 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AdminTeampage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9F9F9">
 
     <RelativeLayout
         android:id="@+id/edit4"
-        android:layout_width="345dp"
+        android:layout_width="337dp"
         android:layout_height="89dp"
         android:background="#DFDADA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613">
+        app:layout_constraintVertical_bias="0.577">
 
         <ImageView
             android:id="@+id/logoimage4"
@@ -45,33 +46,158 @@
             android:text="@string/tnameedit4"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/penciledit4"
+            android:layout_width="54dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="266dp"
+            android:layout_marginLeft="266dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="27dp"
+            android:contentDescription="@string/penciledit4"
+            app:srcCompat="@drawable/edit" />
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="83dp"
-        android:layout_height="46dp"
-        android:background="#FFFFFF"
-        android:text="@string/button"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.914"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
-
     <RelativeLayout
-        android:id="@+id/edit1"
-        android:layout_width="344dp"
-        android:layout_height="89dp"
+        android:id="@+id/edit2"
+        android:layout_width="336dp"
+        android:layout_height="87dp"
         android:background="#DFDADA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144">
+        app:layout_constraintVertical_bias="0.216">
+
+        <ImageView
+            android:id="@+id/logoimage2"
+            android:layout_width="94dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/logoimage2"
+            app:srcCompat="@drawable/edit_image" />
+
+        <TextView
+            android:id="@+id/tnameedit2"
+            android:layout_width="202dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="115dp"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginRight="29dp"
+            android:layout_marginBottom="30dp"
+            android:background="#FFFFFF"
+            android:text="@string/tnameedit2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/penciledit2"
+            android:layout_width="41dp"
+            android:layout_height="29dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="274dp"
+            android:layout_marginLeft="274dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="31dp"
+            android:contentDescription="@string/penciledit2"
+            app:srcCompat="@drawable/edit" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit5"
+        android:layout_width="339dp"
+        android:layout_height="83dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.755">
+
+        <ImageView
+            android:id="@+id/logoimage5"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/logoimage5"
+            app:srcCompat="@drawable/edit_image" />
+
+        <TextView
+            android:id="@+id/tnameedit5"
+            android:layout_width="191dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="118dp"
+            android:layout_marginLeft="118dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginBottom="29dp"
+            android:background="#FFFFFF"
+            android:text="@string/tnameedit5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/penciledit5"
+            android:layout_width="40dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="268dp"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="23dp"
+            android:contentDescription="@string/penciledit5"
+            app:srcCompat="@drawable/edit" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit1"
+        android:layout_width="338dp"
+        android:layout_height="87dp"
+        android:background="#DFDADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031">
 
         <ImageView
             android:id="@+id/logoimage1"
@@ -101,60 +227,38 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000000" />
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/edit2"
-        android:layout_width="346dp"
-        android:layout_height="88dp"
-        android:background="#DFDADA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.569"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301">
-
         <ImageView
-            android:id="@+id/logoimage2"
-            android:layout_width="94dp"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/logoimage2"
-            app:srcCompat="@drawable/edit_image" />
-
-        <TextView
-            android:id="@+id/tnameedit2"
-            android:layout_width="202dp"
-            android:layout_height="32dp"
+            android:id="@+id/editpencil1"
+            android:layout_width="45dp"
+            android:layout_height="29dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="115dp"
-            android:layout_marginLeft="115dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="29dp"
-            android:layout_marginRight="29dp"
-            android:layout_marginBottom="30dp"
-            android:background="#FFFFFF"
-            android:text="@string/tnameedit2"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#000000" />
+            android:layout_marginStart="265dp"
+            android:layout_marginLeft="265dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginBottom="25dp"
+            android:contentDescription="@string/editpencil1"
+            app:srcCompat="@drawable/edit" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/edit3"
-        android:layout_width="345dp"
-        android:layout_height="89dp"
+        android:layout_width="335dp"
+        android:layout_height="82dp"
         android:background="#DFDADA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459">
+        app:layout_constraintVertical_bias="0.395">
 
         <ImageView
             android:id="@+id/logoimage3"
@@ -165,8 +269,8 @@
 
         <TextView
             android:id="@+id/tnameedit3"
-            android:layout_width="196dp"
-            android:layout_height="32dp"
+            android:layout_width="199dp"
+            android:layout_height="36dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -176,54 +280,46 @@
             android:layout_marginStart="112dp"
             android:layout_marginLeft="112dp"
             android:layout_marginTop="31dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginRight="37dp"
-            android:layout_marginBottom="26dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="15dp"
             android:background="#FFFFFF"
             android:text="@string/tnameedit3"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000000" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/edit5"
-        android:layout_width="342dp"
-        android:layout_height="91dp"
-        android:background="#DFDADA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.594"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.776">
 
         <ImageView
-            android:id="@+id/logoimage5"
-            android:layout_width="88dp"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/logoimage5"
-            app:srcCompat="@drawable/edit_image" />
-
-        <TextView
-            android:id="@+id/tnameedit5"
-            android:layout_width="187dp"
-            android:layout_height="30dp"
+            android:id="@+id/penciledit3"
+            android:layout_width="27dp"
+            android:layout_height="31dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginBottom="26dp"
-            android:background="#FFFFFF"
-            android:text="@string/tnameedit5"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#000000" />
+            android:layout_marginStart="275dp"
+            android:layout_marginLeft="275dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginBottom="19dp"
+            android:contentDescription="@string/penciledit3"
+            app:srcCompat="@drawable/edit" />
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="102dp"
+        android:layout_height="39dp"
+        android:background="#FFFFFF"
+        android:text="@string/button"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.867" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

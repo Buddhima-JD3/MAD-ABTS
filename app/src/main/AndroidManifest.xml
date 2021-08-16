@@ -13,6 +13,9 @@
         <activity android:name=".myorders" />
         <activity android:name=".shop" />
         <activity android:name=".adminOrders" />
+        <activity android:name=".adminPlayerspage"></activity>
+        <activity android:name=".sidebar" />
+        <activity android:name=".adminplayerprofile" />
         <activity android:name=".addnewproduct" />
         <activity android:name=".paymentdetails" />
         <activity android:name=".Cart" />
