@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ABTS">
-        <activity android:name=".adminproduct1"></activity>
+        <activity android:name=".teams3"></activity>
+        <activity android:name=".playerpage" />
+        <activity android:name=".teams" />
+        <activity android:name=".adminproduct1" />
         <activity android:name=".myorders" />
         <activity android:name=".shop" />
         <activity android:name=".adminOrders" />
-        <activity android:name=".adminPlayerspage"></activity>
+        <activity android:name=".adminPlayerspage" />
         <activity android:name=".sidebar" />
         <activity android:name=".adminplayerprofile" />
         <activity android:name=".addnewproduct" />

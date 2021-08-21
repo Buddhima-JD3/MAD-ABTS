@@ -95,6 +95,7 @@
             android:layout_marginEnd="73dp"
             android:layout_marginRight="73dp"
             android:layout_marginBottom="2dp"
+            android:onClick="shop"
             android:text="SHOP"
             android:textColor="#000000"
             android:textStyle="bold" />
@@ -116,6 +117,7 @@
             android:layout_marginRight="9dp"
             android:layout_marginBottom="3dp"
             android:background="#FFFFFF"
+            android:onClick="sidebar"
             android:text="MORE"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -177,6 +179,7 @@
             android:layout_marginRight="163dp"
             android:layout_marginBottom="31dp"
             android:contentDescription="@string/teamicon1"
+            android:onClick="teams"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/team" />
@@ -185,11 +188,18 @@
             android:id="@+id/shopicon"
             android:layout_width="65dp"
             android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="267dp"
+            android:layout_marginLeft="267dp"
+            android:layout_marginTop="0dp"
             android:layout_marginEnd="80dp"
             android:layout_marginRight="80dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="34dp"
             android:contentDescription="@string/shopicon"
             android:onClick="shop"
             app:srcCompat="@drawable/shop" />
@@ -211,6 +221,7 @@
             android:layout_marginRight="0dp"
             android:layout_marginBottom="33dp"
             android:contentDescription="@string/moreicon"
+            android:onClick="sidebar"
             app:srcCompat="@drawable/more" />
 
     </RelativeLayout>

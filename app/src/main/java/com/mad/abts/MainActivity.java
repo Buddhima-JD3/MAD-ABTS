@@ -36,5 +36,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, shop.class);
         startActivity(intent);
     }
-
+    public void teams(View view) {
+        Intent intent = new Intent(this, teams.class);
+        startActivity(intent);
+    }
+    public void sidebar(View view) {
+        Intent intent = new Intent(this, sidebar.class);
+        startActivity(intent);
+    }
 }

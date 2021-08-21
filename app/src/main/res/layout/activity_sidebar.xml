@@ -33,6 +33,7 @@
             android:layout_marginEnd="28dp"
             android:layout_marginRight="28dp"
             android:layout_marginBottom="261dp"
+            android:onClick="venues"
             android:text="VENUES"
             android:textColor="#000000"
             app:backgroundTint="#FFFFFF" />
@@ -53,6 +54,7 @@
             android:layout_marginEnd="28dp"
             android:layout_marginRight="28dp"
             android:layout_marginBottom="310dp"
+            android:onClick="gallery"
             android:text="GALLERY"
             android:textColor="#000000"
             app:backgroundTint="#FFFFFF" />
@@ -73,6 +75,7 @@
             android:layout_marginEnd="28dp"
             android:layout_marginRight="28dp"
             android:layout_marginBottom="361dp"
+            android:onClick="players"
             android:text="PLAYERS"
             android:textColor="#000000"
             app:backgroundTint="#FFFFFF" />
@@ -114,6 +117,7 @@
             android:layout_marginEnd="29dp"
             android:layout_marginRight="29dp"
             android:layout_marginBottom="213dp"
+            android:onClick="statistics"
             android:text="STATISTICS"
             android:textColor="#000000"
             app:backgroundTint="#FFFFFF"
@@ -121,7 +125,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/relativelayout"
         android:layout_width="412dp"
         android:layout_height="70dp"
         android:background="#FFFFFF"
@@ -148,6 +152,7 @@
             android:layout_marginEnd="334dp"
             android:layout_marginRight="334dp"
             android:layout_marginBottom="6dp"
+            android:onClick="home"
             android:text="HOME"
             android:textColor="#000000"
             android:textStyle="bold" />
@@ -168,6 +173,7 @@
             android:layout_marginEnd="237dp"
             android:layout_marginRight="237dp"
             android:layout_marginBottom="3dp"
+            android:onClick="matches"
             android:text="MATCHES"
             android:textColor="#000000"
             android:textStyle="bold" />
@@ -208,6 +214,7 @@
             android:layout_marginEnd="73dp"
             android:layout_marginRight="73dp"
             android:layout_marginBottom="2dp"
+            android:onClick="shop"
             android:text="SHOP"
             android:textColor="#000000"
             android:textStyle="bold" />
@@ -229,6 +236,7 @@
             android:layout_marginRight="9dp"
             android:layout_marginBottom="3dp"
             android:background="#FFFFFF"
+            android:onClick="sidebar"
             android:text="MORE"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -250,6 +258,7 @@
             android:layout_marginRight="337dp"
             android:layout_marginBottom="32dp"
             android:contentDescription="@string/home"
+            android:onClick="home"
             app:srcCompat="@drawable/home" />
 
         <ImageView
@@ -269,6 +278,7 @@
             android:layout_marginRight="246dp"
             android:layout_marginBottom="35dp"
             android:contentDescription="@string/matchesicon1"
+            android:onClick="matches"
             app:srcCompat="@drawable/matches" />
 
         <ImageView
@@ -288,6 +298,7 @@
             android:layout_marginRight="163dp"
             android:layout_marginBottom="31dp"
             android:contentDescription="@string/teamicon1"
+            android:onClick="teams"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/team" />
@@ -296,12 +307,20 @@
             android:id="@+id/shopicon"
             android:layout_width="65dp"
             android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="267dp"
+            android:layout_marginLeft="267dp"
+            android:layout_marginTop="0dp"
             android:layout_marginEnd="80dp"
             android:layout_marginRight="80dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="34dp"
             android:contentDescription="@string/shopicon"
+            android:onClick="shop"
             app:srcCompat="@drawable/shop" />
 
         <ImageView
@@ -321,8 +340,10 @@
             android:layout_marginRight="0dp"
             android:layout_marginBottom="33dp"
             android:contentDescription="@string/moreicon"
+            android:onClick="sidebar"
             app:srcCompat="@drawable/more" />
 
     </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
