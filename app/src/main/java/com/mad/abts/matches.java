@@ -2,7 +2,9 @@ package com.mad.abts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 
 import com.github.mikephil.charting.charts.PieChart;
@@ -46,6 +48,18 @@ public class matches extends AppCompatActivity {
         pieData2 = new PieData(pieDataSet2);
         pieChart2.setData(pieData2);
         pieChart2.invalidate();
+    }
+    public void matches(View view) {
+        Intent intent = new Intent(this, matches.class);
+        startActivity(intent);
+    }
+    public void home(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void shop(View view) {
+        Intent intent = new Intent(this, shop.class);
+        startActivity(intent);
     }
 
 
