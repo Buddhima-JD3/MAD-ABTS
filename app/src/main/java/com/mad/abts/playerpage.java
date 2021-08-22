@@ -6,12 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class sidebar extends AppCompatActivity {
+public class playerpage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sidebar);
+        setContentView(R.layout.activity_playerpage);
     }
     public void matches(View view) {
         Intent intent = new Intent(this, matches.class);
@@ -31,22 +32,6 @@ public class sidebar extends AppCompatActivity {
     }
     public void sidebar(View view) {
         Intent intent = new Intent(this, sidebar.class);
-        startActivity(intent);
-    }
-    public void players(View view) {
-        Intent intent = new Intent(this, playerpage.class);
-        startActivity(intent);
-    }
-    public void gallery(View view) {
-        Intent intent = new Intent(this, gallery.class);
-        startActivity(intent);
-    }
-    public void statistics(View view) {
-        Intent intent = new Intent(this, statistics.class);
-        startActivity(intent);
-    }
-    public void venues(View view) {
-        Intent intent = new Intent(this, teams3.class);
         startActivity(intent);
     }
 }
