@@ -6,19 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class adminmatches extends AppCompatActivity {
+public class adminhome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adminmatches);
+        setContentView(R.layout.activity_adminhome);
     }
     public void adminmatches(View view) {
         Intent intent = new Intent(this, adminmatches.class);
-        startActivity(intent);
-    }
-    public void adminlive(View view) {
-        Intent intent = new Intent(this, adminlive.class);
         startActivity(intent);
     }
     public void admin(View view) {
