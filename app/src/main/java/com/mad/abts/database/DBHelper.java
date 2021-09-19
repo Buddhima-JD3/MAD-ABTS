@@ -14,7 +14,7 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "LPLT20.db";
     public DBHelper(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 2);
     }
 
     @Override
@@ -27,9 +27,41 @@ public class DBHelper extends SQLiteOpenHelper {
                 MatchStats.MStats.COLUMN_NAME_LOST+" INTEGER,"+
                 MatchStats.MStats.COLUMN_NAME_NR+" INTEGER,"+
                 MatchStats.MStats.COLUMN_NAME_POINTS+" INTEGER,"
-                +MatchStats.MStats.COLUMN_NAME_WINPERC+" DOUBLE)";
+                +MatchStats.MStats.COLUMN_NAME_WINPERC+" REAL)";
 
         db.execSQL(SQL_CREATE_ENTRIES);
+        db.execSQL("CREATE TABLE "+Matches.Match.TABLE_NAME+
+                " ("+Matches.Match._ID+" INTEGER PRIMARY KEY,"+
+                Matches.Match.COLUMN_NAME_TEAM1+" TEXT,"+
+                Matches.Match.COLUMN_NAME_TEAM2+" TEXT,"+
+                Matches.Match.COLUMN_NAME_MATCHNO+" INTEGER,"+
+                Matches.Match.COLUMN_NAME_MATCHDATE+" TEXT,"+
+                Matches.Match.COLUMN_NAME_BATTING+" TEXT,"+
+                Matches.Match.COLUMN_NAME_RUNS1+" INTEGER,"+
+                Matches.Match.COLUMN_NAME_RUNS2+" INTEGER,"+
+                Matches.Match.COLUMN_NAME_WICKETS1+" INTEGER,"+
+                Matches.Match.COLUMN_NAME_WICKETS2+" INTEGER,"+
+                Matches.Match.COLUMN_NAME_OVERS1+" REAL,"
+                +Matches.Match.COLUMN_NAME_OVERS2+" REAL)");
+
+
+    }
+    public Long addMatch(String team1, String team2,int matchno, String matchdate, int runs1,int runs2,int wickets1, int wickets2, double overs1, double overs2){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values  = new ContentValues();
+        values.put(Matches.Match.COLUMN_NAME_TEAM1,team1);
+        values.put(Matches.Match.COLUMN_NAME_TEAM2,team2);
+        values.put(Matches.Match.COLUMN_NAME_MATCHNO,matchno);
+        values.put(Matches.Match.COLUMN_NAME_MATCHDATE,matchdate);
+        values.put(Matches.Match.COLUMN_NAME_BATTING,"");
+        values.put(Matches.Match.COLUMN_NAME_RUNS1,runs1);
+        values.put(Matches.Match.COLUMN_NAME_RUNS2,runs2);
+        values.put(Matches.Match.COLUMN_NAME_WICKETS1,wickets1);
+        values.put(Matches.Match.COLUMN_NAME_WICKETS2,wickets2);
+        values.put(Matches.Match.COLUMN_NAME_OVERS1,overs1);
+        values.put(Matches.Match.COLUMN_NAME_OVERS2,overs2);
+
+        return db.insert(Matches.Match.TABLE_NAME,null, values);
     }
     public Long addMatchStats(String team, int matches,int won, int lost,int nr,int points, double winperc ){
         SQLiteDatabase db = getWritableDatabase();
@@ -60,11 +92,94 @@ public class DBHelper extends SQLiteOpenHelper {
                 MatchStats.MStats.TABLE_NAME, cv, selection, selectionArgs
         );
     }
+    public void updateMatch(int matchno,String batting, int runs1,int runs2,int wickets1, int wickets2, double overs1, double overs2){
+
+        SQLiteDatabase db = getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Matches.Match.COLUMN_NAME_BATTING,batting);
+        values.put(Matches.Match.COLUMN_NAME_RUNS1,runs1);
+        values.put(Matches.Match.COLUMN_NAME_RUNS2,runs2);
+        values.put(Matches.Match.COLUMN_NAME_WICKETS1,wickets1);
+        values.put(Matches.Match.COLUMN_NAME_WICKETS2,wickets2);
+        values.put(Matches.Match.COLUMN_NAME_OVERS1,overs1);
+        values.put(Matches.Match.COLUMN_NAME_OVERS2,overs2);
+        String selection = Matches.Match.COLUMN_NAME_MATCHNO+" LIKE ?";
+        String[] selectionArgs = {String.valueOf(matchno)};
+        int count = db.update(
+                Matches.Match.TABLE_NAME, values, selection, selectionArgs
+        );
+    }
     public void deleteStats(String team){
         SQLiteDatabase db = getReadableDatabase();
         String selection = MatchStats.MStats.COLUMN_NAME_TEAM+" LIKE ?";
         String[] selectionArgs = {team};
         db.delete(MatchStats.MStats.TABLE_NAME,selection,selectionArgs);
+    }
+    public void deleteMatch(int matchno){
+        SQLiteDatabase db = getReadableDatabase();
+        String selection = Matches.Match.COLUMN_NAME_MATCHNO+" LIKE ?";
+        String[] selectionArgs = {String.valueOf(matchno)};
+        db.delete(Matches.Match.TABLE_NAME,selection,selectionArgs);
+    }
+    public List readspecMatch(int matchno){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2
+        };
+        String selection = Matches.Match.COLUMN_NAME_MATCHNO+" LIKE ?";
+        String[] selectionArgs = {String.valueOf(matchno)};
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                null               // The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            team1.add(team11);
+            team2.add(team22);
+        }
+        cursor.close();
+        return team1;
+
+    }
+    public List readspecMatch2(int matchno){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2
+        };
+        String selection = Matches.Match.COLUMN_NAME_MATCHNO+" LIKE ?";
+        String[] selectionArgs = {String.valueOf(matchno)};
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                null               // The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            team1.add(team11);
+            team2.add(team22);
+        }
+        cursor.close();
+        return team2;
+
     }
     public List readStats1(){
         SQLiteDatabase db = getReadableDatabase();

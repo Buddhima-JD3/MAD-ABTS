@@ -24,7 +24,7 @@ public class teamstats extends AppCompatActivity {
         team = findViewById(R.id.inteamstats);
         matches= findViewById(R.id.teammatchin);
         won= findViewById(R.id.teamwonenter);
-        lost= findViewById(R.id.teamlostenter);
+        lost= findViewById(R.id.teamlost1);
         nr= findViewById(R.id.teamnorenter);
     }
     public void saveStats(View view){
@@ -38,6 +38,7 @@ public class teamstats extends AppCompatActivity {
         winperce= (won1*100)/matches1;
         DBHelper dbHelper =  new DBHelper(this);
         if(team1.isEmpty()){
+            System.out.println("team");
             Toast.makeText(this,"Enter Team", Toast.LENGTH_SHORT).show();
         }else{
             dbHelper.addMatchStats(team1,matches1,won1,lost1,nr1,points,winperce);
