@@ -49,4 +49,8 @@ public class sidebar extends AppCompatActivity {
         Intent intent = new Intent(this, teams3.class);
         startActivity(intent);
     }
+    public void admin(View view) {
+        Intent intent = new Intent(this, adminhome.class);
+        startActivity(intent);
+    }
 }
