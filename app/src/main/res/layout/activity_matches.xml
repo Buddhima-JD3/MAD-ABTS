@@ -287,7 +287,7 @@
                     android:fontFamily="sans-serif-black"
                     android:text="@string/team1"
                     android:textColor="@color/design_default_color_on_secondary"
-                    android:textSize="14sp" />
+                    android:textSize="13sp" />
 
                 <ImageView
                     android:id="@+id/team1img"
@@ -413,8 +413,8 @@
 
                 <ImageView
                     android:id="@+id/img2team"
-                    android:layout_width="50dp"
-                    android:layout_height="52dp"
+                    android:layout_width="57dp"
+                    android:layout_height="50dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
@@ -424,9 +424,9 @@
                     android:layout_marginStart="264dp"
                     android:layout_marginLeft="264dp"
                     android:layout_marginTop="3dp"
-                    android:layout_marginEnd="19dp"
-                    android:layout_marginRight="19dp"
-                    android:layout_marginBottom="123dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_marginRight="39dp"
+                    android:layout_marginBottom="132dp"
                     android:contentDescription="@string/img2team"
                     app:srcCompat="@drawable/kt" />
 
@@ -448,7 +448,8 @@
                     android:layout_marginBottom="102dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/team2"
-                    android:textColor="@color/design_default_color_on_secondary" />
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textSize="13sp" />
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/piepercentage"
@@ -521,7 +522,8 @@
                     android:layout_marginBottom="103dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/team11"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:id="@+id/team22"
@@ -541,7 +543,8 @@
                     android:layout_marginBottom="101dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/team22"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
 
                 <ImageView
                     android:id="@+id/team11img"
@@ -550,10 +553,14 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="30dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="4dp"
+                    android:layout_marginEnd="280dp"
+                    android:layout_marginRight="280dp"
                     android:layout_marginBottom="132dp"
                     android:contentDescription="@string/team11img"
                     app:srcCompat="@drawable/gg" />

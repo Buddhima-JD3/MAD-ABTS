@@ -3,8 +3,11 @@ package com.mad.abts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -21,6 +24,7 @@ import java.util.List;
 public class matches extends AppCompatActivity {
     TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8;
     TextView t1,t2,t3,t4,t5,t6,t7,t8;
+    ImageView im1,im2,im3,im4;
     PieChart pieChart;
     PieChart pieChart2;
     PieData pieData;
@@ -48,6 +52,10 @@ public class matches extends AppCompatActivity {
         t6 = findViewById(R.id.score22);
         t7 = findViewById(R.id.overs21);
         t8 = findViewById(R.id.overs22);
+        im1 = findViewById(R.id.team1img);
+        im2 = findViewById(R.id.img2team);
+        im3 = findViewById(R.id.team11img);
+        im4 = findViewById(R.id.team22img);
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
         List matchnu = new ArrayList<>();
@@ -58,6 +66,8 @@ public class matches extends AppCompatActivity {
         List wickets2 = new ArrayList<>();
         List overs1 = new ArrayList<>();
         List overs2 = new ArrayList<>();
+        List lg1 = new ArrayList<>();
+        List lg2 = new ArrayList<>();
         DBHelper dbHelper =  new DBHelper(this);
         team1=dbHelper.readMatch1();
         team2=dbHelper.readMatch2();
@@ -69,6 +79,20 @@ public class matches extends AppCompatActivity {
         wickets2=dbHelper.readMatch8();
         overs1=dbHelper.readMatch9();
         overs2=dbHelper.readMatch10();
+        lg1=dbHelper.readMatch11();
+        lg2=dbHelper.readMatch12();
+        byte[] img1 = (byte[])lg1.get(0);
+        byte[] img2 = (byte[])lg2.get(0);
+        byte[] img3 = (byte[])lg1.get(1);
+        byte[] img4 = (byte[])lg2.get(1);
+        Bitmap bitmap1 = BitmapFactory.decodeByteArray(img1,0,img1.length);
+        Bitmap bitmap2 = BitmapFactory.decodeByteArray(img2,0,img2.length);
+        Bitmap bitmap3 = BitmapFactory.decodeByteArray(img3,0,img3.length);
+        Bitmap bitmap4 = BitmapFactory.decodeByteArray(img4,0,img4.length);
+        im1.setImageBitmap(bitmap1);
+        im2.setImageBitmap(bitmap2);
+        im3.setImageBitmap(bitmap3);
+        im4.setImageBitmap(bitmap4);
         tv1.setText("Match "+(String)matchnu.get(0));
         tv3.setText((String)team1.get(0));
         tv4.setText((String)team2.get(0));
