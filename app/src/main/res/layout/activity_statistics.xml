@@ -355,7 +355,7 @@
                 android:background="@android:color/darker_gray"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="@string/nrrheader"
+                android:text="Win Perc%"
                 android:textColor="@color/black"
                 android:textSize="10sp"
                 android:textStyle="italic" />

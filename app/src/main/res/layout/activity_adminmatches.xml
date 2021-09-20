@@ -288,7 +288,7 @@
             android:textSize="14sp" />
 
         <EditText
-            android:id="@+id/teamnrenter"
+            android:id="@+id/inmatchdate"
             android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/teamnr"
@@ -435,29 +435,6 @@
             android:text="@string/teamimg1in"
             android:textSize="12sp" />
 
-        <EditText
-            android:id="@+id/teamlostenter"
-            android:layout_width="105dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/teamlost"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="164dp"
-            android:layout_marginLeft="164dp"
-            android:layout_marginTop="243dp"
-            android:layout_marginEnd="67dp"
-            android:layout_marginRight="67dp"
-            android:layout_marginBottom="118dp"
-            android:ems="10"
-            android:hint="@string/matchnoin"
-            android:importantForAutofill="no"
-            android:inputType="number"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <Button
             android:id="@+id/submitmatch"
             android:layout_width="95dp"
@@ -474,10 +451,31 @@
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
+            android:onClick="saveMatch"
             android:text="@string/submitmatch"
             android:textColor="@color/black"
             app:backgroundTint="@color/teal_200"
             app:cornerRadius="20dp" />
+
+        <EditText
+            android:id="@+id/matchnoin1"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="155dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="233dp"
+            android:layout_marginEnd="62dp"
+            android:layout_marginRight="62dp"
+            android:layout_marginBottom="116dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="no" />
     </RelativeLayout>
 
     <Button

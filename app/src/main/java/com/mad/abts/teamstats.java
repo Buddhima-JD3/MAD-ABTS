@@ -24,7 +24,7 @@ public class teamstats extends AppCompatActivity {
         team = findViewById(R.id.inteamstats);
         matches= findViewById(R.id.teammatchin);
         won= findViewById(R.id.teamwonenter);
-        lost= findViewById(R.id.teamlostenter);
+        lost= findViewById(R.id.teamlost1);
         nr= findViewById(R.id.teamnorenter);
     }
     public void saveStats(View view){
@@ -38,10 +38,31 @@ public class teamstats extends AppCompatActivity {
         winperce= (won1*100)/matches1;
         DBHelper dbHelper =  new DBHelper(this);
         if(team1.isEmpty()){
+            System.out.println("team");
             Toast.makeText(this,"Enter Team", Toast.LENGTH_SHORT).show();
         }else{
-            dbHelper.addMatchStats(team1,String.valueOf(matches1),String.valueOf(won1),String.valueOf(lost1),String.valueOf(nr1),String.valueOf(points),String.valueOf(winperce));
+            dbHelper.addMatchStats(team1,matches1,won1,lost1,nr1,points,winperce);
         }
+    }
+    public void updateStats(View view){
+        team1 = team.getText().toString();
+        matches1 = Integer.parseInt(matches.getText().toString());
+        won1 = Integer.parseInt(won.getText().toString());
+        lost1 = Integer.parseInt(lost.getText().toString());
+        nr1 = Integer.parseInt(nr.getText().toString());
+        points = 2*won1+nr1;
+        System.out.println(points);
+        winperce= (won1*100)/matches1;
+        DBHelper dbHelper =  new DBHelper(this);
+        dbHelper.updateStats(team1,matches1,won1,lost1,nr1,points,winperce);
+
+    }
+    public void deleteStats(View view){
+        team1 = team.getText().toString();
+
+        DBHelper dbHelper =  new DBHelper(this);
+        dbHelper.deleteStats(team1);
+
     }
     public void adminmatches(View view) {
         Intent intent = new Intent(this, adminmatches.class);
