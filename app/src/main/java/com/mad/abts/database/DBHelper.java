@@ -151,6 +151,646 @@ public class DBHelper extends SQLiteOpenHelper {
         return team1;
 
     }
+    public List readMatch1(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return team1;
+
+    }
+    public List readMatch2(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return team2;
+
+    }
+    public List readMatch3(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return matchnu;
+
+    }
+    public List readMatch4(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return bat;
+
+    }
+    public List readMatch5(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return runs1;
+
+    }
+    public List readMatch6(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return runs2;
+
+    }
+    public List readMatch7(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return wickets1;
+
+    }
+    public List readMatch8(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return wickets2;
+
+    }
+    public List readMatch9(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return overs1;
+
+    }
+    public List readMatch10(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "2"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List overs2 = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String overs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS2));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            overs2.add(overs22);
+        }
+        cursor.close();
+        return overs2;
+
+    }
     public List readspecMatch2(int matchno){
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = {
