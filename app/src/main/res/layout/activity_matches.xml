@@ -287,7 +287,7 @@
                     android:fontFamily="sans-serif-black"
                     android:text="@string/team1"
                     android:textColor="@color/design_default_color_on_secondary"
-                    android:textSize="14sp" />
+                    android:textSize="13sp" />
 
                 <ImageView
                     android:id="@+id/team1img"
@@ -350,37 +350,21 @@
                     android:textStyle="italic" />
 
                 <TextView
-                    android:id="@+id/bowler"
-                    android:layout_width="155dp"
-                    android:layout_height="27dp"
+                    android:id="@+id/score2"
+                    android:layout_width="74dp"
+                    android:layout_height="36dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="121dp"
-                    android:layout_marginEnd="203dp"
-                    android:layout_marginRight="203dp"
-                    android:layout_marginBottom="37dp"
-                    android:fontFamily="monospace"
-                    android:text="@string/bowler"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/score2"
-                    android:layout_width="74dp"
-                    android:layout_height="36dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="269dp"
+                    android:layout_marginLeft="269dp"
                     android:layout_marginTop="74dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
+                    android:layout_marginBottom="75dp"
                     android:fontFamily="monospace"
                     android:text="@string/score2"
                     android:textColor="@color/black"
@@ -396,31 +380,17 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
                     android:layout_marginStart="271dp"
                     android:layout_marginLeft="271dp"
                     android:layout_marginTop="96dp"
                     android:layout_marginEnd="13dp"
                     android:layout_marginRight="13dp"
+                    android:layout_marginBottom="60dp"
                     android:fontFamily="monospace"
                     android:text="@string/overs2"
                     android:textColor="@color/black"
                     android:textStyle="italic" />
-
-                <TextView
-                    android:id="@+id/bat2"
-                    android:layout_width="113dp"
-                    android:layout_height="58dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="118dp"
-                    android:layout_marginEnd="-5dp"
-                    android:layout_marginRight="-5dp"
-                    android:fontFamily="monospace"
-                    android:text="@string/bat2"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/status"
@@ -443,8 +413,8 @@
 
                 <ImageView
                     android:id="@+id/img2team"
-                    android:layout_width="50dp"
-                    android:layout_height="52dp"
+                    android:layout_width="57dp"
+                    android:layout_height="50dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
@@ -454,9 +424,9 @@
                     android:layout_marginStart="264dp"
                     android:layout_marginLeft="264dp"
                     android:layout_marginTop="3dp"
-                    android:layout_marginEnd="19dp"
-                    android:layout_marginRight="19dp"
-                    android:layout_marginBottom="123dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_marginRight="39dp"
+                    android:layout_marginBottom="132dp"
                     android:contentDescription="@string/img2team"
                     app:srcCompat="@drawable/kt" />
 
@@ -464,15 +434,22 @@
                     android:id="@+id/team4"
                     android:layout_width="105dp"
                     android:layout_height="28dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="249dp"
+                    android:layout_marginLeft="249dp"
                     android:layout_marginTop="55dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginRight="5dp"
+                    android:layout_marginBottom="102dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/team2"
-                    android:textColor="@color/design_default_color_on_secondary" />
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textSize="13sp" />
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/piepercentage"
@@ -545,23 +522,29 @@
                     android:layout_marginBottom="103dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/team11"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:id="@+id/team22"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginLeft="250dp"
                     android:layout_marginTop="54dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginBottom="101dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/team22"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
 
                 <ImageView
                     android:id="@+id/team11img"
@@ -570,10 +553,14 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="30dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="4dp"
+                    android:layout_marginEnd="280dp"
+                    android:layout_marginRight="280dp"
                     android:layout_marginBottom="132dp"
                     android:contentDescription="@string/team11img"
                     app:srcCompat="@drawable/gg" />
@@ -722,50 +709,6 @@
                     android:text="@string/overs22"
                     android:textColor="@color/black"
                     android:textStyle="italic" />
-
-                <TextView
-                    android:id="@+id/play21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="21dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="121dp"
-                    android:layout_marginEnd="227dp"
-                    android:layout_marginRight="227dp"
-                    android:layout_marginBottom="46dp"
-                    android:fontFamily="monospace"
-                    android:text="@string/play21"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/play22"
-                    android:layout_width="116dp"
-                    android:layout_height="55dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="246dp"
-                    android:layout_marginLeft="246dp"
-                    android:layout_marginTop="117dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginBottom="13dp"
-                    android:fontFamily="monospace"
-                    android:text="@string/play22"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/status2"

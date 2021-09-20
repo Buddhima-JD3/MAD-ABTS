@@ -18,5 +18,7 @@ public class Matches {
         public static final String COLUMN_NAME_WICKETS2 = "wickets2";
         public static final String COLUMN_NAME_OVERS2 = "overs2";
         public static final String COLUMN_NAME_BATTING = "batting";
+        public static final String COLUMN_NAME_LOGO1 = "logo1";
+        public static final String COLUMN_NAME_LOGO2 = "logo2";
     }
 }
