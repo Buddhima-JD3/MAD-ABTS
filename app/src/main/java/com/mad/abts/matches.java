@@ -24,14 +24,18 @@ import java.util.List;
 public class matches extends AppCompatActivity {
     TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8;
     TextView t1,t2,t3,t4,t5,t6,t7,t8;
-    ImageView im1,im2,im3,im4;
+    TextView v1,v2,v3,v4,v5,v6,v7,v8;
+    ImageView im1,im2,im3,im4,im5,im6;
     PieChart pieChart;
     PieChart pieChart2;
+    PieChart pieChart3;
     PieData pieData;
     PieData pieData2;
-    int a,b,c,d;
+    PieData pieData3;
+    int a,b,c,d,e,f;
     List<PieEntry> pieEntryList = new ArrayList<>();
     List<PieEntry> pieEntryList2 = new ArrayList<>();
+    List<PieEntry> pieEntryList3 = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +60,16 @@ public class matches extends AppCompatActivity {
         im2 = findViewById(R.id.img2team);
         im3 = findViewById(R.id.team11img);
         im4 = findViewById(R.id.team22img);
+        v1 = findViewById(R.id.matchheading3);
+        v2 = findViewById(R.id.status3);
+        v3 = findViewById(R.id.team13);
+        v4 = findViewById(R.id.team5);
+        v5 = findViewById(R.id.score3);
+        v6 = findViewById(R.id.score23);
+        v7 = findViewById(R.id.overs3);
+        v8 = findViewById(R.id.overs23);
+        im5 = findViewById(R.id.team1img3);
+        im6 = findViewById(R.id.img2team5);
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
         List matchnu = new ArrayList<>();
@@ -85,14 +99,20 @@ public class matches extends AppCompatActivity {
         byte[] img2 = (byte[])lg2.get(0);
         byte[] img3 = (byte[])lg1.get(1);
         byte[] img4 = (byte[])lg2.get(1);
+        byte[] img5 = (byte[])lg1.get(2);
+        byte[] img6 = (byte[])lg2.get(2);
         Bitmap bitmap1 = BitmapFactory.decodeByteArray(img1,0,img1.length);
         Bitmap bitmap2 = BitmapFactory.decodeByteArray(img2,0,img2.length);
         Bitmap bitmap3 = BitmapFactory.decodeByteArray(img3,0,img3.length);
         Bitmap bitmap4 = BitmapFactory.decodeByteArray(img4,0,img4.length);
+        Bitmap bitmap5 = BitmapFactory.decodeByteArray(img5,0,img5.length);
+        Bitmap bitmap6 = BitmapFactory.decodeByteArray(img6,0,img6.length);
         im1.setImageBitmap(bitmap1);
         im2.setImageBitmap(bitmap2);
         im3.setImageBitmap(bitmap3);
         im4.setImageBitmap(bitmap4);
+        im5.setImageBitmap(bitmap5);
+        im6.setImageBitmap(bitmap6);
         tv1.setText("Match "+(String)matchnu.get(0));
         tv3.setText((String)team1.get(0));
         tv4.setText((String)team2.get(0));
@@ -130,6 +150,44 @@ public class matches extends AppCompatActivity {
             }
         }else{
             tv2.setText("Match Over");
+        }
+        v1.setText("Match "+(String)matchnu.get(2));
+        v3.setText((String)team1.get(2));
+        v4.setText((String)team2.get(2));
+        v5.setText((String)runs1.get(2)+"/"+(String)wickets1.get(2));
+        v6.setText((String)runs2.get(2)+"/"+(String)wickets2.get(2));
+        v7.setText((String)overs1.get(2)+" Ov");
+        v8.setText((String)overs2.get(2)+" Ov");
+        if(((String)bat.get(2)).equalsIgnoreCase("team1") && ((String) overs2.get(2)).equalsIgnoreCase("0")){
+            v2.setText((String)team1.get(2)+" Batting First");
+            e=50;
+            f=50;
+        }else if(((String)bat.get(2)).equalsIgnoreCase("team2") && ((String) overs1.get(2)).equalsIgnoreCase("0")){
+            v2.setText((String)team2.get(2)+" Batting First");
+            e=50;
+            f=50;
+        }else if(((String) bat.get(2)).equalsIgnoreCase("team1")&& !((String) overs2.get(2)).equalsIgnoreCase("0")){
+            v2.setText((String)team1.get(2)+" need "+String.valueOf(Integer.parseInt((String)runs2.get(2))-Integer.parseInt((String)runs1.get(2)))+" to win in "+String.valueOf(20-Integer.parseInt((String)overs1.get(2)))+" Overs");
+            e=Integer.parseInt((String)runs2.get(2))-Integer.parseInt((String)runs1.get(2));
+            if(e > 100){
+                e = (e-100)*100/100;
+                f = 100-e;
+            }else{
+                e = e*100/100;
+                f = 100-f;
+            }
+        }else if(((String)bat.get(2)).equalsIgnoreCase("team2") && !((String) overs1.get(2)).equalsIgnoreCase("0")){
+            v2.setText((String)team2.get(2)+" need "+String.valueOf(Integer.parseInt((String)runs1.get(2))-Integer.parseInt((String)runs2.get(2)))+" to win in "+String.valueOf(20-Integer.parseInt((String)overs2.get(2)))+" Overs");
+            f=Integer.parseInt((String)runs1.get(2))-Integer.parseInt((String)runs2.get(2));
+            if(f > 100){
+                f = (f-100)*100/100;
+                e = 100-f;
+            }else{
+                f = f*100/100;
+                e = 100-f;
+            }
+        }else{
+            v2.setText("Match Over");
         }
         pieChart = findViewById(R.id.piepercentage);
         pieChart.setUsePercentValues(true);
@@ -189,6 +247,18 @@ public class matches extends AppCompatActivity {
         pieData2 = new PieData(pieDataSet2);
         pieChart2.setData(pieData2);
         pieChart2.invalidate();
+
+        pieChart3 = findViewById(R.id.piepercentage3);
+        pieChart3.setUsePercentValues(true);
+        pieEntryList3.add(new PieEntry(e,(String)team1.get(2)));
+        pieEntryList3.add(new PieEntry(f,(String)team2.get(2)));
+        PieDataSet pieDataSet3 = new PieDataSet(pieEntryList3,"Team");
+        pieDataSet3.setColors(ColorTemplate.JOYFUL_COLORS);
+        pieChart3.getDescription().setText("Team");
+        pieData3 = new PieData(pieDataSet3);
+        pieChart3.setData(pieData3);
+        pieChart3.invalidate();
+        System.out.println(team1);
 
     }
     public void matches(View view) {
