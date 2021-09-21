@@ -184,7 +184,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -248,7 +248,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -312,7 +312,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -376,7 +376,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -440,7 +440,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -504,7 +504,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -568,7 +568,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -632,7 +632,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -696,7 +696,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -760,7 +760,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -826,7 +826,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
@@ -898,7 +898,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 sortOrder,
-                "2"// The sort order
+                "3"// The sort order
         );
         List team1 = new ArrayList<>();
         List team2 = new ArrayList<>();
