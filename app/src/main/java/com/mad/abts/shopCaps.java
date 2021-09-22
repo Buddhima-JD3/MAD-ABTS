@@ -5,14 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-public class shop extends AppCompatActivity {
+public class shopCaps extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shop);
+        setContentView(R.layout.activity_shop_caps);
     }
     public void matches(View view) {
         Intent intent = new Intent(this, matches.class);
@@ -36,22 +35,22 @@ public class shop extends AppCompatActivity {
     }
 
     public void GOTOCART(View view){
-        Intent shopintent = new Intent(shop.this, Cart.class);
+        Intent shopintent = new Intent(shopCaps.this, Cart.class);
         startActivity(shopintent);
 
 
     }    public void MyOrders(View view){
-        Intent myordintent = new Intent(shop.this, myorders.class);
+        Intent myordintent = new Intent(shopCaps.this, myorders.class);
         startActivity(myordintent);
 
 
     }  public void GoRight(View view){
-        Intent gorightintent = new Intent(shop.this, shopCaps.class);
+        Intent gorightintent = new Intent(shopCaps.this, myorders.class);
         startActivity(gorightintent);
 
 
     }public void GoLeft(View view){
-        Intent goleftintent = new Intent(shop.this, myorders.class);
+        Intent goleftintent = new Intent(shopCaps.this, shop.class);
         startActivity(goleftintent);
 
 

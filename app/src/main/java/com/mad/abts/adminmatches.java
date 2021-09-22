@@ -156,4 +156,8 @@ public class adminmatches extends AppCompatActivity {
         Intent intent = new Intent(this, adminsidebar.class);
         startActivity(intent);
     }
+    public void adminOrders(View view) {
+        Intent intent = new Intent(this, adminOrders.class);
+        startActivity(intent);
+    }
 }

@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundclr"
-    tools:context=".myorders">
-
+    tools:context=".shopCaps">
     <RelativeLayout
         android:id="@+id/relativelayout"
         android:layout_width="412dp"
@@ -228,52 +226,50 @@
 
     </RelativeLayout>
 
+
     <TextView
         android:id="@+id/shopstab1"
         android:layout_width="61dp"
         android:layout_height="29dp"
-        android:contentDescription="@string/myorder1"
-        android:onClick="shop"
-        android:text="@string/myorder1"
-        android:textColor="@color/productdetbtn"
+        android:text="@string/shopstab1"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <TextView
         android:id="@+id/shopstab2"
         android:layout_width="49dp"
         android:layout_height="28dp"
         android:text="@string/shopstab2"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.417"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
-
-    <TextView
-        android:id="@+id/shopstab3"
-        android:layout_width="95dp"
-        android:layout_height="29dp"
-        android:text="@string/myorders3"
         android:textColor="@color/tabselected"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.024" />
 
+    <TextView
+        android:id="@+id/shopstab3"
+        android:layout_width="95dp"
+        android:layout_height="29dp"
+        android:onClick="MyOrders"
+        android:text="@string/shopstab3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout4"
@@ -282,10 +278,10 @@
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157">
+        app:layout_constraintVertical_bias="0.097">
 
         <ImageView
             android:id="@+id/shopprd1img"
@@ -332,20 +328,6 @@
             android:text="@string/shpprd1price"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/myorderqty"
-            android:layout_width="105dp"
-            android:layout_height="20dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="68dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="38dp"
-            android:text="@string/myorderqty1" />
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -355,10 +337,10 @@
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44">
+        app:layout_constraintVertical_bias="0.323">
 
         <ImageView
             android:id="@+id/shopprd2img"
@@ -405,20 +387,6 @@
             android:text="@string/shpprd1price"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/myorderqty2"
-            android:layout_width="105dp"
-            android:layout_height="20dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="68dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="38dp"
-            android:text="@string/myorderqty2" />
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -428,10 +396,10 @@
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725">
+        app:layout_constraintVertical_bias="0.549">
 
         <ImageView
             android:id="@+id/shopprd3img"
@@ -477,52 +445,66 @@
             android:layout_marginBottom="23dp"
             android:text="@string/shpprd1price"
             android:textSize="20sp" />
+    </RelativeLayout>
 
-        <TextView
-            android:id="@+id/myorderqty3"
-            android:layout_width="105dp"
-            android:layout_height="20dp"
+    <RelativeLayout
+        android:id="@+id/product1"
+        android:layout_width="324dp"
+        android:layout_height="126dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775">
+
+        <ImageView
+            android:id="@+id/shopprd4img"
+            android:layout_width="143dp"
+            android:layout_height="81dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="227dp"
+            android:layout_marginRight="227dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/shopstab1"
+            app:srcCompat="@drawable/s1" />
+
+        <TextView
+            android:id="@+id/shpprdname4"
+            android:layout_width="203dp"
+            android:layout_height="53dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="33dp"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="38dp"
-            android:text="@string/myorderqty3" />
+            android:text="@string/shpprdname1"
+            android:textSize="24sp" />
 
+        <TextView
+            android:id="@+id/shpprd4price"
+            android:layout_width="132dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="66dp"
+            android:layout_marginEnd="87dp"
+            android:layout_marginRight="87dp"
+            android:layout_marginBottom="23dp"
+            android:text="@string/shpprd1price"
+            android:textSize="20sp" />
     </RelativeLayout>
 
-    <ImageButton
-        android:id="@+id/shopsort"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/shop_circlebtn2"
-        android:contentDescription="@string/shopsort"
-        app:srcCompat="@drawable/ic_action_sort"
-        app:backgroundTint="@android:color/darker_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toEndOf="@+id/shopstab3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-    <ImageButton
-        android:id="@+id/shopnext"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/shop_circlebtn2"
-        android:contentDescription="@string/shopnexttab"
-        android:onClick="GoRight"
-        app:backgroundTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        app:srcCompat="@drawable/ic_action_next" />
     <ImageButton
         android:id="@+id/shopback"
         android:layout_width="40dp"
@@ -539,6 +521,51 @@
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/ic_action_back" />
 
+    <ImageButton
+        android:id="@+id/shopnext"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/shop_circlebtn2"
+        android:contentDescription="@string/shopnexttab"
+        android:onClick="GoRight"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@drawable/ic_action_next" />
 
+    <ImageButton
+        android:id="@+id/shopsort"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/shop_circlebtn2"
+        android:contentDescription="@string/shopsort"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toEndOf="@+id/shopstab3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.006"
+        app:srcCompat="@drawable/ic_action_sort" />
+
+    <Button
+        android:id="@+id/shopgotocart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/productdetails"
+        android:onClick="GOTOCART"
+        android:text="@string/shopgotocart"
+        android:textColor="@color/productdetailsbtn"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -202,7 +202,7 @@
             android:layout_marginRight="80dp"
             android:layout_marginBottom="34dp"
             android:contentDescription="@string/shopicon"
-            android:onClick="shop"
+            android:onClick="adminOrders"
             app:srcCompat="@drawable/shop" />
 
         <ImageView

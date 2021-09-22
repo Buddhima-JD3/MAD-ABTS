@@ -26,4 +26,8 @@ public class adminhome extends AppCompatActivity {
         Intent intent = new Intent(this, adminsidebar.class);
         startActivity(intent);
     }
+    public void adminOrders(View view) {
+        Intent ordintent = new Intent(this, adminOrders.class);
+        startActivity(ordintent);
+    }
 }
