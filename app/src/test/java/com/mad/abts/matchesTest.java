@@ -23,6 +23,6 @@ public class matchesTest {
         matches mt1= new matches();
         int result = mt1.winchance2(20,6);
 
-        assertEquals(68,result,.1);
+        assertEquals(88,result,.1);
     }
 }
