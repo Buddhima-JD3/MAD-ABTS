@@ -1,39 +1,28 @@
 package com.mad.abts;
 
-import com.mad.abts.database.Matches;
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
 
-import junit.framework.TestCase;
-
-import org.junit.After;
-import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
-
-import java.text.NumberFormat;
 
 import static org.junit.Assert.*;
 
-public class matchesTest extends TestCase {
-private matches mt;
-    @Before
-    public void setUp() throws Exception {
-        mt = new matches();
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
+public class matchesTest {
+    @Rule
+    public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
     @Test
     public void winchance1() {
+        matches mt= new matches();
         int result = mt.winchance1(120,7);
 
-        assertEquals(41,result);
+        assertEquals(41,result,.1);
     }
 
     @Test
     public void winchance2() {
-        int result = mt.winchance1(20,6);
+        matches mt1= new matches();
+        int result = mt1.winchance2(20,6);
 
-        assertEquals(68,result);
+        assertEquals(68,result,.1);
     }
 }
