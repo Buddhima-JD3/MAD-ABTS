@@ -261,6 +261,7 @@
         android:id="@+id/shopstab3"
         android:layout_width="95dp"
         android:layout_height="29dp"
+        android:onClick="MyOrders"
         android:text="@string/shopstab3"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -511,6 +512,7 @@
         android:layout_height="40dp"
         android:background="@drawable/shop_circlebtn2"
         android:contentDescription="@string/shopbacktab"
+        android:onClick="GoLeft"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -526,14 +528,15 @@
         android:layout_height="40dp"
         android:background="@drawable/shop_circlebtn2"
         android:contentDescription="@string/shopnexttab"
-        app:srcCompat="@drawable/ic_action_next"
+        android:onClick="GoRight"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@drawable/ic_action_next" />
 
     <ImageButton
         android:id="@+id/shopsort"
@@ -555,6 +558,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/productdetails"
+        android:onClick="GOTOCART"
         android:text="@string/shopgotocart"
         android:textColor="@color/productdetailsbtn"
         app:backgroundTint="@color/white"
