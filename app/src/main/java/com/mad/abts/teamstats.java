@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import com.mad.abts.database.DBHelper;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 import static java.lang.String.valueOf;
 
 public class teamstats extends AppCompatActivity {
@@ -33,9 +36,9 @@ public class teamstats extends AppCompatActivity {
         won1 = Integer.parseInt(won.getText().toString());
         lost1 = Integer.parseInt(lost.getText().toString());
         nr1 = Integer.parseInt(nr.getText().toString());
-        points = 2*won1+nr1;
+        points = calPoints(won1,nr1);
         System.out.println(points);
-        winperce= (won1*100)/matches1;
+        winperce= calWinPerc(won1,matches1);
         DBHelper dbHelper =  new DBHelper(this);
         if(team1.isEmpty()){
             System.out.println("team");
@@ -50,11 +53,18 @@ public class teamstats extends AppCompatActivity {
         won1 = Integer.parseInt(won.getText().toString());
         lost1 = Integer.parseInt(lost.getText().toString());
         nr1 = Integer.parseInt(nr.getText().toString());
-        points = 2*won1+nr1;
+        points = calPoints(won1,nr1);
         System.out.println(points);
-        winperce= (won1*100)/matches1;
+        winperce= calWinPerc(won1,matches1);
         DBHelper dbHelper =  new DBHelper(this);
-        dbHelper.updateStats(team1,matches1,won1,lost1,nr1,points,winperce);
+        if(team1.isEmpty()){
+            System.out.println("team");
+            Toast.makeText(this,"Enter Team", Toast.LENGTH_SHORT).show();
+        }else{
+            dbHelper.updateStats(team1,matches1,won1,lost1,nr1,points,winperce);
+        }
+
+
 
     }
     public void deleteStats(View view){
@@ -62,6 +72,21 @@ public class teamstats extends AppCompatActivity {
 
         DBHelper dbHelper =  new DBHelper(this);
         dbHelper.deleteStats(team1);
+
+    }
+    public int calPoints(int a, int b){
+
+        return (2*a)+b;
+    }
+    public Double calWinPerc(int a, int b){
+
+        NumberFormat nf= NumberFormat.getInstance();
+        nf.setMaximumFractionDigits(2);
+
+        double d = (float)(a*100)/b;
+        double d1 = Double.parseDouble(nf.format(d));
+        System.out.println(d1);
+        return (d1);
 
     }
     public void adminmatches(View view) {

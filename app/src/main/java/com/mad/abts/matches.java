@@ -131,21 +131,23 @@ public class matches extends AppCompatActivity {
         }else if(((String) bat.get(0)).equalsIgnoreCase("team1")&& !((String) overs2.get(0)).equalsIgnoreCase("0")){
             tv2.setText((String)team1.get(0)+" need "+String.valueOf(Integer.parseInt((String)runs2.get(0))-Integer.parseInt((String)runs1.get(0)))+" to win in "+String.valueOf(20-Integer.parseInt((String)overs1.get(0)))+" Overs");
             a=Integer.parseInt((String)runs2.get(0))-Integer.parseInt((String)runs1.get(0));
+            int w2 = 10 -Integer.parseInt((String)wickets1.get(0));
             if(a > 100){
-                a = (a-100)*100/100;
+                a = winchance1(a,w2);
                 b = 100-a;
             }else{
-                a = a*100/100;
+                a =  winchance2(a,w2);
                 b = 100-a;
             }
         }else if(((String)bat.get(0)).equalsIgnoreCase("team2") && !((String) overs1.get(0)).equalsIgnoreCase("0")){
             tv2.setText((String)team2.get(0)+" need "+String.valueOf(Integer.parseInt((String)runs1.get(0))-Integer.parseInt((String)runs2.get(0)))+" to win in "+String.valueOf(20-Integer.parseInt((String)overs2.get(0)))+" Overs");
             b=Integer.parseInt((String)runs1.get(0))-Integer.parseInt((String)runs2.get(0));
+            int w2 = 10 -Integer.parseInt((String)wickets2.get(0));
             if(b > 100){
-                b = (b-100)*100/100;
+                b = winchance1(b,w2);
                 a = 100-b;
             }else{
-                b = b*100/100;
+                b =  winchance2(b,w2);
                 a = 100-b;
             }
         }else{
@@ -169,21 +171,23 @@ public class matches extends AppCompatActivity {
         }else if(((String) bat.get(2)).equalsIgnoreCase("team1")&& !((String) overs2.get(2)).equalsIgnoreCase("0")){
             v2.setText((String)team1.get(2)+" need "+String.valueOf(Integer.parseInt((String)runs2.get(2))-Integer.parseInt((String)runs1.get(2)))+" to win in "+String.valueOf(20-Integer.parseInt((String)overs1.get(2)))+" Overs");
             e=Integer.parseInt((String)runs2.get(2))-Integer.parseInt((String)runs1.get(2));
+            int w1 = 10 -Integer.parseInt((String)wickets1.get(2));
             if(e > 100){
-                e = (e-100)*100/100;
+                e = winchance1(e,w1);
                 f = 100-e;
             }else{
-                e = e*100/100;
+                e =winchance2(e,w1);
                 f = 100-f;
             }
         }else if(((String)bat.get(2)).equalsIgnoreCase("team2") && !((String) overs1.get(2)).equalsIgnoreCase("0")){
             v2.setText((String)team2.get(2)+" need "+String.valueOf(Integer.parseInt((String)runs1.get(2))-Integer.parseInt((String)runs2.get(2)))+" to win in "+String.valueOf(20-Integer.parseInt((String)overs2.get(2)))+" Overs");
             f=Integer.parseInt((String)runs1.get(2))-Integer.parseInt((String)runs2.get(2));
+            int w1 = 10 -Integer.parseInt((String)wickets2.get(2));
             if(f > 100){
-                f = (f-100)*100/100;
+                f = winchance1(f,w1);
                 e = 100-f;
             }else{
-                f = f*100/100;
+                f =  winchance2(f,w1);
                 e = 100-f;
             }
         }else{
@@ -195,6 +199,7 @@ public class matches extends AppCompatActivity {
         pieEntryList.add(new PieEntry(b,(String)team2.get(0)));
         PieDataSet pieDataSet = new PieDataSet(pieEntryList,"Team");
         pieDataSet.setColors(ColorTemplate.JOYFUL_COLORS);
+        pieChart.setHoleRadius(18);
         pieChart.getDescription().setText("Team");
         pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
@@ -217,21 +222,23 @@ public class matches extends AppCompatActivity {
         }else if(((String) bat.get(1)).equalsIgnoreCase("team1")&& !((String) overs2.get(1)).equalsIgnoreCase("0")){
             t2.setText((String)team1.get(1)+" need "+String.valueOf(Integer.parseInt((String)runs2.get(1))-Integer.parseInt((String)runs1.get(1)))+" to win in "+String.valueOf(20-Integer.parseInt((String)overs1.get(1)))+" Overs");
             c=Integer.parseInt((String)runs2.get(1))-Integer.parseInt((String)runs1.get(1));
+            int w = 10 -Integer.parseInt((String)wickets1.get(1));
             if(c > 100){
-                c = (c-100)*100/100;
+                c = winchance1(c,w);
                d = 100-c;
             }else{
-                c = c*100/100;
+                c = winchance2(c,w);
                 d = 100-c;
             }
         }else if(((String)bat.get(1)).equalsIgnoreCase("team2") && !((String) overs1.get(1)).equalsIgnoreCase("0")){
             t2.setText((String)team2.get(1)+" need "+String.valueOf(Integer.parseInt((String)runs1.get(1))-Integer.parseInt((String)runs2.get(1)))+" to win in "+String.valueOf(20-Integer.parseInt((String)overs2.get(1)))+" Overs");
             d=Integer.parseInt((String)runs1.get(1))-Integer.parseInt((String)runs2.get(1));
+            int w = 10 -Integer.parseInt((String)wickets2.get(1));
             if(d > 100){
-               d = (d-100)*100/100;
+               d = winchance1(d,w);
                 c = 100-d;
             }else{
-                d = d*100/100;
+                d =  winchance2(d,w);
                 c = 100-d;
             }
         }else{
@@ -243,6 +250,7 @@ public class matches extends AppCompatActivity {
         pieEntryList2.add(new PieEntry(d,(String)team2.get(1)));
         PieDataSet pieDataSet2 = new PieDataSet(pieEntryList2,"Team");
         pieDataSet2.setColors(ColorTemplate.JOYFUL_COLORS);
+        pieChart2.setHoleRadius(18);
         pieChart2.getDescription().setText("Team");
         pieData2 = new PieData(pieDataSet2);
         pieChart2.setData(pieData2);
@@ -254,12 +262,19 @@ public class matches extends AppCompatActivity {
         pieEntryList3.add(new PieEntry(f,(String)team2.get(2)));
         PieDataSet pieDataSet3 = new PieDataSet(pieEntryList3,"Team");
         pieDataSet3.setColors(ColorTemplate.JOYFUL_COLORS);
+        pieChart3.setHoleRadius(18);
         pieChart3.getDescription().setText("Team");
         pieData3 = new PieData(pieDataSet3);
         pieChart3.setData(pieData3);
         pieChart3.invalidate();
         System.out.println(team1);
 
+    }
+    public int winchance1(int a, int b){
+        return (((a-100)*100)/100)+(b*3);
+    }
+    public int winchance2(int a, int b){
+        return (100-((a*100)/100))-((10-b)*3);
     }
     public void matches(View view) {
         Intent intent = new Intent(this, matches.class);

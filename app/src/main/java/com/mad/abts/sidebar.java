@@ -53,4 +53,12 @@ public class sidebar extends AppCompatActivity {
         Intent intent = new Intent(this, adminhome.class);
         startActivity(intent);
     }
+    public void createacc(View view) {
+        Intent intent = new Intent(this, createaccount.class);
+        startActivity(intent);
+    }
+    public void login(View view) {
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
+    }
 }
