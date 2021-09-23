@@ -1,43 +1,33 @@
 package com.mad.abts;
 
-import junit.framework.TestCase;
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 import java.text.NumberFormat;
 
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
-import java.text.NumberFormat;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.*;
-public class teamstatsTest extends TestCase {
-    private teamstats tstats;
-    @Before
-    public void setUp() throws Exception {
-        tstats = new teamstats();
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
+public class teamstatsTest {
+    @Rule
+    public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
     @Test
     public void calPoints() {
+        teamstats tstats = new teamstats();
         int result = tstats.calPoints(6,2);
-
-        assertEquals(14,result);
+        assertEquals(14,result,.1);
     }
 
     @Test
     public void calWinPerc() {
+        teamstats tstats = new teamstats();
         NumberFormat nf= NumberFormat.getInstance();
         nf.setMaximumFractionDigits(2);
-        double result = tstats.calWinPerc(7,4);
+        double result = tstats.calWinPerc(4,6);
         result = Double.parseDouble(nf.format(result));
-        assertEquals(57.14,result);
+        assertEquals(66.66,result,.1);
     }
 }

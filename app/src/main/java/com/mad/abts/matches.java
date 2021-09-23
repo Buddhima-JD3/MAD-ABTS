@@ -134,9 +134,17 @@ public class matches extends AppCompatActivity {
             int w2 = 10 -Integer.parseInt((String)wickets1.get(0));
             if(a > 100){
                 a = winchance1(a,w2);
+                if(a>100){
+                    a = 99;
+                }
                 b = 100-a;
             }else{
                 a =  winchance2(a,w2);
+                if(b<0){
+                    a = 1;
+                }else if(b > 100){
+                    b = 99;
+                }
                 b = 100-a;
             }
         }else if(((String)bat.get(0)).equalsIgnoreCase("team2") && !((String) overs1.get(0)).equalsIgnoreCase("0")){
@@ -145,9 +153,17 @@ public class matches extends AppCompatActivity {
             int w2 = 10 -Integer.parseInt((String)wickets2.get(0));
             if(b > 100){
                 b = winchance1(b,w2);
+                if(b>100){
+                    b = 99;
+                }
                 a = 100-b;
             }else{
                 b =  winchance2(b,w2);
+                if(b<0){
+                    b = 1;
+                }else if(b > 100){
+                    b = 99;
+                }
                 a = 100-b;
             }
         }else{
@@ -174,9 +190,17 @@ public class matches extends AppCompatActivity {
             int w1 = 10 -Integer.parseInt((String)wickets1.get(2));
             if(e > 100){
                 e = winchance1(e,w1);
+                if(e>100){
+                    e = 99;
+                }
                 f = 100-e;
             }else{
                 e =winchance2(e,w1);
+                if(e<0){
+                    e = 1;
+                }else if(e > 100){
+                    e = 99;
+                }
                 f = 100-f;
             }
         }else if(((String)bat.get(2)).equalsIgnoreCase("team2") && !((String) overs1.get(2)).equalsIgnoreCase("0")){
@@ -185,9 +209,17 @@ public class matches extends AppCompatActivity {
             int w1 = 10 -Integer.parseInt((String)wickets2.get(2));
             if(f > 100){
                 f = winchance1(f,w1);
+                if(f>100){
+                    f = 99;
+                }
                 e = 100-f;
             }else{
                 f =  winchance2(f,w1);
+                if(f<0){
+                    f = 1;
+                }else if(f > 100){
+                    f = 99;
+                }
                 e = 100-f;
             }
         }else{
@@ -225,9 +257,17 @@ public class matches extends AppCompatActivity {
             int w = 10 -Integer.parseInt((String)wickets1.get(1));
             if(c > 100){
                 c = winchance1(c,w);
+                if(c >100){
+                    c = 99;
+                }
                d = 100-c;
             }else{
                 c = winchance2(c,w);
+                if(c<0){
+                    c = 1;
+                }else if(c > 100){
+                    c = 99;
+                }
                 d = 100-c;
             }
         }else if(((String)bat.get(1)).equalsIgnoreCase("team2") && !((String) overs1.get(1)).equalsIgnoreCase("0")){
@@ -236,9 +276,17 @@ public class matches extends AppCompatActivity {
             int w = 10 -Integer.parseInt((String)wickets2.get(1));
             if(d > 100){
                d = winchance1(d,w);
+               if(d >100){
+                   d = 99;
+               }
                 c = 100-d;
             }else{
                 d =  winchance2(d,w);
+                if(d<0){
+                    d = 1;
+                }else if(d > 100){
+                    d = 99;
+                }
                 c = 100-d;
             }
         }else{
@@ -274,7 +322,7 @@ public class matches extends AppCompatActivity {
         return (((a-100)*100)/100)+(b*3);
     }
     public int winchance2(int a, int b){
-        return (100-((a*100)/100))-((10-b)*3);
+        return (120-((a*100)/100))-((10-b)*3);
     }
     public void matches(View view) {
         Intent intent = new Intent(this, matches.class);

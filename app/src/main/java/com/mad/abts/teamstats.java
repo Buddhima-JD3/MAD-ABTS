@@ -78,7 +78,7 @@ public class teamstats extends AppCompatActivity {
 
         return (2*a)+b;
     }
-    public Double calWinPerc(int a, int b){
+    public double calWinPerc(int a, int b){
 
         NumberFormat nf= NumberFormat.getInstance();
         nf.setMaximumFractionDigits(2);
@@ -86,7 +86,7 @@ public class teamstats extends AppCompatActivity {
         double d = (float)(a*100)/b;
         double d1 = Double.parseDouble(nf.format(d));
         System.out.println(d1);
-        return (d1);
+        return d1;
 
     }
     public void adminmatches(View view) {

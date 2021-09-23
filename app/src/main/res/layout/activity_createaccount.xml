@@ -303,19 +303,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.473" />
 
-    <CheckBox
-        android:id="@+id/terms"
-        android:layout_width="207dp"
-        android:layout_height="44dp"
-        android:hint="@string/terms"
-        android:text="@string/terms"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.357"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733" />
-
     <TextView
         android:id="@+id/myprofile"
         android:layout_width="220dp"
@@ -336,6 +323,7 @@
         android:id="@+id/create"
         android:layout_width="204dp"
         android:layout_height="48dp"
+        android:onClick="savedata"
         android:text="@string/create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -343,23 +331,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.819" />
-
-    <EditText
-        android:id="@+id/phonenumberenter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/phonenumberenter"
-        android:inputType="number"
-        android:text="@string/fullname"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.381" />
 
     <EditText
         android:id="@+id/fullnameinput2"
@@ -373,9 +344,9 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292" />
+        app:layout_constraintVertical_bias="0.381" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
