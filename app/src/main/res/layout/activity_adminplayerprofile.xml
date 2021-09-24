@@ -8,6 +8,7 @@
     tools:context=".adminplayerprofile">
 
     <RelativeLayout
+        android:id="@+id/layoutadmin111"
         android:id="@+id/relativelayout"
         android:layout_width="412dp"
         android:layout_height="70dp"
@@ -241,7 +242,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/admin"
+            android:id="@+id/admin111"
             android:layout_width="wrap_content"
             android:layout_height="27dp"
             android:layout_alignParentStart="true"
