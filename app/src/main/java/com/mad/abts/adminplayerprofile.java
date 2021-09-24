@@ -48,21 +48,7 @@ public class adminplayerprofile extends AppCompatActivity {
         setContentView(R.layout.activity_adminplayerprofile);
         context=this;
 
-        playername = findViewById(R.id.enterplayername);
-        teamname = findViewById(R.id.enterteamname);
-        dob = findViewById(R.id.dob2);
-        country = findViewById(R.id.countryadmin2);
-        role = findViewById(R.id.roleadmin2);
-        battingstyle = findViewById(R.id.batstyle2);
-        bowlingstyle = findViewById(R.id.bowlstyle1);
-        matches = findViewById(R.id.matadmin2);
-        runs = findViewById(R.id.runsadmin2);
-        fiftieshundreds = findViewById(R.id.hunadmin2);
-        boundaries = findViewById(R.id.fouradmin2);
-        overs = findViewById(R.id.oversadmin2);
-        wickets = findViewById(R.id.wktsadmin2);
-        economy = findViewById(R.id.econadmin2);
-        wickethauls = findViewById(R.id.threeadmin2);
+
 
         cameraPermisiion =new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermssion = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
