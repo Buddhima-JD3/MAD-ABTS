@@ -3,17 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/acer/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_admin_playerspage.xml" value="0.25025641025641027" />
-        <entry key="..\:/Users/acer/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_adminmatches.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/acer/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_adminplayerprofile.xml" value="0.4" />
-        <entry key="..\:/Users/acer/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_matches.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/acer/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_playerpage.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_adminmatches.xml" value="0.22" />
         <entry key="..\:/Users/HP/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_matches.xml" value="0.25" />
         <entry key="..\:/Users/HP/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_teams2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_teams4.xml" value="0.22" />
         <entry key="..\:/Users/HP/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_teams5.xml" value="0.22" />
-        <entry key="..\:/Users/HP/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_teams6.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_teams6.xml" value="0.25" />
         <entry key="..\:/Users/HP/Desktop/MAD Final/MAD-ABTS/app/src/main/res/layout/activity_teamstats.xml" value="0.20416666666666666" />
       </map>
     </option>
