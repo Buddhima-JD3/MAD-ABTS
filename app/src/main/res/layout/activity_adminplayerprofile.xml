@@ -283,7 +283,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/dob2"
             android:layout_width="92dp"
             android:layout_height="21dp"
             android:layout_alignParentStart="true"
@@ -325,7 +325,7 @@
             android:text="Name" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/roleadmin2"
             android:layout_width="92dp"
             android:layout_height="23dp"
             android:layout_alignParentEnd="true"
@@ -340,7 +340,7 @@
             android:textSize="10sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/batstyle2"
             android:layout_width="92dp"
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
