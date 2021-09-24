@@ -74,7 +74,7 @@
             android:layout_marginEnd="28dp"
             android:layout_marginRight="28dp"
             android:layout_marginBottom="361dp"
-            android:onClick="players"
+            android:onClick="adminPlayerspage"
             android:text="PLAYERS"
             android:textColor="#000000"
             app:backgroundTint="#FFFFFF" />
