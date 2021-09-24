@@ -24,7 +24,7 @@ public class DBHelperAnu extends SQLiteOpenHelper {
                 PlayerProfile.Player.COLUMN_NAME_PLAYERNAME+"TEXT,"+
                 PlayerProfile.Player.COLUMN_NAME_PHOTO+"BLOB,"+
                 PlayerProfile.Player.COLUMN_NAME_TEAMNAME+"TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_DOB+"INTEGER,"+
+                PlayerProfile.Player.COLUMN_NAME_DOB+"TEXT,"+
                 PlayerProfile.Player.COLUMN_NAME_COUNTRY+"TEXT,"+
                 PlayerProfile.Player.COLUMN_NAME_ROLE+"TEXT,"+
                 PlayerProfile.Player.COLUMN_NAME_BATSTYLE+"TEXT,"+
@@ -39,29 +39,10 @@ public class DBHelperAnu extends SQLiteOpenHelper {
                 PlayerProfile.Player.COLUMN_NAME_WICKETHAULS+"INTEGER)";
 
         db.execSQL(SQL_CREATE_ENTRIES);
-        db.execSQL("CREATE TABLE "+ PlayerProfile.Player.TABLE_NAME+
-                " ("+PlayerProfile.Player._ID+" INTEGER PRIMARY KEY,"+
-                PlayerProfile.Player.COLUMN_NAME_PLAYERNAME+" TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_PHOTO+" BLOB,"+
-                PlayerProfile.Player.COLUMN_NAME_PLAYERNAME+" TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_TEAMNAME+" TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_DOB+" INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_COUNTRY+" TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_ROLE+" TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_BATSTYLE+" TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_BOWLSTYLE+" TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_MATCHES+" INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_RUNS+" INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_HUNDREDS+" INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_BOUNDARIES+" INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_OVERS+" INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_WICKETS+" INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_ECONOMY+" INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_WICKETHAULS+" INTEGER)");
     }
 
-    public Long addPlayer(byte [] photo , String playername, String teamname, int dob, String country, String role, String battingstyle, String bowlingstyle, int matches,
-                          int runs, int fiftieshundreds, int boundaries, int overs, int wickets, double economy, int wickethauls){
+    public Long addPlayer(byte [] photo , String playername, String teamname, String dob, String country, String role, String battingstyle, String bowlingstyle, int matches,
+                          int runs, int fiftieshundreds, int boundaries, double overs, int wickets, double economy, int wickethauls){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values  = new ContentValues();
         values.put(PlayerProfile.Player.COLUMN_NAME_PHOTO,photo);
