@@ -47,4 +47,15 @@ public class adminsidebar extends AppCompatActivity {
         startActivity(ordintent);
     }
 
+    public void adminplayerprofile(View view) {
+        Intent intent = new Intent(this, adminplayerprofile.class);
+        startActivity(intent);
+    }
+
+    public void adminPlayerspage(View view) {
+        Intent intent = new Intent(this, adminPlayerspage.class);
+        startActivity(intent);
+    }
+
+
 }

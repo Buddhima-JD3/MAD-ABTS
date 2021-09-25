@@ -68,8 +68,8 @@
 
         <ImageView
             android:id="@+id/pic2"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_width="341dp"
+            android:layout_height="114dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -78,10 +78,10 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginBottom="29dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="23dp"
             app:srcCompat="@drawable/_dkdrzvdxsph9ip8_1607931959" />
 
         <TextView
