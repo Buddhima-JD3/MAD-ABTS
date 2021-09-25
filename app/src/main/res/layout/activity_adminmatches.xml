@@ -7,7 +7,7 @@
     tools:context=".adminmatches">
 
     <RelativeLayout
-        android:id="@+id/layoutadmin"
+        android:id="@+id/layoutadmin111"
         android:layout_width="413dp"
         android:layout_height="49dp"
         android:background="#808080"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/admin"
+            android:id="@+id/admin111"
             android:layout_width="wrap_content"
             android:layout_height="27dp"
             android:layout_alignParentStart="true"
