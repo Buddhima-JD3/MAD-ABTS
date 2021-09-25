@@ -50,6 +50,22 @@ public class adminplayerprofile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminplayerprofile);
         context=this;
+        photo = findViewById(R.id.imageicon);
+        playername = (EditText) findViewById(R.id.enterplayername);
+        teamname = (EditText) findViewById(R.id.enterteamname);
+        country = (EditText) findViewById(R.id.countryadmin2);
+        role = (EditText) findViewById(R.id.roleadmin2);
+        dob = (EditText) findViewById(R.id.dob2);
+        battingstyle = (EditText) findViewById(R.id.batstyle2);
+        bowlingstyle = (EditText) findViewById(R.id.bowlstyle1);
+        matches = (EditText) findViewById(R.id.matadmin2);
+        runs = (EditText) findViewById(R.id.runsadmin2);
+        fiftieshundreds = (EditText) findViewById(R.id.hunadmin2);
+        boundaries = (EditText) findViewById(R.id.fouradmin2);
+        overs = (EditText) findViewById(R.id.oversadmin2);
+        wickets = (EditText) findViewById(R.id.wktsadmin2);
+        economy = (EditText) findViewById(R.id.econadmin2);
+        wickethauls = (EditText) findViewById(R.id.threeadmin2);
         cameraPermisiion =new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermssion = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
@@ -137,6 +153,40 @@ public class adminplayerprofile extends AppCompatActivity {
                     overs1, wicket1, econ, haul1);
         }
     }
+
+    public void updatePlayer(View view){
+        pname = playername.getText().toString();
+        tname = teamname.getText().toString();
+        country1 = country.getText().toString();
+        role1 = role.getText().toString();
+        bat1 = battingstyle.getText().toString();
+        bowl1 = bowlingstyle.getText().toString();
+        dob1 = dob.getText().toString();
+        runs1 = 0;
+        matches1 = 0;
+        fifty1 = 0;
+        bound1 = 0;
+        overs1 = 0;
+        wicket1 = 0;
+        haul1 = 0;
+        econ = 0;
+        byte[] image1 = imageViewToByte(photo);
+        DBHelperAnu dbHelper =  new DBHelperAnu(this);
+        if(pname.isEmpty()||tname.isEmpty() || country1.isEmpty() || role1.isEmpty() || bat1.isEmpty() || bowl1.isEmpty() || dob1.isEmpty()){
+            Toast.makeText(this,"Enter Player", Toast.LENGTH_SHORT).show();
+        }else{
+            dbHelper.updatePlayer(image1, pname,tname, dob1, country1, role1, bat1, bowl1, matches1, runs1, fifty1, bound1,
+                    overs1, wicket1, econ, haul1);
+        }
+    }
+
+    public void deletePlayer(View view){
+        pname = playername.getText().toString();
+
+        DBHelper dbHelper =  new DBHelper(this);
+        dbHelper.deleteStats(pname);
+    }
+
 
     public void adminplayerprofile(View view) {
         Intent intent = new Intent(this, adminplayerprofile.class);

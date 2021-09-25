@@ -21,22 +21,22 @@ public class DBHelperAnu extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String SQL_CREATE_ENTRIES = "CREATE TABLE "+PlayerProfile.Player.TABLE_NAME+
                 " ("+PlayerProfile.Player._ID+" INTEGER PRIMARY KEY,"+
-                PlayerProfile.Player.COLUMN_NAME_PLAYERNAME+"TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_PHOTO+"BLOB,"+
-                PlayerProfile.Player.COLUMN_NAME_TEAMNAME+"TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_DOB+"TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_COUNTRY+"TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_ROLE+"TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_BATSTYLE+"TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_BOWLSTYLE+"TEXT,"+
-                PlayerProfile.Player.COLUMN_NAME_MATCHES+"INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_RUNS+"INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_HUNDREDS+"INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_BOUNDARIES+"INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_OVERS+"INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_WICKETS+"INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_ECONOMY+"INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_WICKETHAULS+"INTEGER)";
+                PlayerProfile.Player.COLUMN_NAME_PLAYERNAME+" TEXT,"+
+                PlayerProfile.Player.COLUMN_NAME_PHOTO+" BLOB,"+
+                PlayerProfile.Player.COLUMN_NAME_TEAMNAME+" TEXT,"+
+                PlayerProfile.Player.COLUMN_NAME_DOB+" TEXT,"+
+                PlayerProfile.Player.COLUMN_NAME_COUNTRY+" TEXT,"+
+                PlayerProfile.Player.COLUMN_NAME_ROLE+" TEXT,"+
+                PlayerProfile.Player.COLUMN_NAME_BATSTYLE+" TEXT,"+
+                PlayerProfile.Player.COLUMN_NAME_BOWLSTYLE+" TEXT,"+
+                PlayerProfile.Player.COLUMN_NAME_MATCHES+" INTEGER,"+
+                PlayerProfile.Player.COLUMN_NAME_RUNS+" INTEGER,"+
+                PlayerProfile.Player.COLUMN_NAME_HUNDREDS+" INTEGER,"+
+                PlayerProfile.Player.COLUMN_NAME_BOUNDARIES+" INTEGER,"+
+                PlayerProfile.Player.COLUMN_NAME_OVERS+" REAL,"+
+                PlayerProfile.Player.COLUMN_NAME_WICKETS+" INTEGER,"+
+                PlayerProfile.Player.COLUMN_NAME_ECONOMY+" REAL,"+
+                PlayerProfile.Player.COLUMN_NAME_WICKETHAULS+" INTEGER)";
 
         db.execSQL(SQL_CREATE_ENTRIES);
     }
@@ -65,8 +65,9 @@ public class DBHelperAnu extends SQLiteOpenHelper {
 
         return db.insert(PlayerProfile.Player.TABLE_NAME,null, values);
     }
-    public void updateMatch(byte [] photo , String playername, String teamname, String dob, String country, String role, String battingstyle, String bowlingstyle, int matches,
-                            int runs, int fiftieshundreds, int boundaries, double overs, int wickets, double economy, int wickethauls){
+
+    public void updatePlayer(byte [] photo , String playername, String teamname, String dob, String country, String role, String battingstyle, String bowlingstyle, int matches,
+                             int runs, int fiftieshundreds, int boundaries, double overs, int wickets, double economy, int wickethauls){
 
         SQLiteDatabase db = getReadableDatabase();
         ContentValues values = new ContentValues();
@@ -93,7 +94,12 @@ public class DBHelperAnu extends SQLiteOpenHelper {
         );
     }
 
-
+    public void deletePlayer(String playername){
+        SQLiteDatabase db = getReadableDatabase();
+        String selection = PlayerProfile.Player.COLUMN_NAME_PLAYERNAME+" LIKE ?";
+        String[] selectionArgs = {playername};
+        db.delete(MatchStats.MStats.TABLE_NAME,selection,selectionArgs);
+    }
 
 
     @Override

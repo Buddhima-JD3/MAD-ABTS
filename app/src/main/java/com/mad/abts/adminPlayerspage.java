@@ -14,6 +14,8 @@ public class adminPlayerspage extends AppCompatActivity {
         setContentView(R.layout.activity_admin_playerspage);
     }
 
+
+
     public void adminplayerprofile(View view) {
         Intent intent = new Intent(this, adminplayerprofile.class);
         startActivity(intent);
