@@ -412,4 +412,5 @@
     <string name="adminproductqty">edit quantity</string>
     <string name="admindelete">delete  product</string>
     <string name="adminedit">edit product</string>
+    <string name="UpdateBtn">Update</string>
 </resources>
