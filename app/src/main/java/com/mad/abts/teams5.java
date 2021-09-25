@@ -180,7 +180,7 @@ public class teams5 extends AppCompatActivity {
         if (mvenname1.isEmpty() || mvenname2.isEmpty() || mvenname3.isEmpty() || mvenname4.isEmpty() || mvenname5.isEmpty()) {
             Toast.makeText(this, "Enter Venues", Toast.LENGTH_SHORT).show();
         } else {
-            Long inserted = dbHelper.addTeams(imges1, mvenname1, imges2, mvenname2, imges3, mvenname3, imges4, mvenname4, imges5, mvenname5);
+            Long inserted = dbHelper.addVenues(imges1, mvenname1, imges2, mvenname2, imges3, mvenname3, imges4, mvenname4, imges5, mvenname5);
         }
     }
 }

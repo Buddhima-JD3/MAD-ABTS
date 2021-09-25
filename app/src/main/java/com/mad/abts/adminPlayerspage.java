@@ -15,7 +15,7 @@ public class adminPlayerspage extends AppCompatActivity {
     }
 
     public void adminplayerprofile(View view) {
-        Intent intent = new Intent(this, adminPlayerspage.class);
+        Intent intent = new Intent(this, adminplayerprofile.class);
         startActivity(intent);
     }
 
@@ -23,7 +23,6 @@ public class adminPlayerspage extends AppCompatActivity {
         Intent intent = new Intent(this, adminPlayerspage.class);
         startActivity(intent);
     }
-
     public void adminmatches(View view) {
         Intent intent = new Intent(this, adminmatches.class);
         startActivity(intent);
