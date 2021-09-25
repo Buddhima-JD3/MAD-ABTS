@@ -65,6 +65,36 @@ public class DBHelperAnu extends SQLiteOpenHelper {
 
         return db.insert(PlayerProfile.Player.TABLE_NAME,null, values);
     }
+    public void updateMatch(byte [] photo , String playername, String teamname, String dob, String country, String role, String battingstyle, String bowlingstyle, int matches,
+                            int runs, int fiftieshundreds, int boundaries, double overs, int wickets, double economy, int wickethauls){
+
+        SQLiteDatabase db = getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(PlayerProfile.Player.COLUMN_NAME_PHOTO,photo);
+        values.put(PlayerProfile.Player.COLUMN_NAME_PLAYERNAME,playername);
+        values.put(PlayerProfile.Player.COLUMN_NAME_TEAMNAME,teamname);
+        values.put(PlayerProfile.Player.COLUMN_NAME_DOB,dob);
+        values.put(PlayerProfile.Player.COLUMN_NAME_COUNTRY,country);
+        values.put(PlayerProfile.Player.COLUMN_NAME_ROLE,role);
+        values.put(PlayerProfile.Player.COLUMN_NAME_BATSTYLE,battingstyle);
+        values.put(PlayerProfile.Player.COLUMN_NAME_BOWLSTYLE,bowlingstyle);
+        values.put(PlayerProfile.Player.COLUMN_NAME_MATCHES,matches);
+        values.put(PlayerProfile.Player.COLUMN_NAME_RUNS,runs);
+        values.put(PlayerProfile.Player.COLUMN_NAME_HUNDREDS,fiftieshundreds);
+        values.put(PlayerProfile.Player.COLUMN_NAME_BOUNDARIES,boundaries);
+        values.put(PlayerProfile.Player.COLUMN_NAME_OVERS,overs);
+        values.put(PlayerProfile.Player.COLUMN_NAME_WICKETS,wickets);
+        values.put(PlayerProfile.Player.COLUMN_NAME_ECONOMY,economy);
+        values.put(PlayerProfile.Player.COLUMN_NAME_WICKETHAULS,wickethauls);
+        String selection = PlayerProfile.Player.COLUMN_NAME_PLAYERNAME+" LIKE ?";
+        String[] selectionArgs = {String.valueOf(playername)};
+        int count = db.update(
+                PlayerProfile.Player.TABLE_NAME, values, selection, selectionArgs
+        );
+    }
+
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
