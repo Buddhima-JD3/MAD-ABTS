@@ -148,4 +148,8 @@ public class teams6 extends AppCompatActivity{
         Intent intent = new Intent(this, teams6.class);
         startActivity(intent);
     }
+    public void teams5(View view) {
+        Intent intent = new Intent(this, teams5.class);
+        startActivity(intent);
+    }
 }

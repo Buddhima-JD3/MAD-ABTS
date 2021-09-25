@@ -18,6 +18,10 @@ public class adminhome extends AppCompatActivity {
         Intent intent = new Intent(this, adminmatches.class);
         startActivity(intent);
     }
+    public void adminteam(View view) {
+        Intent intent = new Intent(this, teams4.class);
+        startActivity(intent);
+    }
     public void admin(View view) {
         Intent intent = new Intent(this, adminhome.class);
         startActivity(intent);
@@ -30,4 +34,5 @@ public class adminhome extends AppCompatActivity {
         Intent ordintent = new Intent(this, adminOrders.class);
         startActivity(ordintent);
     }
+
 }

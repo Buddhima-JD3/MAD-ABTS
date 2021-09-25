@@ -233,6 +233,7 @@
         android:layout_width="335dp"
         android:layout_height="93dp"
         android:background="#DFDADA"
+        android:onClick="team1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
