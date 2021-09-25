@@ -12,6 +12,7 @@ public class AllTeams {
         public static final String TABLE_NAME = "allteams";
         public static final String COLUMN_NAME_LOGO = "logo";
         public static final String COLUMN_NAME_TEAM = "team";
+        public static final String COLUMN_NAME_CAPTAIN = "captain";
 
     }
 }

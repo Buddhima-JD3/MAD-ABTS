@@ -12,10 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ABTS">
-        <activity android:name=".shopCaps"></activity>
+        <activity
+            android:name=".team2"
+            android:exported="true" />
+        <activity android:name=".shopCaps" />
         <activity android:name=".adminsidebar" />
         <activity android:name=".adminhome" />
         <activity android:name=".teams3" />
+        <activity android:name=".teams4" />
         <activity android:name=".playerpage" />
         <activity android:name=".teams" />
         <activity android:name=".adminproduct1" />
