@@ -6,8 +6,246 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundclr"
     tools:context=".addnewproduct">
+
+    <EditText
+        android:id="@+id/categoryin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/productname"
+        android:ems="10"
+        android:hint="Shirt/Cap"
+        android:inputType="textPersonName"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newproductview1"
+        app:layout_constraintVertical_bias="0.549" />
+
     <RelativeLayout
-        android:id="@+id/layoutadmin"
+        android:id="@+id/relativelayout"
+        android:layout_width="412dp"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/hometab"
+            android:layout_width="46dp"
+            android:layout_height="29dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="334dp"
+            android:layout_marginRight="334dp"
+            android:layout_marginBottom="6dp"
+            android:onClick="admin"
+            android:text="HOME"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/matchestab"
+            android:layout_width="70dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="105dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="237dp"
+            android:layout_marginRight="237dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="adminmatches"
+            android:text="MATCHES"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/teamtab"
+            android:layout_width="58dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="202dp"
+            android:layout_marginLeft="202dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="152dp"
+            android:layout_marginRight="152dp"
+            android:layout_marginBottom="3dp"
+            android:text="TEAM"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shoptab"
+            android:layout_width="56dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="283dp"
+            android:layout_marginLeft="283dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="73dp"
+            android:layout_marginRight="73dp"
+            android:layout_marginBottom="2dp"
+            android:onClick="adminOrders"
+            android:text="SHOP"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/moretab"
+            android:layout_width="56dp"
+            android:layout_height="31dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="347dp"
+            android:layout_marginLeft="347dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginBottom="3dp"
+            android:background="#FFFFFF"
+            android:onClick="adminsidebar"
+            android:text="MORE"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/homeicon"
+            android:layout_width="44dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="337dp"
+            android:layout_marginRight="337dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/home"
+            android:onClick="admin"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/matchesicon"
+            android:layout_width="53dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="113dp"
+            android:layout_marginLeft="113dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="246dp"
+            android:layout_marginRight="246dp"
+            android:layout_marginBottom="35dp"
+            android:contentDescription="@string/matchesicon1"
+            android:onClick="adminmatches"
+            app:srcCompat="@drawable/matches" />
+
+        <ImageView
+            android:id="@+id/teamicon"
+            android:layout_width="54dp"
+            android:layout_height="39dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="195dp"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="163dp"
+            android:layout_marginRight="163dp"
+            android:layout_marginBottom="31dp"
+            android:contentDescription="@string/teamicon1"
+            android:onClick="teams"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/team" />
+
+        <ImageView
+            android:id="@+id/shopicon"
+            android:layout_width="65dp"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="267dp"
+            android:layout_marginLeft="267dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="34dp"
+            android:contentDescription="@string/shopicon"
+            android:onClick="adminOrders"
+            app:srcCompat="@drawable/shop" />
+
+        <ImageView
+            android:id="@+id/moreicon"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="320dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="33dp"
+            android:contentDescription="@string/moreicon"
+            android:onClick="adminsidebar"
+            app:srcCompat="@drawable/more" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutadmin111"
         android:layout_width="413dp"
         android:layout_height="49dp"
         android:background="#808080"
@@ -19,7 +257,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/admin"
+            android:id="@+id/admin111"
             android:layout_width="wrap_content"
             android:layout_height="27dp"
             android:layout_alignParentStart="true"
@@ -39,20 +277,21 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </RelativeLayout>
+
     <TextView
         android:id="@+id/newproductview"
-        android:layout_width="269dp"
-        android:layout_height="50dp"
+        android:layout_width="198dp"
+        android:layout_height="41dp"
         android:text="@string/newproductview"
         android:textColor="@color/black"
-        android:textSize="34sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <TextView
         android:id="@+id/newproductview1"
@@ -161,7 +400,7 @@
         android:id="@+id/newproductview5"
         android:layout_width="158dp"
         android:layout_height="36dp"
-        android:text="@string/newproductview5"
+        android:text="Category"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -169,32 +408,6 @@
         app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newproductquantity"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/newproductcategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
-        android:text="@string/newproductcategory"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newproductview5"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/newproductcategory2"
-        android:layout_width="69dp"
-        android:layout_height="44dp"
-        android:text="@string/newproductcategory2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toEndOf="@+id/newproductcategory"
-        app:layout_constraintTop_toBottomOf="@+id/newproductview5"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -215,46 +428,30 @@
 
     <ImageView
         android:id="@+id/newproductimg"
-        android:layout_width="105dp"
-        android:layout_height="120dp"
+        android:layout_width="84dp"
+        android:layout_height="98dp"
+        android:layout_marginBottom="120dp"
         android:contentDescription="@string/newproductimg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newproductcategory2"
-        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/s1" />
-
-    <Button
-        android:id="@+id/newproductuploadbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/productdetails"
-        android:text="@string/newpeoductuploadbtn"
-        android:textColor="@color/productdetailsbtn"
-        app:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newproductimg"
-        app:layout_constraintVertical_bias="0.447" />
 
     <Button
         android:id="@+id/savebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/productdetails"
-        android:onClick="adminOrders"
+        android:onClick="savenewProduct"
         android:text="@string/savebtn"
         android:textColor="@color/productdetailsbtn"
         app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toEndOf="@+id/newproductuploadbtn"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newproductimg"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -631,7 +631,7 @@
             android:layout_marginRight="209dp"
             android:layout_marginBottom="69dp"
             android:ems="10"
-            android:hint="@string/runsin1"
+            android:hint="0/1"
             android:importantForAutofill="no"
             android:inputType="number"
             android:textSize="10sp" />
@@ -653,7 +653,7 @@
             android:layout_marginRight="53dp"
             android:layout_marginBottom="67dp"
             android:ems="10"
-            android:hint="@string/runsin1"
+            android:hint="0/1"
             android:importantForAutofill="no"
             android:inputType="number"
             android:textSize="10sp" />
