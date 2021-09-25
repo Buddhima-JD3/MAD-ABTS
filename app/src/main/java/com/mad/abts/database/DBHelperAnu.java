@@ -65,7 +65,8 @@ public class DBHelperAnu extends SQLiteOpenHelper {
 
         return db.insert(PlayerProfile.Player.TABLE_NAME,null, values);
     }
-    public void updateMatch(byte [] photo , String playername, String teamname, String dob, String country, String role, String battingstyle, String bowlingstyle, int matches,
+
+    public void updatePlayer(byte [] photo , String playername, String teamname, String dob, String country, String role, String battingstyle, String bowlingstyle, int matches,
                             int runs, int fiftieshundreds, int boundaries, double overs, int wickets, double economy, int wickethauls){
 
         SQLiteDatabase db = getReadableDatabase();
@@ -92,9 +93,6 @@ public class DBHelperAnu extends SQLiteOpenHelper {
                 PlayerProfile.Player.TABLE_NAME, values, selection, selectionArgs
         );
     }
-
-
-
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
