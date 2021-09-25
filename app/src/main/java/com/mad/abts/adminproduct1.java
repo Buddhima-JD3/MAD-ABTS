@@ -59,31 +59,35 @@ public class adminproduct1 extends AppCompatActivity {
         pqty1=dbHelper.readProductUserCap4();
         pimages1=dbHelper.readProductUserCap3();
         idc = dbHelper.readProductUserCap5();
+        String x = (String) pname.get(1);
+        if(x.isEmpty()){
 
-        tv1.setText((String)pname.get(0));
-        tv2.setText((String)pname.get(1));
-        tv3.setText((String)pname1.get(0));
-        tv4.setText((String)pname1.get(1));
+        }else {
+            tv1.setText((String) pname.get(0));
+            tv2.setText((String) pname.get(1));
+            tv3.setText((String) pname1.get(0));
+            tv4.setText((String) pname1.get(1));
 
-        tv5.setText((String)pqty.get(0));
-        tv6.setText((String)pqty.get(1));
-        tv7.setText((String)pqty1.get(0));
-        tv8.setText((String)pqty1.get(1));
+            tv5.setText((String) pqty.get(0));
+            tv6.setText((String) pqty.get(1));
+            tv7.setText((String) pqty1.get(0));
+            tv8.setText((String) pqty1.get(1));
 
-        byte[] img1 = (byte[])pimages.get(0);
-        byte[] img2 = (byte[])pimages.get(1);
-        byte[] img3 = (byte[])pimages1.get(0);
-        byte[] img4 = (byte[])pimages1.get(1);
+            byte[] img1 = (byte[]) pimages.get(0);
+            byte[] img2 = (byte[]) pimages.get(1);
+            byte[] img3 = (byte[]) pimages1.get(0);
+            byte[] img4 = (byte[]) pimages1.get(1);
 
-        Bitmap bitmap1 = BitmapFactory.decodeByteArray(img1,0,img1.length);
-        Bitmap bitmap2 = BitmapFactory.decodeByteArray(img2,0,img2.length);
-        Bitmap bitmap3 = BitmapFactory.decodeByteArray(img3,0,img3.length);
-        Bitmap bitmap4 = BitmapFactory.decodeByteArray(img4,0,img4.length);
+            Bitmap bitmap1 = BitmapFactory.decodeByteArray(img1, 0, img1.length);
+            Bitmap bitmap2 = BitmapFactory.decodeByteArray(img2, 0, img2.length);
+            Bitmap bitmap3 = BitmapFactory.decodeByteArray(img3, 0, img3.length);
+            Bitmap bitmap4 = BitmapFactory.decodeByteArray(img4, 0, img4.length);
 
-        im1.setImageBitmap(bitmap1);
-        im2.setImageBitmap(bitmap2);
-        im3.setImageBitmap(bitmap3);
-        im4.setImageBitmap(bitmap4);
+            im1.setImageBitmap(bitmap1);
+            im2.setImageBitmap(bitmap2);
+            im3.setImageBitmap(bitmap3);
+            im4.setImageBitmap(bitmap4);
+        }
 
     }
     public void editQty1(View view){
