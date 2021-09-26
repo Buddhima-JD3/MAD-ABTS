@@ -63,7 +63,7 @@ public class adminproduct1 extends AppCompatActivity {
         pqty1=dbHelper.readProductUserCap4();
         pimages1=dbHelper.readProductUserCap3();
         idc = dbHelper.readProductUserCap5();
-        if(pname1.size() == 0 && pname.size() == 0){
+        if(pname1.size() == 0 || pname.size() == 0){
 
         }else {
             tv1.setText((String) pname.get(0));
