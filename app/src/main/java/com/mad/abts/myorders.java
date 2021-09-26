@@ -42,7 +42,9 @@ public class myorders extends AppCompatActivity {
     }public void GoLeft(View view){
         Intent goleftintent = new Intent(this, shopCaps.class);
         startActivity(goleftintent);
-
-
+   }
+    public void shopcap(View view) {
+        Intent intent = new Intent(this, shopCaps.class);
+        startActivity(intent);
     }
 }

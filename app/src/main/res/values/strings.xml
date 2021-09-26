@@ -387,7 +387,9 @@
     <string name="order2cartstatus">Shirts  5 - Jaffna Stallions</string>
     <string name="order2status2">Caps 5 - Jaffna Stallions</string>
     <string name="shopstab1"><u>Shirts</u></string>
+    <string name="shopstab5">Shirts</string>
     <string name="shopstab2">Caps</string>
+    <string name="shopstab4"><u>Caps</u></string>
     <string name="shopstab3">My Orders</string>
     <string name="shpprdname1">Jaffna Stallions</string>
     <string name="shpprd1price">LKR 400</string>
