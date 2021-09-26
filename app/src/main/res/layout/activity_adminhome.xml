@@ -42,8 +42,8 @@
 
         <TextView
             android:id="@+id/matchestab"
-            android:layout_width="70dp"
-            android:layout_height="33dp"
+            android:layout_width="82dp"
+            android:layout_height="36dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -53,9 +53,9 @@
             android:layout_marginStart="105dp"
             android:layout_marginLeft="105dp"
             android:layout_marginTop="34dp"
-            android:layout_marginEnd="237dp"
-            android:layout_marginRight="237dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="225dp"
+            android:layout_marginRight="225dp"
+            android:layout_marginBottom="0dp"
             android:onClick="adminmatches"
             android:text="MATCHES"
             android:textColor="#000000"

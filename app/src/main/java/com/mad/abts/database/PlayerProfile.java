@@ -18,7 +18,7 @@ public class PlayerProfile {
         public static final String COLUMN_NAME_MATCHES = "matches";
         public static final String COLUMN_NAME_RUNS = "runs";
         public static final String COLUMN_NAME_HUNDREDS = "fiftieshundreds";
-        public static final String COLUMN_NAME_BOUNDARIES = "boundaries";
+        public static final String COLUMN_NAME_AVERAGE = "average";
         public static final String COLUMN_NAME_OVERS = "overs";
         public static final String COLUMN_NAME_WICKETS = "wickets";
         public static final String COLUMN_NAME_ECONOMY = "economy";

@@ -58,6 +58,11 @@
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
+
+        <provider
+            android:name=".database.OrderProvider"
+            android:authorities="com.mad.abts"
+            android:exported="true" />
     </application>
 
 </manifest>

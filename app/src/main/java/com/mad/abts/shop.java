@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class shop extends AppCompatActivity {
+    public static final String Extra_Message1 ="com.mad.abts";
+    public static final String Extra_Message2 ="com.mad.abts";
     TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8;
     ImageView im1,im2,im3,im4;
     @Override
@@ -106,12 +108,42 @@ public class shop extends AppCompatActivity {
     }  public void GoRight(View view){
         Intent gorightintent = new Intent(shop.this, shopCaps.class);
         startActivity(gorightintent);
-
-
-    }public void GoLeft(View view){
+    }
+    public void GoLeft(View view){
         Intent goleftintent = new Intent(shop.this, myorders.class);
         startActivity(goleftintent);
-
-
     }
+    public void ProductDetails1(View view){
+        Intent prddetintent = new Intent(shop.this, productdetails.class);
+        String value1 = tv1.getText().toString();
+        String value2 = tv2.getText().toString();
+        prddetintent.putExtra("Extra_Message1",value1);
+        prddetintent.putExtra("Extra_Message2",value2);
+        startActivity(prddetintent);
+    }
+    public void ProductDetails2(View view){
+        Intent prddetintent = new Intent(shop.this, productdetails.class);
+        String value1 = tv3.getText().toString();
+        String value2 = tv4.getText().toString();
+        prddetintent.putExtra("Extra_Message1",value1);
+        prddetintent.putExtra("Extra_Message2",value2);
+        startActivity(prddetintent);
+    }
+    public void ProductDetails3(View view){
+        Intent prddetintent = new Intent(shop.this, productdetails.class);
+        String value1 = tv5.getText().toString();
+        String value2 = tv6.getText().toString();
+        prddetintent.putExtra("Extra_Message1",value1);
+        prddetintent.putExtra("Extra_Message2",value2);
+        startActivity(prddetintent);
+    }
+    public void ProductDetails4(View view){
+        Intent prddetintent = new Intent(shop.this, productdetails.class);
+        String value1 = tv7.getText().toString();
+        String value2 = tv8.getText().toString();
+        prddetintent.putExtra("Extra_Message1",value1);
+        prddetintent.putExtra("Extra_Message2",value2);
+        startActivity(prddetintent);
+    }
+
 }

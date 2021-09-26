@@ -33,10 +33,10 @@ import java.io.IOException;
 public class adminplayerprofile extends AppCompatActivity {
     public final static int PICK_IMAGE_REQUEST=999;
     private Uri imageFilePath1;
-    EditText playername, dob, teamname, country, role, battingstyle, bowlingstyle, matches, runs, fiftieshundreds, boundaries, wickets, wickethauls, overs, economy;
+    EditText playername, dob, teamname, country, role, battingstyle, bowlingstyle, matches, runs, fiftieshundreds, average, wickets, wickethauls, overs, economy;
     String pname, tname, country1, role1, bat1, bowl1, dob1;
-    int matches1, runs1, fifty1, bound1, wicket1, haul1;
-    double econ, overs1;
+    int matches1, runs1, fifty1, wicket1, haul1;
+    double econ, overs1, avg;
     ImageView photo;
     Bitmap photo1;
     private Context context;
@@ -61,7 +61,6 @@ public class adminplayerprofile extends AppCompatActivity {
         matches = (EditText) findViewById(R.id.matadmin2);
         runs = (EditText) findViewById(R.id.runsadmin2);
         fiftieshundreds = (EditText) findViewById(R.id.hunadmin2);
-        boundaries = (EditText) findViewById(R.id.fouradmin2);
         overs = (EditText) findViewById(R.id.oversadmin2);
         wickets = (EditText) findViewById(R.id.wktsadmin2);
         economy = (EditText) findViewById(R.id.econadmin2);
@@ -136,20 +135,20 @@ public class adminplayerprofile extends AppCompatActivity {
         bat1 = battingstyle.getText().toString();
         bowl1 = bowlingstyle.getText().toString();
         dob1 = dob.getText().toString();
-        runs1 = 0;
-        matches1 = 0;
-        fifty1 = 0;
-        bound1 = 0;
-        overs1 = 0;
-        wicket1 = 0;
-        haul1 = 0;
-        econ = 0;
+        runs1 = Integer.parseInt(runs.getText().toString());
+        matches1 = Integer.parseInt(matches.getText().toString());
+        fifty1 = Integer.parseInt(fiftieshundreds.getText().toString());
+        avg = calAverage(runs1,matches1);
+        overs1 = Double.parseDouble(overs.getText().toString());
+        wicket1 = Integer.parseInt(wickets.getText().toString());
+        haul1 = Integer.parseInt(wickethauls.getText().toString());
+        econ = Double.parseDouble(economy.getText().toString());
         byte[] image1 = imageViewToByte(photo);
         DBHelperAnu dbHelper =  new DBHelperAnu(this);
         if(pname.isEmpty()||tname.isEmpty() || country1.isEmpty() || role1.isEmpty() || bat1.isEmpty() || bowl1.isEmpty() || dob1.isEmpty()){
             Toast.makeText(this,"Enter Player", Toast.LENGTH_SHORT).show();
         }else{
-            Long inserted = dbHelper.addPlayer(image1, pname,tname, dob1, country1, role1, bat1, bowl1, matches1, runs1, fifty1, bound1,
+            Long inserted = dbHelper.addPlayer(image1, pname,tname, dob1, country1, role1, bat1, bowl1, matches1, runs1, fifty1, avg,
                     overs1, wicket1, econ, haul1);
         }
     }
@@ -162,20 +161,20 @@ public class adminplayerprofile extends AppCompatActivity {
         bat1 = battingstyle.getText().toString();
         bowl1 = bowlingstyle.getText().toString();
         dob1 = dob.getText().toString();
-        runs1 = 0;
-        matches1 = 0;
-        fifty1 = 0;
-        bound1 = 0;
-        overs1 = 0;
-        wicket1 = 0;
-        haul1 = 0;
-        econ = 0;
+        runs1 = Integer.parseInt(runs.getText().toString());
+        matches1 = Integer.parseInt(matches.getText().toString());
+        fifty1 = Integer.parseInt(fiftieshundreds.getText().toString());;
+        avg = calAverage(runs1,matches1);
+        overs1 = Double.parseDouble(overs.getText().toString());
+        wicket1 = Integer.parseInt(wickets.getText().toString());
+        haul1 = Integer.parseInt(wickethauls.getText().toString());
+        econ = Double.parseDouble(economy.getText().toString());
         byte[] image1 = imageViewToByte(photo);
         DBHelperAnu dbHelper =  new DBHelperAnu(this);
         if(pname.isEmpty()||tname.isEmpty() || country1.isEmpty() || role1.isEmpty() || bat1.isEmpty() || bowl1.isEmpty() || dob1.isEmpty()){
             Toast.makeText(this,"Enter Player", Toast.LENGTH_SHORT).show();
         }else{
-            dbHelper.updatePlayer(image1, pname,tname, dob1, country1, role1, bat1, bowl1, matches1, runs1, fifty1, bound1,
+            dbHelper.updatePlayer(image1, pname,tname, dob1, country1, role1, bat1, bowl1, matches1, runs1, fifty1, avg,
                     overs1, wicket1, econ, haul1);
         }
     }
@@ -183,10 +182,13 @@ public class adminplayerprofile extends AppCompatActivity {
     public void deletePlayer(View view){
         pname = playername.getText().toString();
 
-        DBHelper dbHelper =  new DBHelper(this);
-        dbHelper.deleteStats(pname);
+        DBHelperAnu dbHelper =  new DBHelperAnu(this);
+        dbHelper.deletePlayer(pname);
     }
 
+    public int calAverage(int a, int b){
+        return (a/b);
+    }
 
     public void adminplayerprofile(View view) {
         Intent intent = new Intent(this, adminplayerprofile.class);
