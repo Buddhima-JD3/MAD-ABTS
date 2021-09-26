@@ -943,6 +943,71 @@ public class DBHelper extends SQLiteOpenHelper {
         return logo2;
 
     }
+    public List readMatch13(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Matches.Match._ID,
+                Matches.Match.COLUMN_NAME_TEAM1,
+                Matches.Match.COLUMN_NAME_TEAM2,
+                Matches.Match.COLUMN_NAME_MATCHNO,
+                Matches.Match.COLUMN_NAME_BATTING,
+                Matches.Match.COLUMN_NAME_RUNS1,
+                Matches.Match.COLUMN_NAME_RUNS2,
+                Matches.Match.COLUMN_NAME_WICKETS1,
+                Matches.Match.COLUMN_NAME_WICKETS2,
+                Matches.Match.COLUMN_NAME_OVERS1,
+                Matches.Match.COLUMN_NAME_OVERS2,
+                Matches.Match.COLUMN_NAME_MATCHDATE
+
+        };
+        String sortOrder = Matches.Match.COLUMN_NAME_MATCHNO+" DESC";
+        Cursor cursor = db.query(
+                Matches.Match.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,
+                "3"// The sort order
+        );
+        List team1 = new ArrayList<>();
+        List team2 = new ArrayList<>();
+        List matchnu = new ArrayList<>();
+        List bat = new ArrayList<>();
+        List runs1 = new ArrayList<>();
+        List runs2 = new ArrayList<>();
+        List wickets1 = new ArrayList<>();
+        List wickets2 = new ArrayList<>();
+        List overs1 = new ArrayList<>();
+        List dates = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String team11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM1));
+            String team22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_TEAM2));
+            String matchnu1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHNO));
+            String bat1 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_BATTING));
+            String runs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS1));
+            String runs22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_RUNS2));
+            String wickets11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS1));
+            String wickets22 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_WICKETS2));
+            String overs11 = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_OVERS1));
+            String date = cursor.getString(cursor.getColumnIndexOrThrow(Matches.Match.COLUMN_NAME_MATCHDATE));
+            team1.add(team11);
+            team2.add(team22);
+            matchnu.add(matchnu1);
+            bat.add(bat1);
+            runs1.add(runs11);
+            runs2.add(runs22);
+            wickets1.add(wickets11);
+            wickets2.add(wickets22);
+            overs1.add(overs11);
+            dates.add(date);
+        }
+        cursor.close();
+        return dates;
+
+    }
     public List readspecMatch2(int matchno){
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = {
