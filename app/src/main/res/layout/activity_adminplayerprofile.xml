@@ -681,7 +681,7 @@
             android:layout_marginEnd="313dp"
             android:layout_marginRight="313dp"
             android:layout_marginBottom="15dp"
-            android:text="@string/fouradmin1"
+            android:text="@string/bataverage"
             android:textColor="#000000"
             android:textSize="10sp" />
 
@@ -984,7 +984,20 @@
         app:layout_constraintVertical_bias="0.887" />
 
     <Button
-        android:id="@+id/updatebutton"
+        android:id="@+id/deletebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deletePlayer"
+        android:text="@string/deletebtnanu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
+    <Button
+        android:id="@+id/updatebutton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="updatePlayer"

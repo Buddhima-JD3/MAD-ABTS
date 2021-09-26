@@ -413,4 +413,7 @@
     <string name="admindelete">delete  product</string>
     <string name="adminedit">edit product</string>
     <string name="UpdateBtn">Update</string>
+    <string name="deletebtnanu">Delete</string>
+    <string name="bataverage">Average</string>
+    <string name="saveplayerid">Save</string>
 </resources>
