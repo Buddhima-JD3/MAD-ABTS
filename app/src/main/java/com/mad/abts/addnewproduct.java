@@ -39,7 +39,7 @@ public class addnewproduct extends AppCompatActivity {
     ImageView img;
     String e1,e2,e5;
     int e3;
-    double e4;
+    double e4, e6;
     private Context context;
     private String[] cameraPermisiion;
     private String[] storagePermssion;
@@ -53,6 +53,7 @@ public class addnewproduct extends AppCompatActivity {
         et3 = findViewById(R.id.newproductquantity);
         et4 = findViewById(R.id.newproductprice);
         et5 = findViewById(R.id.categoryin);
+
         img = findViewById(R.id.newproductimg);
         cameraPermisiion =new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermssion = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -67,6 +68,10 @@ public class addnewproduct extends AppCompatActivity {
             }
         });
     }
+    public double totalprofit(int a, double b){
+        return a * b;
+    }
+
     public void savenewProduct(View view){
         e1 = et1.getText().toString();
         e2 = et2.getText().toString();
@@ -79,6 +84,8 @@ public class addnewproduct extends AppCompatActivity {
         }
         e4 = Double.parseDouble(et4.getText().toString());
         e5 = et5.getText().toString();
+        e6 = totalprofit(e3,e4);
+        Log.d("fi:", String.valueOf(e6));
         byte[] image1 = imageViewToByte(img);
         DBHelperBuddhi dbHelper =  new DBHelperBuddhi(this);
         Log.d("ei:",String.valueOf(e1));
