@@ -14,6 +14,11 @@ public class teams extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teams);
     }
+    public void team1(View view) {
+        Intent sendIntent = new Intent(this, team2.class);
+        sendIntent.putExtra("Extra", "Colombo Kings");
+        startActivity(sendIntent);
+    }
     public void matches(View view) {
         Intent intent = new Intent(this, matches.class);
         startActivity(intent);

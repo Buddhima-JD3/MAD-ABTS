@@ -26,10 +26,11 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         String SQL_CREATE_ENTRIES = "CREATE TABLE "+AllTeams.Teams.TABLE_NAME+
                 " ("+AllTeams.Teams._ID+" INTEGER PRIMARY KEY,"+
                 AllTeams.Teams.COLUMN_NAME_LOGO+" BLOB,"+
-                AllTeams.Teams.COLUMN_NAME_TEAM+" TEXT)";
+                AllTeams.Teams.COLUMN_NAME_TEAM+" TEXT,"+
+                AllTeams.Teams.COLUMN_NAME_CAPTAIN+" TEXT)";
 
         db.execSQL(SQL_CREATE_ENTRIES);
-
+/*
         db.execSQL("CREATE TABLE "+AllVenues.Venues.TABLE_NAME+
                 " ("+AllVenues.Venues._ID+" INTEGER PRIMARY KEY,"+
                 AllVenues.Venues.COLUMN_NAME_VENPIC1+" BLOB,"+
@@ -54,13 +55,16 @@ public class DBHelperSenara extends SQLiteOpenHelper{
                 TeamStatistics.TeamStat.COLUMN_NAME_MOSTWICKETS+" INTEGER,"+
                 TeamStatistics.TeamStat.COLUMN_NAME_BOWLERNAME+" TEXT)"
         );
+
+ */
     }
 
-    public Long addTeams(byte[] logo, String team){
+    public Long addTeams(byte[] logo, String team, String captain){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(AllTeams.Teams.COLUMN_NAME_LOGO,logo);
         values.put(AllTeams.Teams.COLUMN_NAME_TEAM, team);
+        values.put(AllTeams.Teams.COLUMN_NAME_CAPTAIN, captain);
 
         return db.insert(AllTeams.Teams.TABLE_NAME, null, values);
 
@@ -98,17 +102,18 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         return db.insert(TeamStatistics.TeamStat.TABLE_NAME, null, values);
     }
 
-    public void updateTeams(String team){
+    public void updateTeams(String team, String captain){
 
         SQLiteDatabase db = getReadableDatabase();
         ContentValues values = new ContentValues();
         values.put(AllTeams.Teams.COLUMN_NAME_TEAM,team);
+        values.put(AllTeams.Teams.COLUMN_NAME_CAPTAIN, captain);
         String selection = AllTeams.Teams.COLUMN_NAME_TEAM+" LIKE ?";
         String[] selectionArgs = {String.valueOf(team)};
         int count = db.update(
                AllTeams.Teams.TABLE_NAME, values, selection, selectionArgs);
     }
-
+/*
     public void updateTeamStat(String teamname){
 
         SQLiteDatabase db = getReadableDatabase();
@@ -119,14 +124,14 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         int count = db.update(
                 TeamStatistics.TeamStat.TABLE_NAME, values, selection, selectionArgs);
     }
-
-    public void deleteTeams(String team){
+*/
+    public void deleteTeams(String team, String captain){
     SQLiteDatabase db = getReadableDatabase();
     String selection = AllTeams.Teams.COLUMN_NAME_TEAM+ " LIKE ?";
     String[] selectionArgs = {String.valueOf(team)};
     db.delete(AllTeams.Teams.TABLE_NAME,selection,selectionArgs);
     }
-
+/*
     public void deleteTeamStat(String teamname){
         SQLiteDatabase db = getReadableDatabase();
         String selection = TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME+ " LIKE ?";
@@ -165,7 +170,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = {
                 TeamStatistics.TeamStat._ID,
-                TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
+                //TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
                 TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME,
                 TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL,
                 TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL,
@@ -184,7 +189,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
                 sortOrder,
                 "3"
         );
-        List teamlogo = new ArrayList<>();
+        //List teamlogo = new ArrayList<>();
         List teamname = new ArrayList<>();
         List highesttotal = new ArrayList<>();
         List lowesttotal = new ArrayList<>();
@@ -193,14 +198,14 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         List bowlername = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-            String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
+            //String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
             String mteamname = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME));
             String mhighesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL));
             String mlowesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL));
             String mmostruns = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTRUNS));
             String mmostwickets = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTWICKETS));
             String mbowlername = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_BOWLERNAME));
-            teamlogo.add(image);
+            //teamlogo.add(image);
             teamname.add(mteamname);
             highesttotal.add(mhighesttotal);
             lowesttotal.add(mlowesttotal);
@@ -216,7 +221,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = {
                 TeamStatistics.TeamStat._ID,
-                TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
+                //TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
                 TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME,
                 TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL,
                 TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL,
@@ -235,7 +240,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
                 sortOrder,
                 "3"
         );
-        List teamlogo = new ArrayList<>();
+        //List teamlogo = new ArrayList<>();
         List teamname = new ArrayList<>();
         List highesttotal = new ArrayList<>();
         List lowesttotal = new ArrayList<>();
@@ -244,14 +249,14 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         List bowlername = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-            String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
+            //String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
             String mteamname = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME));
             String mhighesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL));
             String mlowesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL));
             String mmostruns = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTRUNS));
             String mmostwickets = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTWICKETS));
             String mbowlername = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_BOWLERNAME));
-            teamlogo.add(image);
+            //teamlogo.add(image);
             teamname.add(mteamname);
             highesttotal.add(mhighesttotal);
             lowesttotal.add(mlowesttotal);
@@ -267,7 +272,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = {
                 TeamStatistics.TeamStat._ID,
-                TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
+                //TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
                 TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME,
                 TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL,
                 TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL,
@@ -286,7 +291,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
                 sortOrder,
                 "3"
         );
-        List teamlogo = new ArrayList<>();
+        //List teamlogo = new ArrayList<>();
         List teamname = new ArrayList<>();
         List highesttotal = new ArrayList<>();
         List lowesttotal = new ArrayList<>();
@@ -295,14 +300,14 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         List bowlername = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-            String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
+            //String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
             String mteamname = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME));
             String mhighesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL));
             String mlowesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL));
             String mmostruns = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTRUNS));
             String mmostwickets = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTWICKETS));
             String mbowlername = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_BOWLERNAME));
-            teamlogo.add(image);
+            //teamlogo.add(image);
             teamname.add(mteamname);
             highesttotal.add(mhighesttotal);
             lowesttotal.add(mlowesttotal);
@@ -318,7 +323,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = {
                 TeamStatistics.TeamStat._ID,
-                TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
+                //TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
                 TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME,
                 TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL,
                 TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL,
@@ -337,7 +342,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
                 sortOrder,
                 "3"
         );
-        List teamlogo = new ArrayList<>();
+        //List teamlogo = new ArrayList<>();
         List teamname = new ArrayList<>();
         List highesttotal = new ArrayList<>();
         List lowesttotal = new ArrayList<>();
@@ -346,14 +351,14 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         List bowlername = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-            String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
+           // String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
             String mteamname = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME));
             String mhighesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL));
             String mlowesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL));
             String mmostruns = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTRUNS));
             String mmostwickets = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTWICKETS));
             String mbowlername = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_BOWLERNAME));
-            teamlogo.add(image);
+            //teamlogo.add(image);
             teamname.add(mteamname);
             highesttotal.add(mhighesttotal);
             lowesttotal.add(mlowesttotal);
@@ -369,7 +374,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = {
                 TeamStatistics.TeamStat._ID,
-                TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
+                //TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
                 TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME,
                 TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL,
                 TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL,
@@ -388,7 +393,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
                 sortOrder,
                 "3"
         );
-        List teamlogo = new ArrayList<>();
+        //List teamlogo = new ArrayList<>();
         List teamname = new ArrayList<>();
         List highesttotal = new ArrayList<>();
         List lowesttotal = new ArrayList<>();
@@ -397,14 +402,14 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         List bowlername = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-            String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
+           // String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
             String mteamname = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME));
             String mhighesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL));
             String mlowesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL));
             String mmostruns = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTRUNS));
             String mmostwickets = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTWICKETS));
             String mbowlername = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_BOWLERNAME));
-            teamlogo.add(image);
+            //teamlogo.add(image);
             teamname.add(mteamname);
             highesttotal.add(mhighesttotal);
             lowesttotal.add(mlowesttotal);
@@ -420,7 +425,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = {
                 TeamStatistics.TeamStat._ID,
-                TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
+               // TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO,
                 TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME,
                 TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL,
                 TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL,
@@ -439,7 +444,7 @@ public class DBHelperSenara extends SQLiteOpenHelper{
                 sortOrder,
                 "3"
         );
-        List teamlogo = new ArrayList<>();
+       // List teamlogo = new ArrayList<>();
         List teamname = new ArrayList<>();
         List highesttotal = new ArrayList<>();
         List lowesttotal = new ArrayList<>();
@@ -448,14 +453,14 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         List bowlername = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-            String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
+           // String image = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMLOGO));
             String mteamname = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_TEAMNAME));
             String mhighesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_HIGHESTTOTAL));
             String mlowesttotal = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_LOWESTTOTAL));
             String mmostruns = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTRUNS));
             String mmostwickets = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_MOSTWICKETS));
             String mbowlername = cursor.getString(cursor.getColumnIndexOrThrow(TeamStatistics.TeamStat.COLUMN_NAME_BOWLERNAME));
-            teamlogo.add(image);
+           // teamlogo.add(image);
             teamname.add(mteamname);
             highesttotal.add(mhighesttotal);
             lowesttotal.add(mlowesttotal);
@@ -466,6 +471,8 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         cursor.close();
         return bowlername;
     }
+
+ */
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

@@ -32,14 +32,14 @@ public class teams4  extends AppCompatActivity{
     public final static int PICK_IMAGE_REQUEST = 999;
     private Uri imageFile1;
     Bitmap img1;
-    EditText team;
-    String mteam;
+    EditText team, captain;
+    String mteam, mcaptain;
     ImageView logo;
     private Context context;
     private String[] cameraPermission;
     private String[] storagePermission;
 
-    @SuppressLint("WrongViewCast")
+    //@SuppressLint("WrongViewCast")
     @Override
     protected  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -47,6 +47,8 @@ public class teams4  extends AppCompatActivity{
         context=this;
         logo = findViewById(R.id.logoimage1);
         team = findViewById(R.id.tname);
+        captain = findViewById(R.id.newcapname);
+        //logo = findViewById(R.id,logoimage2);
 
         cameraPermission =new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -116,14 +118,33 @@ public class teams4  extends AppCompatActivity{
     public void saveTeams(View view){
         byte[] images1 = imageViewToByte(logo);
         mteam = team.getText().toString();
+        mcaptain = captain.getText().toString();
 
 
         DBHelperSenara dbHelper = new DBHelperSenara(this);
         if(mteam.isEmpty()){
             Toast.makeText(this, "Enter Teams", Toast.LENGTH_SHORT).show();
         }else{
-            Long inserted = dbHelper.addTeams(images1,mteam);
+            Long inserted = dbHelper.addTeams(images1,mteam,mcaptain);
         }
+    }
+    public void updateTeams(View view) {
+        mteam = team.getText().toString();
+        mcaptain = captain.getText().toString();
+        DBHelperSenara dbHelper = new DBHelperSenara(this);
+        if (mteam.isEmpty()) {
+            System.out.println("team");
+            Toast.makeText(this, "Enter Team", Toast.LENGTH_SHORT).show();
+        } else {
+            dbHelper.updateTeams(mteam, mcaptain);
+        }
+    }
+
+    public void deleteTeams(View view){
+        mteam = team.getText().toString();
+
+        DBHelperSenara dbHelper = new DBHelperSenara(this);
+        dbHelper.deleteTeams(mteam, mcaptain);
     }
 
     public void teams6(View view) {
@@ -143,4 +164,6 @@ public class teams4  extends AppCompatActivity{
         Intent intent = new Intent(this, adminsidebar.class);
         startActivity(intent);
     }
+
+
 }

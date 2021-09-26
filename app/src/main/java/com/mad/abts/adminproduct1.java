@@ -2,14 +2,18 @@ package com.mad.abts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mad.abts.database.DBHelperBuddhi;
 
@@ -59,7 +63,7 @@ public class adminproduct1 extends AppCompatActivity {
         pqty1=dbHelper.readProductUserCap4();
         pimages1=dbHelper.readProductUserCap3();
         idc = dbHelper.readProductUserCap5();
-        if(pname1.size() == 0){
+        if(pname1.size() == 0 && pname.size() == 0){
 
         }else {
             tv1.setText((String) pname.get(0));
@@ -145,7 +149,9 @@ public class adminproduct1 extends AppCompatActivity {
         List ids = new ArrayList<>();
         ids = dbHelper.readProductUserShirt5();
         dbHelper.deleteProduct((int)ids.get(0));
-
+        finish();
+        startActivity(getIntent());
+        adminproduct1.ShowToast st = new adminproduct1.ShowToast(getApplicationContext(), "Product Deleted Successfully");
 
     }
     public void deleteProd2(View view){
@@ -153,8 +159,9 @@ public class adminproduct1 extends AppCompatActivity {
         List ids = new ArrayList<>();
         ids = dbHelper.readProductUserShirt5();
         dbHelper.deleteProduct((int)ids.get(1));
-
-
+        finish();
+        startActivity(getIntent());
+        adminproduct1.ShowToast st = new adminproduct1.ShowToast(getApplicationContext(), "Product Deleted Successfully");
     }
 
     public void deleteProd3(View view){
@@ -162,16 +169,25 @@ public class adminproduct1 extends AppCompatActivity {
         List idc = new ArrayList<>();
         idc = dbHelper.readProductUserCap5();
         dbHelper.deleteProduct((int)idc.get(0));
-
-
+        finish();
+        startActivity(getIntent());
+        adminproduct1.ShowToast st = new adminproduct1.ShowToast(getApplicationContext(), "Product Deleted Successfully");
     }
     public void deleteProd4(View view){
         DBHelperBuddhi dbHelper =  new DBHelperBuddhi(this);
         List idc = new ArrayList<>();
         idc = dbHelper.readProductUserCap5();
         dbHelper.deleteProduct((int)idc.get(1));
-
-
+        finish();
+        startActivity(getIntent());
+        adminproduct1.ShowToast st = new adminproduct1.ShowToast(getApplicationContext(), "Product Deleted Successfully");
+    }
+    public class ShowToast {
+        public ShowToast(Context context, String info) {
+            Toast toast = Toast.makeText(context, Html.fromHtml("<font color='#000000' ><b>" + info + "</b></font>"), Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+            toast.show();
+        }
     }
 
     public void adminmatches(View view) {

@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/categoryin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="45dp"
         android:autofillHints="@string/productname"
         android:ems="10"
         android:hint="Shirt/Cap"
@@ -18,10 +18,10 @@
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newproductview1"
-        app:layout_constraintVertical_bias="0.549" />
+        app:layout_constraintTop_toBottomOf="@+id/newproductview5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <RelativeLayout
         android:id="@+id/relativelayout"
@@ -280,8 +280,8 @@
 
     <TextView
         android:id="@+id/newproductview"
-        android:layout_width="198dp"
-        android:layout_height="41dp"
+        android:layout_width="189dp"
+        android:layout_height="34dp"
         android:text="@string/newproductview"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -305,7 +305,7 @@
         app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newproductview"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/newproductname"
@@ -318,7 +318,7 @@
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newproductview1"
         app:layout_constraintVertical_bias="0.0" />
@@ -340,8 +340,8 @@
 
     <TextView
         android:id="@+id/newproductview3"
-        android:layout_width="97dp"
-        android:layout_height="40dp"
+        android:layout_width="84dp"
+        android:layout_height="28dp"
         android:text="@string/newproductview3"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -369,8 +369,8 @@
 
     <TextView
         android:id="@+id/newproductview4"
-        android:layout_width="99dp"
-        android:layout_height="43dp"
+        android:layout_width="97dp"
+        android:layout_height="28dp"
         android:text="@string/newproductview4"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -391,10 +391,10 @@
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toEndOf="@+id/newproductquantity"
         app:layout_constraintTop_toBottomOf="@+id/newproductview4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.003" />
 
     <TextView
         android:id="@+id/newproductview5"
@@ -430,13 +430,13 @@
         android:id="@+id/newproductimg"
         android:layout_width="84dp"
         android:layout_height="98dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="136dp"
         android:contentDescription="@string/newproductimg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/s1" />
+        app:srcCompat="@drawable/addprdimag" />
 
     <Button
         android:id="@+id/savebtn"
@@ -452,6 +452,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newproductimg"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.093" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

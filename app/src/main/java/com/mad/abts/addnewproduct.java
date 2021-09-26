@@ -15,6 +15,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -69,22 +70,28 @@ public class addnewproduct extends AppCompatActivity {
     public void savenewProduct(View view){
         e1 = et1.getText().toString();
         e2 = et2.getText().toString();
-        e3 = Integer.parseInt(et3.getText().toString());
+        try {
+            e3 = Integer.parseInt(et3.getText().toString());
+        } catch (NumberFormatException e) {
+            finish();
+            startActivity(getIntent());
+            ShowToast st = new ShowToast(getApplicationContext(), "Empty Product Details!!! Try Again");
+        }
         e4 = Double.parseDouble(et4.getText().toString());
         e5 = et5.getText().toString();
         byte[] image1 = imageViewToByte(img);
         DBHelperBuddhi dbHelper =  new DBHelperBuddhi(this);
+        Log.d("ei:",String.valueOf(e1));
         if(e1.isEmpty()){
             Toast.makeText(this,"Enter Name", Toast.LENGTH_SHORT).show();
         }else{
             dbHelper.addProductShop(e1,e2,e3,e4,e5,image1);
+            Intent ordintent = new Intent(this, adminproduct1.class);
+            startActivity(ordintent);
+            ShowToast st = new ShowToast(getApplicationContext(), "Product Uploaded Successfully");
         }
     }
-    public void adminOrders(View view) {
-        Intent ordintent = new Intent(this, adminproduct1.class);
-        startActivity(ordintent);
-        ShowToast st = new ShowToast(getApplicationContext(), "Product Uploaded Successfully");
-    }
+
 
     public static byte[] imageViewToByte(ImageView image) {
         Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
@@ -154,6 +161,10 @@ public class addnewproduct extends AppCompatActivity {
     public void adminsidebar(View view) {
         Intent intent = new Intent(this, adminsidebar.class);
         startActivity(intent);
+    }
+    public void adminOrders(View view) {
+        Intent ordintent = new Intent(this, adminOrders.class);
+        startActivity(ordintent);
     }
 
 }
