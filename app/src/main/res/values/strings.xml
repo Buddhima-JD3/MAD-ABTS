@@ -421,4 +421,5 @@
     <string name="bataverage">Average</string>
     <string name="saveplayerid">Save</string>
     <string name="notification_activity">NotificationView</string>
+    <string name="textViewqty">Qty</string>
 </resources>

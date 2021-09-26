@@ -221,6 +221,42 @@ public class DBHelperBuddhi extends SQLiteOpenHelper {
         return ids;
 
     }
+    public List readProductUserShirt6(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Products.product._ID,
+                Products.product.COLUMN_NAME_PRODUCTNAME,
+                Products.product.COLUMN_NAME_DESCRIPTION,
+                Products.product.COLUMN_NAME_QUANTITY,
+                Products.product.COLUMN_NAME_PRICE,
+                Products.product.COLUMN_NAME_CATEGORY,
+                Products.product.COLUMN_NAME_IMAGE,
+        };
+        String sortOrder = Products.product._ID+" DESC";
+        String selection = Products.product.COLUMN_NAME_CATEGORY+" LIKE ?";
+        String[] selectionArgs = {("Shirt")};
+        Cursor cursor = db.query(
+                Products.product.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder              // The sort order
+        );
+        List names = new ArrayList<>();
+        List qty = new ArrayList<>();
+        List price = new ArrayList<>();
+        List imgs = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String pricess = cursor.getString(cursor.getColumnIndexOrThrow(Products.product.COLUMN_NAME_PRICE));
+            price.add(pricess);
+        }
+        cursor.close();
+        return price;
+
+    }
 
     public List readProductUserCap1(){
         SQLiteDatabase db = getReadableDatabase();
@@ -399,11 +435,49 @@ public class DBHelperBuddhi extends SQLiteOpenHelper {
         return ids;
 
     }
-    public void updateProduct(int id, int qty){
+    public List readProductUserCap6(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Products.product._ID,
+                Products.product.COLUMN_NAME_PRODUCTNAME,
+                Products.product.COLUMN_NAME_DESCRIPTION,
+                Products.product.COLUMN_NAME_QUANTITY,
+                Products.product.COLUMN_NAME_PRICE,
+                Products.product.COLUMN_NAME_CATEGORY,
+                Products.product.COLUMN_NAME_IMAGE,
+        };
+        String sortOrder = Products.product._ID+" DESC";
+        String selection = Products.product.COLUMN_NAME_CATEGORY+" LIKE ?";
+        String[] selectionArgs = {("Cap")};
+        Cursor cursor = db.query(
+                Products.product.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder              // The sort order
+        );
+        List names = new ArrayList<>();
+        List qty = new ArrayList<>();
+        List price = new ArrayList<>();
+        List imgs = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String pricess = cursor.getString(cursor.getColumnIndexOrThrow(Products.product.COLUMN_NAME_PRICE));
+            price.add(pricess);
+        }
+        cursor.close();
+        return price;
+
+    }
+    public void updateProduct(int id, String prdname, int qty, double price){
 
         SQLiteDatabase db = getReadableDatabase();
         ContentValues cv = new ContentValues();
+        cv.put(Products.product.COLUMN_NAME_PRODUCTNAME,prdname);
         cv.put(Products.product.COLUMN_NAME_QUANTITY,qty);
+        cv.put(Products.product.COLUMN_NAME_PRICE,price);
 
         String selection = Products.product._ID+" LIKE ?";
         String[] selectionArgs = {String.valueOf(id)};

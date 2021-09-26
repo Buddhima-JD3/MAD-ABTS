@@ -133,22 +133,7 @@ public class productdetails extends AppCompatActivity implements LoaderManager.L
 
         }
 
-        private int CalculatePrice(CheckBox addExtraCream, CheckBox addToppings) {
 
-            int basePrice = 5;
-
-            if (addExtraCream.isChecked()) {
-                // add the cream cost $2
-                basePrice = basePrice + 2;
-            }
-
-            if (addToppings.isChecked()) {
-                // topping cost is $3
-                basePrice = basePrice + 3;
-            }
-
-            return basePrice * quantity;
-        }
 
         private void displayQuantity() {
             quantitynumber.setText(String.valueOf(quantity));
