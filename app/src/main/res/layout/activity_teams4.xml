@@ -5,111 +5,58 @@
     android:id="@+id/AdminTeampage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F9F9F9">
+    android:background="#F9F9F9"
+    android:onClick="teams6">
 
     <RelativeLayout
-        android:id="@+id/edit4"
-        android:layout_width="337dp"
-        android:layout_height="89dp"
-        android:background="#DFDADA"
+        android:id="@+id/layoutadmin111"
+        android:layout_width="413dp"
+        android:layout_height="49dp"
+        android:background="#808080"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.577">
-
-        <ImageView
-            android:id="@+id/logoimage4"
-            android:layout_width="89dp"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/logoimage4"
-            app:srcCompat="@drawable/edit_image" />
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/tnameedit4"
-            android:layout_width="200dp"
-            android:layout_height="31dp"
+            android:id="@+id/admin111"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="118dp"
-            android:layout_marginLeft="118dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="27dp"
-            android:layout_marginRight="27dp"
-            android:layout_marginBottom="26dp"
-            android:background="#FFFFFF"
-            android:text="@string/tnameedit4"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#000000" />
-
-        <ImageView
-            android:id="@+id/penciledit4"
-            android:layout_width="54dp"
-            android:layout_height="32dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="266dp"
-            android:layout_marginLeft="266dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="27dp"
-            android:contentDescription="@string/penciledit4"
-            app:srcCompat="@drawable/edit" />
+            android:layout_marginStart="174dp"
+            android:layout_marginLeft="174dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="172dp"
+            android:layout_marginRight="172dp"
+            android:layout_marginBottom="11dp"
+            android:text="@string/admin"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/edit2"
-        android:layout_width="336dp"
-        android:layout_height="87dp"
-        android:background="#DFDADA"
+        android:id="@+id/relativelayout"
+        android:layout_width="412dp"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216">
-
-        <ImageView
-            android:id="@+id/logoimage2"
-            android:layout_width="94dp"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/logoimage2"
-            app:srcCompat="@drawable/edit_image" />
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
-            android:id="@+id/tnameedit2"
-            android:layout_width="202dp"
-            android:layout_height="32dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="115dp"
-            android:layout_marginLeft="115dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="29dp"
-            android:layout_marginRight="29dp"
-            android:layout_marginBottom="30dp"
-            android:background="#FFFFFF"
-            android:text="@string/tnameedit2"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#000000" />
-
-        <ImageView
-            android:id="@+id/penciledit2"
-            android:layout_width="41dp"
+            android:id="@+id/hometab"
+            android:layout_width="46dp"
             android:layout_height="29dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -117,74 +64,203 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="274dp"
-            android:layout_marginLeft="274dp"
-            android:layout_marginTop="29dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginBottom="31dp"
-            android:contentDescription="@string/penciledit2"
-            app:srcCompat="@drawable/edit" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/edit5"
-        android:layout_width="339dp"
-        android:layout_height="83dp"
-        android:background="#DFDADA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755">
-
-        <ImageView
-            android:id="@+id/logoimage5"
-            android:layout_width="88dp"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/logoimage5"
-            app:srcCompat="@drawable/edit_image" />
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="334dp"
+            android:layout_marginRight="334dp"
+            android:layout_marginBottom="6dp"
+            android:onClick="home"
+            android:text="HOME"
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tnameedit5"
-            android:layout_width="191dp"
-            android:layout_height="30dp"
+            android:id="@+id/matchestab"
+            android:layout_width="70dp"
+            android:layout_height="33dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="118dp"
-            android:layout_marginLeft="118dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="19dp"
-            android:layout_marginRight="19dp"
-            android:layout_marginBottom="29dp"
+            android:layout_marginStart="105dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="237dp"
+            android:layout_marginRight="237dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="matches"
+            android:text="MATCHES"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/teamtab"
+            android:layout_width="58dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="202dp"
+            android:layout_marginLeft="202dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="152dp"
+            android:layout_marginRight="152dp"
+            android:layout_marginBottom="3dp"
+            android:text="TEAM"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shoptab"
+            android:layout_width="56dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="283dp"
+            android:layout_marginLeft="283dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="73dp"
+            android:layout_marginRight="73dp"
+            android:layout_marginBottom="2dp"
+            android:onClick="shop"
+            android:text="SHOP"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/moretab"
+            android:layout_width="56dp"
+            android:layout_height="31dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="347dp"
+            android:layout_marginLeft="347dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginBottom="3dp"
             android:background="#FFFFFF"
-            android:text="@string/tnameedit5"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#000000" />
+            android:onClick="sidebar"
+            android:text="MORE"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/penciledit5"
-            android:layout_width="40dp"
-            android:layout_height="34dp"
+            android:id="@+id/homeicon"
+            android:layout_width="44dp"
+            android:layout_height="38dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="268dp"
-            android:layout_marginLeft="268dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="23dp"
-            android:contentDescription="@string/penciledit5"
-            app:srcCompat="@drawable/edit" />
+            android:layout_marginStart="31dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="337dp"
+            android:layout_marginRight="337dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/home"
+            android:onClick="home"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/matchesicon"
+            android:layout_width="53dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="113dp"
+            android:layout_marginLeft="113dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="246dp"
+            android:layout_marginRight="246dp"
+            android:layout_marginBottom="35dp"
+            android:contentDescription="@string/matchesicon1"
+            android:onClick="matches"
+            app:srcCompat="@drawable/matches" />
+
+        <ImageView
+            android:id="@+id/teamicon"
+            android:layout_width="54dp"
+            android:layout_height="39dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="195dp"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="163dp"
+            android:layout_marginRight="163dp"
+            android:layout_marginBottom="31dp"
+            android:contentDescription="@string/teamicon1"
+            android:onClick="teams6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/team" />
+
+        <ImageView
+            android:id="@+id/shopicon"
+            android:layout_width="65dp"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="267dp"
+            android:layout_marginLeft="267dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="34dp"
+            android:contentDescription="@string/shopicon"
+            android:onClick="adminOrders"
+            app:srcCompat="@drawable/shop" />
+
+        <ImageView
+            android:id="@+id/moreicon"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="320dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="33dp"
+            android:contentDescription="@string/moreicon"
+            android:onClick="adminsidebar"
+            app:srcCompat="@drawable/more" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -194,38 +270,18 @@
         android:background="#DFDADA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031">
+        app:layout_constraintVertical_bias="0.164">
 
         <ImageView
             android:id="@+id/logoimage1"
             android:layout_width="94dp"
             android:layout_height="match_parent"
             android:contentDescription="@string/logoimage1"
+            android:onClick="teams6"
             app:srcCompat="@drawable/edit_image" />
-
-        <TextView
-            android:id="@+id/tname"
-            android:layout_width="198dp"
-            android:layout_height="34dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="115dp"
-            android:layout_marginLeft="115dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="31dp"
-            android:layout_marginRight="31dp"
-            android:layout_marginBottom="23dp"
-            android:background="#FFFFFF"
-            android:text="@string/tname"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#000000" />
 
         <ImageView
             android:id="@+id/editpencil1"
@@ -246,66 +302,25 @@
             android:contentDescription="@string/editpencil1"
             app:srcCompat="@drawable/edit" />
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/edit3"
-        android:layout_width="335dp"
-        android:layout_height="82dp"
-        android:background="#DFDADA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395">
-
-        <ImageView
-            android:id="@+id/logoimage3"
-            android:layout_width="90dp"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/logoimage3"
-            app:srcCompat="@drawable/edit_image" />
-
-        <TextView
-            android:id="@+id/tnameedit3"
-            android:layout_width="199dp"
-            android:layout_height="36dp"
+        <EditText
+            android:id="@+id/tname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="112dp"
-            android:layout_marginLeft="112dp"
-            android:layout_marginTop="31dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
             android:layout_marginBottom="15dp"
-            android:background="#FFFFFF"
-            android:text="@string/tnameedit3"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#000000" />
+            android:ems="10"
+            android:inputType="textPersonName" />
 
-        <ImageView
-            android:id="@+id/penciledit3"
-            android:layout_width="27dp"
-            android:layout_height="31dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="275dp"
-            android:layout_marginLeft="275dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="33dp"
-            android:layout_marginRight="33dp"
-            android:layout_marginBottom="19dp"
-            android:contentDescription="@string/penciledit3"
-            app:srcCompat="@drawable/edit" />
     </RelativeLayout>
 
     <Button
@@ -318,9 +333,63 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintHorizontal_bias="0.203"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="112dp"
+        android:layout_height="53dp"
+        android:onClick="updateTeams"
+        android:text="UPDATE"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="71dp"
+        android:layout_height="34dp"
+        android:text="CAPTAIN"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343" />
+
+    <EditText
+        android:id="@+id/newcapname"
+        android:layout_width="259dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="104dp"
+        android:layout_height="66dp"
+        android:onClick="deleteTeams"
+        android:text="DELETE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.647" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
