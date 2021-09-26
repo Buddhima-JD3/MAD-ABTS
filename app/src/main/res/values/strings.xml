@@ -415,4 +415,7 @@
     <string name="UpdateBtn">Update</string>
     <string name="prodname">Jaffna Stallions</string>
     <string name="totprice">Total Price = LKR 1000.00</string>
+    <string name="deletebtnanu">Delete</string>
+    <string name="bataverage">Average</string>
+    <string name="saveplayerid">Save</string>
 </resources>

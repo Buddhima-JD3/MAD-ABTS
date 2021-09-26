@@ -32,7 +32,7 @@ public class DBHelperAnu extends SQLiteOpenHelper {
                 PlayerProfile.Player.COLUMN_NAME_MATCHES+" INTEGER,"+
                 PlayerProfile.Player.COLUMN_NAME_RUNS+" INTEGER,"+
                 PlayerProfile.Player.COLUMN_NAME_HUNDREDS+" INTEGER,"+
-                PlayerProfile.Player.COLUMN_NAME_BOUNDARIES+" INTEGER,"+
+                PlayerProfile.Player.COLUMN_NAME_AVERAGE+" REAL,"+
                 PlayerProfile.Player.COLUMN_NAME_OVERS+" REAL,"+
                 PlayerProfile.Player.COLUMN_NAME_WICKETS+" INTEGER,"+
                 PlayerProfile.Player.COLUMN_NAME_ECONOMY+" REAL,"+
@@ -42,7 +42,7 @@ public class DBHelperAnu extends SQLiteOpenHelper {
     }
 
     public Long addPlayer(byte [] photo , String playername, String teamname, String dob, String country, String role, String battingstyle, String bowlingstyle, int matches,
-                          int runs, int fiftieshundreds, int boundaries, double overs, int wickets, double economy, int wickethauls){
+                          int runs, int fiftieshundreds, double average, double overs, int wickets, double economy, int wickethauls){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values  = new ContentValues();
         values.put(PlayerProfile.Player.COLUMN_NAME_PHOTO,photo);
@@ -56,7 +56,7 @@ public class DBHelperAnu extends SQLiteOpenHelper {
         values.put(PlayerProfile.Player.COLUMN_NAME_MATCHES,matches);
         values.put(PlayerProfile.Player.COLUMN_NAME_RUNS,runs);
         values.put(PlayerProfile.Player.COLUMN_NAME_HUNDREDS,fiftieshundreds);
-        values.put(PlayerProfile.Player.COLUMN_NAME_BOUNDARIES,boundaries);
+        values.put(PlayerProfile.Player.COLUMN_NAME_AVERAGE,average);
         values.put(PlayerProfile.Player.COLUMN_NAME_OVERS,overs);
         values.put(PlayerProfile.Player.COLUMN_NAME_WICKETS,wickets);
         values.put(PlayerProfile.Player.COLUMN_NAME_ECONOMY,economy);
@@ -67,7 +67,7 @@ public class DBHelperAnu extends SQLiteOpenHelper {
     }
 
     public void updatePlayer(byte [] photo , String playername, String teamname, String dob, String country, String role, String battingstyle, String bowlingstyle, int matches,
-                             int runs, int fiftieshundreds, int boundaries, double overs, int wickets, double economy, int wickethauls){
+                             int runs, int fiftieshundreds, double average, double overs, int wickets, double economy, int wickethauls){
 
         SQLiteDatabase db = getReadableDatabase();
         ContentValues values = new ContentValues();
@@ -82,7 +82,7 @@ public class DBHelperAnu extends SQLiteOpenHelper {
         values.put(PlayerProfile.Player.COLUMN_NAME_MATCHES,matches);
         values.put(PlayerProfile.Player.COLUMN_NAME_RUNS,runs);
         values.put(PlayerProfile.Player.COLUMN_NAME_HUNDREDS,fiftieshundreds);
-        values.put(PlayerProfile.Player.COLUMN_NAME_BOUNDARIES,boundaries);
+        values.put(PlayerProfile.Player.COLUMN_NAME_AVERAGE,average);
         values.put(PlayerProfile.Player.COLUMN_NAME_OVERS,overs);
         values.put(PlayerProfile.Player.COLUMN_NAME_WICKETS,wickets);
         values.put(PlayerProfile.Player.COLUMN_NAME_ECONOMY,economy);
@@ -98,7 +98,7 @@ public class DBHelperAnu extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
         String selection = PlayerProfile.Player.COLUMN_NAME_PLAYERNAME+" LIKE ?";
         String[] selectionArgs = {playername};
-        db.delete(MatchStats.MStats.TABLE_NAME,selection,selectionArgs);
+        db.delete(PlayerProfile.Player.TABLE_NAME,selection,selectionArgs);
     }
 
 
