@@ -33,12 +33,12 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productimg1"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.19" />
 
     <TextView
         android:id="@+id/productdetails"
-        android:layout_width="255dp"
-        android:layout_height="118dp"
+        android:layout_width="248dp"
+        android:layout_height="36dp"
         android:gravity="center"
         android:text="@string/productdetails"
         android:textColor="@color/black"
@@ -60,9 +60,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productdetails"
-        app:layout_constraintVertical_bias="0.131" />
+        app:layout_constraintVertical_bias="0.052" />
 
-    <EditText
+    <TextView
         android:id="@+id/productqtyN"
         android:layout_width="48dp"
         android:layout_height="42dp"
@@ -75,16 +75,19 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productqty"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <Button
         android:id="@+id/productdetailsbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/productdetails"
         android:fontFamily="sans-serif-black"
+        android:onClick="ADDTOCART"
         android:text="@string/productdetailsbtn"
         android:textColor="@color/productdetailsbtn"
         android:textSize="15sp"
@@ -94,8 +97,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productqtyN"
-        app:layout_constraintVertical_bias="0.385" />
+        app:layout_constraintTop_toBottomOf="@+id/totprice"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/productqtyadd"
@@ -103,13 +106,13 @@
         android:layout_height="25dp"
         android:background="@drawable/shop_circlebtn1"
         android:contentDescription="@string/productqtyadd"
-        app:srcCompat="@drawable/ic_action_addqty"
         app:backgroundTint="@color/productdetbtn"
         app:layout_constraintBottom_toBottomOf="@+id/productqtyN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toEndOf="@+id/productqtyN"
-        app:layout_constraintTop_toTopOf="@+id/productqtyN" />
+        app:layout_constraintTop_toTopOf="@+id/productqtyN"
+        app:srcCompat="@drawable/ic_action_addqty" />
 
     <ImageButton
         android:id="@+id/productqtyremove"
@@ -117,13 +120,13 @@
         android:layout_height="25dp"
         android:background="@drawable/shop_circlebtn1"
         android:contentDescription="@string/productqtyremove"
-        app:srcCompat="@drawable/ic_action_removeqty"
         app:backgroundTint="@color/productdetbtn"
         app:layout_constraintBottom_toBottomOf="@+id/productqtyN"
         app:layout_constraintEnd_toStartOf="@+id/productqtyN"
         app:layout_constraintHorizontal_bias="0.886"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/productqtyN" />
+        app:layout_constraintTop_toTopOf="@+id/productqtyN"
+        app:srcCompat="@drawable/ic_action_removeqty" />
 
     <ImageButton
         android:id="@+id/productdetbtnleft"
@@ -131,14 +134,15 @@
         android:layout_height="40dp"
         android:background="@drawable/shop_circlebtn2"
         android:contentDescription="@string/productdetbtnleft"
-        app:srcCompat="@drawable/ic_action_back"
+        android:onClick="GoLeft"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.506" />
+        app:layout_constraintVertical_bias="0.506"
+        app:srcCompat="@drawable/ic_action_back" />
 
     <ImageButton
         android:id="@+id/productdetbtnright"
@@ -146,13 +150,43 @@
         android:layout_height="40dp"
         android:background="@drawable/shop_circlebtn2"
         android:contentDescription="@string/productdetbtnright"
-        app:srcCompat="@drawable/ic_action_next"
+        android:onClick="GoRight"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintVertical_bias="0.507"
+        app:srcCompat="@drawable/ic_action_next" />
+
+    <TextView
+        android:id="@+id/totprice"
+        android:layout_width="252dp"
+        android:layout_height="24dp"
+        android:text="@string/totprice"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productqtyN"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/prodname"
+        android:layout_width="262dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="@string/prodname"
+        android:textAllCaps="false"
+        android:textColor="@color/shop_labels"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/productprice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productimg1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

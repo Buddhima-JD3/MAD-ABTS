@@ -108,7 +108,9 @@ public class shopCaps extends AppCompatActivity {
     }public void GoLeft(View view){
         Intent goleftintent = new Intent(shopCaps.this, shop.class);
         startActivity(goleftintent);
-
-
+    }
+    public void ProductDetails(View view){
+        Intent prddetintent = new Intent(shopCaps.this, productdetails.class);
+        startActivity(prddetintent);
     }
 }
