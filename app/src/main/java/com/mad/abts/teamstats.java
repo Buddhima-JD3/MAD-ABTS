@@ -45,6 +45,7 @@ public class teamstats extends AppCompatActivity {
             Toast.makeText(this,"Enter Team", Toast.LENGTH_SHORT).show();
         }else{
             dbHelper.addMatchStats(team1,matches1,won1,lost1,nr1,points,winperce);
+            Toast.makeText(this,"Inserted", Toast.LENGTH_SHORT).show();
         }
     }
     public void updateStats(View view){
@@ -62,6 +63,7 @@ public class teamstats extends AppCompatActivity {
             Toast.makeText(this,"Enter Team", Toast.LENGTH_SHORT).show();
         }else{
             dbHelper.updateStats(team1,matches1,won1,lost1,nr1,points,winperce);
+            Toast.makeText(this,"Updated", Toast.LENGTH_SHORT).show();
         }
 
 
@@ -72,6 +74,7 @@ public class teamstats extends AppCompatActivity {
 
         DBHelper dbHelper =  new DBHelper(this);
         dbHelper.deleteStats(team1);
+        Toast.makeText(this,"Deleted", Toast.LENGTH_SHORT).show();
 
     }
     public int calPoints(int a, int b){

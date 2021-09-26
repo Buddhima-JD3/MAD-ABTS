@@ -290,7 +290,7 @@ public class matches extends AppCompatActivity {
                 c = 100-d;
             }
         }else{
-            tv2.setText("Match Over");
+            t2.setText("Match Over");
         }
         pieChart2 = findViewById(R.id.piepercentage2);
         pieChart2.setUsePercentValues(true);
@@ -319,11 +319,14 @@ public class matches extends AppCompatActivity {
 
     }
     public int winchance1(int a, int b){
+
         return (((a-100)*100)/100)+(b*3);
     }
     public int winchance2(int a, int b){
+
         return (120-((a*100)/100))-((10-b)*3);
     }
+
     public void matches(View view) {
         Intent intent = new Intent(this, matches.class);
         startActivity(intent);
