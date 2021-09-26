@@ -229,8 +229,10 @@ public class matches extends AppCompatActivity {
                 }
                 a = 100-b;
             }
-        }else{
+        }else if(Integer.parseInt((String)runs2.get(0))-Integer.parseInt((String)runs1.get(0)) < 0 || Integer.parseInt((String)runs1.get(0))-Integer.parseInt((String)runs2.get(0)) < 0 ){
             tv2.setText("Match Over");
+        }else{
+            tv2.setText("Match Not Started");
         }
         v1.setText("Match "+(String)matchnu.get(2));
         v3.setText((String)team1.get(2));
@@ -285,8 +287,10 @@ public class matches extends AppCompatActivity {
                 }
                 e = 100-f;
             }
-        }else{
+        }else if(Integer.parseInt((String)runs2.get(2))-Integer.parseInt((String)runs1.get(2)) < 0 || Integer.parseInt((String)runs1.get(2))-Integer.parseInt((String)runs2.get(2)) < 0 ){
             v2.setText("Match Over");
+        }else{
+            v2.setText("Match Not Started");
         }
         pieChart = findViewById(R.id.piepercentage);
         pieChart.setUsePercentValues(true);
@@ -352,8 +356,10 @@ public class matches extends AppCompatActivity {
                 }
                 c = 100-d;
             }
-        }else{
+        }else if(Integer.parseInt((String)runs2.get(1))-Integer.parseInt((String)runs1.get(1)) < 0|| Integer.parseInt((String)runs1.get(1))-Integer.parseInt((String)runs2.get(1)) < 0){
             t2.setText("Match Over");
+        }else{
+            t2.setText("Match Not Started");
         }
         pieChart2 = findViewById(R.id.piepercentage2);
         pieChart2.setUsePercentValues(true);

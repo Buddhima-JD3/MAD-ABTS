@@ -86,8 +86,11 @@ public class adminlive extends AppCompatActivity {
             if(batting11.isEmpty()){
                 dbHelper.updateMatch(matchno1,"team2",runs11,runs22,wickets11,wickets22,overs11,overs22);
                 Toast.makeText(this,"Updated", Toast.LENGTH_SHORT).show();
-            }else{
+            }else if(batting22.isEmpty()){
                 dbHelper.updateMatch(matchno1,"team1",runs11,runs22,wickets11,wickets22,overs11,overs22);
+                Toast.makeText(this,"Updated", Toast.LENGTH_SHORT).show();
+            }else{
+                dbHelper.updateMatch(matchno1,"",runs11,runs22,wickets11,wickets22,overs11,overs22);
                 Toast.makeText(this,"Updated", Toast.LENGTH_SHORT).show();
             }
 
