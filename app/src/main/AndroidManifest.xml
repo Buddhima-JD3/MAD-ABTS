@@ -41,6 +41,8 @@
         <activity android:name=".gallery" />
         <activity android:name=".statistics" />
         <activity android:name=".matches" />
+        <activity android:name=".teams6" />
+        <activity android:name=".teams5" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
