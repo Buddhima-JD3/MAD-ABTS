@@ -146,6 +146,136 @@ public class DBHelperSenara extends SQLiteOpenHelper{
         String[] selectionArgs = {String.valueOf(teamname)};
         db.delete(TeamStatistics.TeamStat.TABLE_NAME,selection,selectionArgs);
     }
+
+    public List readTeams(String team){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                AllTeams.Teams._ID,
+                AllTeams.Teams.COLUMN_NAME_TEAM
+
+        };
+        String selection  = AllTeams.Teams.COLUMN_NAME_TEAM+" LIKE ?";
+        String[] selectionArgs = {String.valueOf(team)};
+        Cursor cursor = db.query(
+                AllTeams.Teams.TABLE_NAME,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+        List teams = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String mteam = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_TEAM));
+            teams.add(mteam);
+        }
+        cursor.close();
+        return teams;
+    }
+    public List readTeams1(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                AllTeams.Teams._ID,
+                AllTeams.Teams.COLUMN_NAME_LOGO,
+                AllTeams.Teams.COLUMN_NAME_TEAM,
+                AllTeams.Teams.COLUMN_NAME_CAPTAIN
+        };
+        String sortOrder = AllTeams.Teams.COLUMN_NAME_TEAM+" DESC";
+        Cursor cursor = db.query(
+                AllTeams.Teams.TABLE_NAME,
+                projection,
+                null,
+                null,
+                null,
+                null,
+                sortOrder,
+                "5"
+        );
+        List logo = new ArrayList<>();
+        List team = new ArrayList<>();
+        List captain = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String mlogo = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_LOGO));
+            String mteam = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_TEAM));
+            String mcaptain = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_CAPTAIN));
+            logo.add(mlogo);
+            team.add(mteam);
+            captain.add(mcaptain);
+        }
+        cursor.close();
+        return logo;
+    }
+    public List readTeams2(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                AllTeams.Teams._ID,
+                AllTeams.Teams.COLUMN_NAME_LOGO,
+                AllTeams.Teams.COLUMN_NAME_TEAM,
+                AllTeams.Teams.COLUMN_NAME_CAPTAIN
+        };
+        String sortOrder = AllTeams.Teams.COLUMN_NAME_TEAM+" DESC";
+        Cursor cursor = db.query(
+                AllTeams.Teams.TABLE_NAME,
+                projection,
+                null,
+                null,
+                null,
+                null,
+                sortOrder,
+                "5"
+        );
+        List logo = new ArrayList<>();
+        List team = new ArrayList<>();
+        List captain = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String mlogo = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_LOGO));
+            String mteam = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_TEAM));
+            String mcaptain = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_CAPTAIN));
+            logo.add(mlogo);
+            team.add(mteam);
+            captain.add(mcaptain);
+        }
+        cursor.close();
+        return team;
+    }
+    public List readTeams3(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                AllTeams.Teams._ID,
+                AllTeams.Teams.COLUMN_NAME_LOGO,
+                AllTeams.Teams.COLUMN_NAME_TEAM,
+                AllTeams.Teams.COLUMN_NAME_CAPTAIN
+        };
+        String sortOrder = AllTeams.Teams.COLUMN_NAME_TEAM+" DESC";
+        Cursor cursor = db.query(
+                AllTeams.Teams.TABLE_NAME,
+                projection,
+                null,
+                null,
+                null,
+                null,
+                sortOrder,
+                "5"
+        );
+        List logo = new ArrayList<>();
+        List team = new ArrayList<>();
+        List captain = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String mlogo = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_LOGO));
+            String mteam = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_TEAM));
+            String mcaptain = cursor.getString(cursor.getColumnIndexOrThrow(AllTeams.Teams.COLUMN_NAME_CAPTAIN));
+            logo.add(mlogo);
+            team.add(mteam);
+            captain.add(mcaptain);
+        }
+        cursor.close();
+        return captain;
+    }
 /*
     public List readTeamStat(String teamname){
         SQLiteDatabase db = getReadableDatabase();
