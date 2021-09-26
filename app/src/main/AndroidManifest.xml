@@ -12,6 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ABTS">
+        <activity android:name=".activity_notification_view" android:label="@string/notification_activity"
+            android:parentActivityName=".matches"></activity>
         <activity
             android:name=".team2"
             android:exported="true" />
@@ -47,6 +49,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".matches"/>
         </activity>
 
         <meta-data

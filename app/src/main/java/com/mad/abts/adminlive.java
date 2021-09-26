@@ -1,7 +1,9 @@
 package com.mad.abts;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -40,8 +42,20 @@ public class adminlive extends AppCompatActivity {
         matchno1 = Integer.parseInt(matchno.getText().toString());
 
         DBHelper dbHelper =  new DBHelper(this);
-        dbHelper.deleteMatch(matchno1);
-        Toast.makeText(this,"Deleted", Toast.LENGTH_SHORT).show();
+        AlertDialog alertDialog = new AlertDialog.Builder(adminlive.this).create();
+        alertDialog.setTitle("Alert");
+        alertDialog.setMessage("Do you want to delete?");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        dbHelper.deleteMatch(matchno1);
+                    }
+
+
+                });
+        alertDialog.show();
+
 
     }
     public void editMatch(View view){

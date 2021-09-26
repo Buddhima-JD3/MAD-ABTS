@@ -339,10 +339,10 @@
             android:layout_marginRight="27dp"
             android:layout_marginBottom="67dp"
             android:ems="10"
-            android:hint="@string/matchdatein"
+            android:hint="year-month-date"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:text="@string/matchdatein"
+            android:text="year-month-date"
             android:textSize="14sp" />
 
         <TextView

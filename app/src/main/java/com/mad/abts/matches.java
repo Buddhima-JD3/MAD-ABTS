@@ -1,10 +1,18 @@
 package com.mad.abts;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,7 +26,11 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.mad.abts.database.DBHelper;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class matches extends AppCompatActivity {
@@ -33,9 +45,11 @@ public class matches extends AppCompatActivity {
     PieData pieData2;
     PieData pieData3;
     int a,b,c,d,e,f;
+    String [] dates = {};
     List<PieEntry> pieEntryList = new ArrayList<>();
     List<PieEntry> pieEntryList2 = new ArrayList<>();
     List<PieEntry> pieEntryList3 = new ArrayList<>();
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +96,9 @@ public class matches extends AppCompatActivity {
         List overs2 = new ArrayList<>();
         List lg1 = new ArrayList<>();
         List lg2 = new ArrayList<>();
+        List date = new ArrayList<>();
+
+
         DBHelper dbHelper =  new DBHelper(this);
         team1=dbHelper.readMatch1();
         team2=dbHelper.readMatch2();
@@ -95,6 +112,52 @@ public class matches extends AppCompatActivity {
         overs2=dbHelper.readMatch10();
         lg1=dbHelper.readMatch11();
         lg2=dbHelper.readMatch12();
+        date=dbHelper.readMatch13();
+
+        LocalDate day = LocalDate.now(); // Create a date object
+        System.out.println(day);
+        String dayt = ""+day;
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
+
+        for(int jj = 0; jj < date.size(); jj++){
+            if(dayt.equals((String)date.get(jj))){
+                System.out.println("1");
+                NotificationCompat.Builder builder =
+                        new NotificationCompat.Builder(this)
+                                .setSmallIcon(R.drawable.r_premadasa) //set icon for notification
+                                .setContentTitle("Notifications Example") //set title of notification
+                                .setContentText("This is a notification message")//this is notification message
+                                .setAutoCancel(true) // makes auto cancel of notification
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT); //set priority of notification
+
+
+                Intent notificationIntent = new Intent(this, activity_notification_view.class);
+                notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                //notification message will get at NotificationView
+                notificationIntent.putExtra("message", "This is a notification message");
+
+                PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent,
+                        PendingIntent.FLAG_UPDATE_CURRENT);
+                builder.setContentIntent(pendingIntent);
+
+                // Add as notification
+                NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                manager.notify(0, builder.build());
+                AlertDialog alertDialog = new AlertDialog.Builder(matches.this).create();
+                alertDialog.setTitle("Live Match!!!");
+                alertDialog.setMessage("Match No - "+(String)matchnu.get(jj)+" \n"+(String)team1.get(jj)+" vs "+(String)team2.get(jj));
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+
+
+                        });
+                alertDialog.show();
+            }
+        }
+
         byte[] img1 = (byte[])lg1.get(0);
         byte[] img2 = (byte[])lg2.get(0);
         byte[] img3 = (byte[])lg1.get(1);
