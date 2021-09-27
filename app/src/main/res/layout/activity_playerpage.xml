@@ -240,7 +240,7 @@
         app:layout_constraintVertical_bias="0.089">
 
         <ImageView
-            android:id="@+id/player1"
+            android:id="@+id/imgplayer1"
             android:layout_width="103dp"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
@@ -259,7 +259,7 @@
             app:srcCompat="@drawable/angelo_mathews_sl" />
 
         <TextView
-            android:id="@+id/player1name"
+            android:id="@+id/tvplayer1"
             android:layout_width="161dp"
             android:layout_height="38dp"
             android:layout_alignParentStart="true"
@@ -311,7 +311,7 @@
         app:layout_constraintVertical_bias="0.237">
 
         <TextView
-            android:id="@+id/andrerussell"
+            android:id="@+id/tvplayer2"
             android:layout_width="163dp"
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
@@ -330,7 +330,7 @@
             android:textColor="#000000" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/imgplayer2"
             android:layout_width="103dp"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
@@ -379,7 +379,7 @@
         app:layout_constraintVertical_bias="0.389">
 
         <TextView
-            android:id="@+id/dhammikaprasad"
+            android:id="@+id/tvplayer3"
             android:layout_width="163dp"
             android:layout_height="39dp"
             android:layout_alignParentStart="true"
@@ -398,7 +398,7 @@
             android:textColor="#000000" />
 
         <ImageView
-            android:id="@+id/player3"
+            android:id="@+id/imgplayer3"
             android:layout_width="103dp"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
