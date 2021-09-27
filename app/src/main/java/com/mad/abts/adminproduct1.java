@@ -122,7 +122,7 @@ public class adminproduct1 extends AppCompatActivity {
         List ids = new ArrayList<>();
         ids = dbHelper.readProductUserShirt5();
         dbHelper.updateProduct((int)ids.get(0),t1,Integer.parseInt(t5),Double.parseDouble(t9));
-
+        adminproduct1.ShowToast st = new adminproduct1.ShowToast(getApplicationContext(), "Product Saved Successfully");
 
     }
     public void editQty2(View view){
@@ -142,7 +142,7 @@ public class adminproduct1 extends AppCompatActivity {
         List ids = new ArrayList<>();
         ids = dbHelper.readProductUserShirt5();
         dbHelper.updateProduct((int)ids.get(1),t2,Integer.parseInt(t6),Double.parseDouble(t10));
-
+        adminproduct1.ShowToast st = new adminproduct1.ShowToast(getApplicationContext(), "Product Saved Successfully");
 
     }
 
@@ -163,7 +163,7 @@ public class adminproduct1 extends AppCompatActivity {
         List idc = new ArrayList<>();
         idc = dbHelper.readProductUserCap5();
         dbHelper.updateProduct((int)idc.get(0),t3,Integer.parseInt(t7),Double.parseDouble(t11));
-
+        adminproduct1.ShowToast st = new adminproduct1.ShowToast(getApplicationContext(), "Product Saved Successfully");
 
     }
     public void editQty4(View view){
@@ -183,7 +183,7 @@ public class adminproduct1 extends AppCompatActivity {
         List idc = new ArrayList<>();
         idc = dbHelper.readProductUserCap5();
         dbHelper.updateProduct((int)idc.get(1),t4,Integer.parseInt(t8),Double.parseDouble(t12));
-
+        adminproduct1.ShowToast st = new adminproduct1.ShowToast(getApplicationContext(), "Product Saved Successfully");
 
     }
 

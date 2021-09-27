@@ -2,6 +2,7 @@ package com.mad.abts;
 
 import static com.mad.abts.shop.Extra_Message1;
 import static com.mad.abts.shop.Extra_Message2;
+import static com.mad.abts.shop.Extra_Message3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,7 +30,7 @@ public class productdetails extends AppCompatActivity implements LoaderManager.L
 
     ImageView imageView;
     ImageButton plusquantity, minusquantity;
-    TextView quantitynumber, drinnkName, coffeePrice, totPrice;
+    TextView quantitynumber, drinnkName, coffeePrice, totPrice, details;
     Button addtoCart;
     int quantity;
     public Uri mCurrentCartUri;
@@ -47,14 +48,17 @@ public class productdetails extends AppCompatActivity implements LoaderManager.L
         coffeePrice = findViewById(R.id.productprice);
         totPrice = findViewById(R.id.totprice);
         addtoCart = findViewById(R.id.productdetailsbtn);
+        details = findViewById(R.id.productdetails);
         Intent prddetintent = getIntent();
         String txt1  = prddetintent.getStringExtra("Extra_Message1");
-        int txt2  = Integer.parseInt(prddetintent.getStringExtra("Extra_Message2"));
+        double txt2  = Double.parseDouble(prddetintent.getStringExtra("Extra_Message2"));
+        String txt3  = prddetintent.getStringExtra("Extra_Message3");
 
         // setting the name of drink
         drinnkName.setText(txt1);
         coffeePrice.setText("LKR " + String.valueOf(txt2));
         totPrice.setText("Total Price = LKR 000.00");
+        details.setText(txt3);
 
         addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,10 +76,10 @@ public class productdetails extends AppCompatActivity implements LoaderManager.L
                 @Override
                 public void onClick(View v) {
                     // coffee price
-                    int basePrice = txt2;
+                    double basePrice = txt2;
                     quantity++;
                     displayQuantity();
-                    int coffePrice = basePrice * quantity;
+                    double coffePrice = basePrice * quantity;
                     String setnewPrice = String.valueOf(coffePrice);
                     totPrice.setText("Total Price = LKR " + setnewPrice);
                 }
@@ -85,14 +89,14 @@ public class productdetails extends AppCompatActivity implements LoaderManager.L
                 @Override
                 public void onClick(View v) {
 
-                    int basePrice = txt2;
+                    double basePrice = txt2;
                     // because we dont want the quantity go less than 0
                     if (quantity == 0) {
                         Toast.makeText(productdetails.this, "Cant decrease quantity < 0", Toast.LENGTH_SHORT).show();
                     } else {
                         quantity--;
                         displayQuantity();
-                        int coffePrice = basePrice * quantity;
+                        double coffePrice = basePrice * quantity;
                         String setnewPrice = String.valueOf(coffePrice);
                         totPrice.setText("Total Price = LKR " +setnewPrice);
 
