@@ -16,6 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class shopCaps extends AppCompatActivity {
+    public static final String Extra_Message1 ="com.mad.abts";
+    public static final String Extra_Message2 ="com.mad.abts";
+    public static final String Extra_Message3 ="com.mad.abts";
+    String tv9, tv10, tv11, tv12;
     TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8;
     ImageView im1,im2,im3,im4;
     @Override
@@ -37,22 +41,29 @@ public class shopCaps extends AppCompatActivity {
 
         List pname = new ArrayList<>();
         List ppirce = new ArrayList<>();
+        List pdesc = new ArrayList<>();
         List pimages = new ArrayList<>();
 
         DBHelperBuddhi dbHelper =  new DBHelperBuddhi(this);
         pname=dbHelper.readProductUserCap1();
         ppirce=dbHelper.readProductUserCap2();
         pimages=dbHelper.readProductUserCap3();
+        pdesc=dbHelper.readProductUserCap7();
 
         tv1.setText((String)pname.get(0));
         tv3.setText((String)pname.get(1));
         tv5.setText((String)pname.get(2));
         tv7.setText((String)pname.get(3));
 
-        tv2.setText((String)ppirce.get(0));
-        tv4.setText((String)ppirce.get(1));
-        tv6.setText((String)ppirce.get(2));
-        tv8.setText((String)ppirce.get(3));
+        tv2.setText((String)ppirce.get(0) +".00");
+        tv4.setText((String)ppirce.get(1) +".00");
+        tv6.setText((String)ppirce.get(2) +".00");
+        tv8.setText((String)ppirce.get(3) +".00");
+
+        tv9 = (String) pdesc.get(0);
+        tv10= (String) pdesc.get(1);
+        tv11= (String) pdesc.get(2);
+        tv12= (String) pdesc.get(3);
 
         byte[] img1 = (byte[])pimages.get(0);
         byte[] img2 = (byte[])pimages.get(1);
@@ -109,8 +120,44 @@ public class shopCaps extends AppCompatActivity {
         Intent goleftintent = new Intent(shopCaps.this, shop.class);
         startActivity(goleftintent);
     }
-    public void ProductDetails(View view){
+    public void ProductDetails1(View view){
         Intent prddetintent = new Intent(shopCaps.this, productdetails.class);
+        String value1 = tv1.getText().toString();
+        String value2 = tv2.getText().toString();
+        String value3 = tv9;
+        prddetintent.putExtra("Extra_Message1",value1);
+        prddetintent.putExtra("Extra_Message2",value2);
+        prddetintent.putExtra("Extra_Message3",value3);
+        startActivity(prddetintent);
+    }
+    public void ProductDetails2(View view){
+        Intent prddetintent = new Intent(shopCaps.this, productdetails.class);
+        String value1 = tv3.getText().toString();
+        String value2 = tv4.getText().toString();
+        String value3 = tv10;
+        prddetintent.putExtra("Extra_Message1",value1);
+        prddetintent.putExtra("Extra_Message2",value2);
+        prddetintent.putExtra("Extra_Message3",value3);
+        startActivity(prddetintent);
+    }
+    public void ProductDetails3(View view){
+        Intent prddetintent = new Intent(shopCaps.this, productdetails.class);
+        String value1 = tv5.getText().toString();
+        String value2 = tv6.getText().toString();
+        String value3 = tv11;
+        prddetintent.putExtra("Extra_Message1",value1);
+        prddetintent.putExtra("Extra_Message2",value2);
+        prddetintent.putExtra("Extra_Message3",value3);
+        startActivity(prddetintent);
+    }
+    public void ProductDetails4(View view){
+        Intent prddetintent = new Intent(shopCaps.this, productdetails.class);
+        String value1 = tv7.getText().toString();
+        String value2 = tv8.getText().toString();
+        String value3 = tv12;
+        prddetintent.putExtra("Extra_Message1",value1);
+        prddetintent.putExtra("Extra_Message2",value2);
+        prddetintent.putExtra("Extra_Message3",value3);
         startActivity(prddetintent);
     }
 }
