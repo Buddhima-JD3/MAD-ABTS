@@ -92,7 +92,7 @@ public class addnewproduct extends AppCompatActivity {
         if(e1.isEmpty()){
             Toast.makeText(this,"Enter Name", Toast.LENGTH_SHORT).show();
         }else{
-            dbHelper.addProductShop(e1,e2,e3,e4,e5,image1);
+            dbHelper.addProductShop(e1,e2,e3,e4,e6,e5,image1);
             Intent ordintent = new Intent(this, adminproduct1.class);
             startActivity(ordintent);
             ShowToast st = new ShowToast(getApplicationContext(), "Product Uploaded Successfully");
