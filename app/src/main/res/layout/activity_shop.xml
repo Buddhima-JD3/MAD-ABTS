@@ -247,6 +247,7 @@
         android:id="@+id/shopstab2"
         android:layout_width="49dp"
         android:layout_height="28dp"
+        android:onClick="GoRight"
         android:text="@string/shopstab2"
         android:textSize="20sp"
         android:textStyle="bold"
