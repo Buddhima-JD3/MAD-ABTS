@@ -33,10 +33,10 @@ public class teams6 extends AppCompatActivity{
     public final static int PICK_IMAGE_REQUEST=999;
     private Uri imageFilePath1;
     Bitmap img1;
-    EditText teamname, bowlername, highesttotal, lowesttotal, mostruns, mostwickets;
+    EditText teamname, bowlername, highesttotal, lowesttotal, mostruns, mostwickets, average;
     String mteamname, mbowlername;
-    int mhighesttotal, mlowesttotal, mmostruns, mmostwickets;
-    ImageView teamlogo;
+    int mhighesttotal, mlowesttotal, mmostruns, mmostwickets, maverage;
+    //ImageView teamlogo;
     private Context context;
     private String[] cameraPermission;
     private String[] storagePermission;
@@ -45,18 +45,19 @@ public class teams6 extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adminmatches);
+        setContentView(R.layout.activity_teams6);
         context=this;
-        teamlogo = findViewById(R.id.logoinsertname2);
-        teamname= findViewById(R.id.inteam2);
+        //teamlogo = findViewById(R.id.teaminsertlogo);
+        teamname= findViewById(R.id.teaminsertname2);
         highesttotal = findViewById(R.id.insert1);
         lowesttotal = findViewById(R.id.insert2);
         mostruns = findViewById(R.id.insert3);
         mostwickets = findViewById(R.id.insert4);
         bowlername = findViewById(R.id.insert5);
+        average = findViewById(R.id.insert6);
         cameraPermission =new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
-
+/*
         teamlogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,7 +68,7 @@ public class teams6 extends AppCompatActivity{
                 );
             }
         });
-
+*/
     }
 
     public static byte[] imageViewToByte(ImageView image) {
@@ -108,7 +109,7 @@ public class teams6 extends AppCompatActivity{
             if(resultCode ==RESULT_OK){
                 Uri resultUri = result.getUri();
                 //set image choose from gallery to image view
-                teamlogo.setImageURI(resultUri);
+                //teamlogo.setImageURI(resultUri);
 
             }else if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
                 Exception error = result.getError();
@@ -119,21 +120,51 @@ public class teams6 extends AppCompatActivity{
     }
 
     public void saveTeamStat(View view){
-        byte[] image = imageViewToByte(teamlogo);
+        //byte[] image = imageViewToByte(teamlogo);
         mteamname = teamname.getText().toString();
         mhighesttotal = Integer.parseInt(highesttotal.getText().toString());
         mlowesttotal = Integer.parseInt(lowesttotal.getText().toString());
         mmostruns = Integer.parseInt(mostruns.getText().toString());
         mmostwickets = Integer.parseInt(mostwickets.getText().toString());
         mbowlername = bowlername.getText().toString();
+        maverage = calScoreAvg(mhighesttotal,mlowesttotal);
 
         DBHelperSenara dbHelper = new DBHelperSenara(this);
         if(mteamname.isEmpty()){
             Toast.makeText(this, "Enter Team", Toast.LENGTH_SHORT).show();
         }else{
-            dbHelper.addTeamStat(image, mteamname, mhighesttotal, mlowesttotal, mmostruns, mmostwickets, mbowlername);
+            dbHelper.addTeamStat(mteamname, mhighesttotal, mlowesttotal, mmostruns, mmostwickets, mbowlername, maverage);
         }
 
+    }
+
+    public void updateTeamStat(View view) {
+        mteamname = teamname.getText().toString();
+        mhighesttotal = Integer.parseInt(highesttotal.getText().toString());
+        mlowesttotal = Integer.parseInt(lowesttotal.getText().toString());
+        mmostruns = Integer.parseInt(mostruns.getText().toString());
+        mmostwickets = Integer.parseInt(mostwickets.getText().toString());
+        mbowlername = bowlername.getText().toString();
+        maverage = calScoreAvg(mhighesttotal,mlowesttotal);
+
+        DBHelperSenara dbHelper = new DBHelperSenara(this);
+        if (mteamname.isEmpty()) {
+            System.out.println("team");
+            Toast.makeText(this, "Enter Team", Toast.LENGTH_SHORT).show();
+        }else{
+            dbHelper.updateTeamStat(mteamname, mhighesttotal, mlowesttotal, mmostruns, mmostwickets, mbowlername, maverage);
+        }
+    }
+
+    public void deleteTeamStat(View view){
+        mteamname = teamname.getText().toString();
+
+        DBHelperSenara dbHelper = new DBHelperSenara(this);
+        dbHelper.deleteTeamStat(mteamname, mhighesttotal, mlowesttotal, mmostruns, mmostwickets, mbowlername, maverage);
+    }
+
+    public int calScoreAvg(int a, int b){
+        return (a + b) / 2;
     }
 
     public void admin(View view) {
@@ -146,6 +177,14 @@ public class teams6 extends AppCompatActivity{
     }
     public void teams6(View view) {
         Intent intent = new Intent(this, teams6.class);
+        startActivity(intent);
+    }
+    public void teams5(View view) {
+        Intent intent = new Intent(this, teams5.class);
+        startActivity(intent);
+    }
+    public void teams4(View view) {
+        Intent intent = new Intent(this, teams4.class);
         startActivity(intent);
     }
 }

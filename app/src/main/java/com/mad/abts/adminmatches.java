@@ -138,6 +138,7 @@ public class adminmatches extends AppCompatActivity {
             Toast.makeText(this,"Enter Teams", Toast.LENGTH_SHORT).show();
         }else{
             dbHelper.addMatch(team11,team22,matchno1,date,runs1,runs2,wickets1,wickets2,overs1,overs2,image1,image2);
+            Toast.makeText(this,"Inserted", Toast.LENGTH_SHORT).show();
         }
     }
     public void adminmatches(View view) {

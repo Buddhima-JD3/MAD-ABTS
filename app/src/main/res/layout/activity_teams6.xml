@@ -7,6 +7,227 @@
     android:layout_height="match_parent"
     android:background="#F9F9F9">
 
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="412dp"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997">
+
+        <TextView
+            android:id="@+id/hometab"
+            android:layout_width="46dp"
+            android:layout_height="29dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="334dp"
+            android:layout_marginRight="334dp"
+            android:layout_marginBottom="6dp"
+            android:onClick="home"
+            android:text="HOME"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/matchestab"
+            android:layout_width="70dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="105dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="237dp"
+            android:layout_marginRight="237dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="matches"
+            android:text="MATCHES"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/teamtab"
+            android:layout_width="58dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="202dp"
+            android:layout_marginLeft="202dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="152dp"
+            android:layout_marginRight="152dp"
+            android:layout_marginBottom="3dp"
+            android:text="TEAM"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shoptab"
+            android:layout_width="56dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="283dp"
+            android:layout_marginLeft="283dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="73dp"
+            android:layout_marginRight="73dp"
+            android:layout_marginBottom="2dp"
+            android:onClick="shop"
+            android:text="SHOP"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/moretab"
+            android:layout_width="56dp"
+            android:layout_height="31dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="347dp"
+            android:layout_marginLeft="347dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginBottom="3dp"
+            android:background="#FFFFFF"
+            android:onClick="sidebar"
+            android:text="MORE"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/homeicon"
+            android:layout_width="44dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="337dp"
+            android:layout_marginRight="337dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/home"
+            android:onClick="home"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/matchesicon"
+            android:layout_width="53dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="113dp"
+            android:layout_marginLeft="113dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="246dp"
+            android:layout_marginRight="246dp"
+            android:layout_marginBottom="35dp"
+            android:contentDescription="@string/matchesicon1"
+            android:onClick="matches"
+            app:srcCompat="@drawable/matches" />
+
+        <ImageView
+            android:id="@+id/teamicon"
+            android:layout_width="54dp"
+            android:layout_height="39dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="195dp"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="163dp"
+            android:layout_marginRight="163dp"
+            android:layout_marginBottom="31dp"
+            android:contentDescription="@string/teamicon1"
+            android:onClick="teams4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/team" />
+
+        <ImageView
+            android:id="@+id/shopicon"
+            android:layout_width="65dp"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="267dp"
+            android:layout_marginLeft="267dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="34dp"
+            android:contentDescription="@string/shopicon"
+            android:onClick="adminOrders"
+            app:srcCompat="@drawable/shop" />
+
+        <ImageView
+            android:id="@+id/moreicon"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="320dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="33dp"
+            android:contentDescription="@string/moreicon"
+            android:onClick="adminsidebar"
+            app:srcCompat="@drawable/more" />
+
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/statinsert"
         android:layout_width="120dp"
@@ -14,17 +235,15 @@
         android:text="@string/statinsert"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFC107"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.821"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
         android:id="@+id/teaminsert"
-        android:layout_width="373dp"
-        android:layout_height="118dp"
+        android:layout_width="374dp"
+        android:layout_height="102dp"
         android:background="#DFDADA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,29 +252,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.068">
 
-        <ImageView
-            android:id="@+id/teaminsertlogo"
-            android:layout_width="wrap_content"
-            android:layout_height="67dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="42dp"
-            android:layout_marginEnd="271dp"
-            android:layout_marginRight="271dp"
-            android:layout_marginBottom="9dp"
-            android:contentDescription="@string/teaminsertlogo"
-            app:srcCompat="@drawable/edit_image" />
-
         <TextView
             android:id="@+id/teaminsertname"
-            android:layout_width="286dp"
-            android:layout_height="33dp"
+            android:layout_width="301dp"
+            android:layout_height="32dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -65,63 +265,63 @@
             android:layout_marginStart="29dp"
             android:layout_marginLeft="29dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="58dp"
-            android:layout_marginRight="58dp"
-            android:layout_marginBottom="80dp"
-            android:text="@string/teaminsertname"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            android:layout_marginBottom="65dp"
+            android:text="Enter Team Name"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-        <TextView
-            android:id="@+id/logoinsertname2"
-            android:layout_width="203dp"
-            android:layout_height="28dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="130dp"
-            android:layout_marginLeft="130dp"
-            android:layout_marginTop="55dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="35dp"
-            android:background="#FFFFFF"
-            android:text="@string/logoinsertname2"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <ImageView
             android:id="@+id/penciledit6"
-            android:layout_width="44dp"
-            android:layout_height="26dp"
+            android:layout_width="39dp"
+            android:layout_height="36dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="284dp"
-            android:layout_marginLeft="284dp"
-            android:layout_marginTop="55dp"
-            android:layout_marginEnd="45dp"
-            android:layout_marginRight="45dp"
-            android:layout_marginBottom="37dp"
+            android:layout_marginStart="314dp"
+            android:layout_marginLeft="314dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="26dp"
             android:contentDescription="@string/penciledit6"
             app:srcCompat="@drawable/edit" />
+
+        <EditText
+            android:id="@+id/teaminsertname2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="134dp"
+            android:layout_marginRight="134dp"
+            android:layout_marginBottom="14dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/statdetails"
-        android:layout_width="368dp"
-        android:layout_height="357dp"
+        android:layout_width="352dp"
+        android:layout_height="354dp"
         android:background="#DFDADA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646">
+        app:layout_constraintVertical_bias="0.546">
 
         <TextView
             android:id="@+id/statpart1"
@@ -143,25 +343,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
-            android:id="@+id/insert1"
-            android:layout_width="58dp"
-            android:layout_height="27dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="231dp"
-            android:layout_marginLeft="231dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginEnd="79dp"
-            android:layout_marginRight="79dp"
-            android:layout_marginBottom="308dp"
-            android:background="#FFFFFF"
-            android:text="@string/insert1" />
-
-        <TextView
             android:id="@+id/statpart2"
             android:layout_width="215dp"
             android:layout_height="35dp"
@@ -179,25 +360,6 @@
             android:layout_marginBottom="256dp"
             android:text="@string/statpart2"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-        <TextView
-            android:id="@+id/insert2"
-            android:layout_width="61dp"
-            android:layout_height="30dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="229dp"
-            android:layout_marginLeft="229dp"
-            android:layout_marginTop="65dp"
-            android:layout_marginEnd="78dp"
-            android:layout_marginRight="78dp"
-            android:layout_marginBottom="262dp"
-            android:background="#FFFFFF"
-            android:text="@string/insert2" />
 
         <TextView
             android:id="@+id/statpart3"
@@ -219,25 +381,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
-            android:id="@+id/insert3"
-            android:layout_width="61dp"
-            android:layout_height="31dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="229dp"
-            android:layout_marginLeft="229dp"
-            android:layout_marginTop="108dp"
-            android:layout_marginEnd="78dp"
-            android:layout_marginRight="78dp"
-            android:layout_marginBottom="218dp"
-            android:background="#FFFFFF"
-            android:text="@string/insert3" />
-
-        <TextView
             android:id="@+id/statpart4"
             android:layout_width="165dp"
             android:layout_height="38dp"
@@ -255,25 +398,6 @@
             android:layout_marginBottom="164dp"
             android:text="@string/statpart4"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-        <TextView
-            android:id="@+id/insert4"
-            android:layout_width="62dp"
-            android:layout_height="31dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="228dp"
-            android:layout_marginLeft="228dp"
-            android:layout_marginTop="158dp"
-            android:layout_marginEnd="78dp"
-            android:layout_marginRight="78dp"
-            android:layout_marginBottom="168dp"
-            android:background="#FFFFFF"
-            android:text="@string/insert4" />
 
         <TextView
             android:id="@+id/statpart5"
@@ -295,28 +419,9 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
-            android:id="@+id/insert5"
-            android:layout_width="220dp"
-            android:layout_height="30dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="131dp"
-            android:layout_marginLeft="131dp"
-            android:layout_marginTop="206dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginRight="17dp"
-            android:layout_marginBottom="121dp"
-            android:background="#FFFFFF"
-            android:text="@string/insert5" />
-
-        <TextView
             android:id="@+id/statpart6"
-            android:layout_width="160dp"
-            android:layout_height="34dp"
+            android:layout_width="170dp"
+            android:layout_height="33dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -326,95 +431,168 @@
             android:layout_marginStart="14dp"
             android:layout_marginLeft="14dp"
             android:layout_marginTop="253dp"
-            android:layout_marginEnd="194dp"
-            android:layout_marginRight="194dp"
-            android:layout_marginBottom="70dp"
-            android:text="@string/statpart6"
+            android:layout_marginEnd="168dp"
+            android:layout_marginRight="168dp"
+            android:layout_marginBottom="68dp"
+            android:text="Average Runs - "
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <TextView
-            android:id="@+id/insert6"
-            android:layout_width="60dp"
-            android:layout_height="33dp"
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="120dp"
+            android:layout_height="43dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="228dp"
-            android:layout_marginLeft="228dp"
-            android:layout_marginTop="252dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginRight="80dp"
-            android:layout_marginBottom="72dp"
-            android:background="#FFFFFF"
-            android:text="@string/insert6" />
+            android:layout_marginStart="211dp"
+            android:layout_marginLeft="211dp"
+            android:layout_marginTop="298dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="13dp"
+            android:onClick="updateTeamStat"
+            android:text="@string/button3"
+            android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/statpart7"
-            android:layout_width="wrap_content"
-            android:layout_height="26dp"
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="114dp"
+            android:layout_height="43dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="26dp"
-            android:layout_marginLeft="26dp"
-            android:layout_marginTop="296dp"
-            android:layout_marginEnd="241dp"
-            android:layout_marginRight="241dp"
-            android:layout_marginBottom="35dp"
-            android:text="@string/statpart7"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="299dp"
+            android:layout_marginEnd="222dp"
+            android:layout_marginRight="222dp"
+            android:layout_marginBottom="12dp"
+            android:onClick="saveTeamStat"
+            android:text="@string/button4"
+            android:textColor="#000000"
+            app:backgroundTint="#FFC107" />
 
-        <TextView
-            android:id="@+id/insert7"
-            android:layout_width="215dp"
-            android:layout_height="33dp"
+        <EditText
+            android:id="@+id/insert1"
+            android:layout_width="101dp"
+            android:layout_height="38dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="137dp"
-            android:layout_marginLeft="137dp"
-            android:layout_marginTop="295dp"
+            android:layout_marginStart="238dp"
+            android:layout_marginLeft="238dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="304dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/insert2"
+            android:layout_width="101dp"
+            android:layout_height="43dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="238dp"
+            android:layout_marginLeft="238dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="254dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/insert3"
+            android:layout_width="123dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="213dp"
+            android:layout_marginLeft="213dp"
+            android:layout_marginTop="103dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="29dp"
-            android:background="#FFFFFF"
-            android:text="@string/insert7" />
+            android:layout_marginBottom="211dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/insert4"
+            android:layout_width="121dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="216dp"
+            android:layout_marginLeft="216dp"
+            android:layout_marginTop="145dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="164dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/insert5"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="118dp"
+            android:layout_marginLeft="118dp"
+            android:layout_marginTop="195dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="115dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/insert6"
+            android:layout_width="134dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="204dp"
+            android:layout_marginLeft="204dp"
+            android:layout_marginTop="242dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="67dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="118dp"
-        android:layout_height="39dp"
-        android:text="@string/button3"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.903" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="114dp"
-        android:layout_height="43dp"
-        android:text="@string/button4"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.883"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907" />
 
     <TextView
         android:id="@+id/squadinsert23"
@@ -428,4 +606,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.006" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="109dp"
+        android:layout_height="39dp"
+        android:background="#FF7F7F"
+        android:onClick="deleteTeamStat"
+        android:text="DELETE"
+        android:textColor="#000000"
+        app:backgroundTint="#FF7F7F"
+        app:layout_constraintBottom_toTopOf="@+id/relativelayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

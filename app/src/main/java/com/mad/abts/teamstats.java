@@ -1,7 +1,9 @@
 package com.mad.abts;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -45,6 +47,7 @@ public class teamstats extends AppCompatActivity {
             Toast.makeText(this,"Enter Team", Toast.LENGTH_SHORT).show();
         }else{
             dbHelper.addMatchStats(team1,matches1,won1,lost1,nr1,points,winperce);
+            Toast.makeText(this,"Inserted", Toast.LENGTH_SHORT).show();
         }
     }
     public void updateStats(View view){
@@ -62,6 +65,7 @@ public class teamstats extends AppCompatActivity {
             Toast.makeText(this,"Enter Team", Toast.LENGTH_SHORT).show();
         }else{
             dbHelper.updateStats(team1,matches1,won1,lost1,nr1,points,winperce);
+            Toast.makeText(this,"Updated", Toast.LENGTH_SHORT).show();
         }
 
 
@@ -71,7 +75,21 @@ public class teamstats extends AppCompatActivity {
         team1 = team.getText().toString();
 
         DBHelper dbHelper =  new DBHelper(this);
-        dbHelper.deleteStats(team1);
+
+        AlertDialog alertDialog = new AlertDialog.Builder(teamstats.this).create();
+        alertDialog.setTitle("Alert");
+        alertDialog.setMessage("Do you want to delete?");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        dbHelper.deleteStats(team1);
+                    }
+
+
+                });
+        alertDialog.show();
+
 
     }
     public int calPoints(int a, int b){

@@ -42,8 +42,8 @@
 
         <TextView
             android:id="@+id/matchestab"
-            android:layout_width="70dp"
-            android:layout_height="33dp"
+            android:layout_width="88dp"
+            android:layout_height="34dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -53,9 +53,9 @@
             android:layout_marginStart="105dp"
             android:layout_marginLeft="105dp"
             android:layout_marginTop="34dp"
-            android:layout_marginEnd="237dp"
-            android:layout_marginRight="237dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="219dp"
+            android:layout_marginRight="219dp"
+            android:layout_marginBottom="2dp"
             android:onClick="matches"
             android:text="MATCHES"
             android:textColor="#000000"
@@ -265,7 +265,7 @@
 
     <Button
         android:id="@+id/matcheslive"
-        android:layout_width="110dp"
+        android:layout_width="118dp"
         android:layout_height="50dp"
         android:onClick="adminmatches"
         android:text="@string/matches"
@@ -775,8 +775,8 @@
 
         <Button
             android:id="@+id/submitlive"
-            android:layout_width="95dp"
-            android:layout_height="34dp"
+            android:layout_width="98dp"
+            android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -786,9 +786,9 @@
             android:layout_marginStart="232dp"
             android:layout_marginLeft="232dp"
             android:layout_marginTop="279dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="19dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="13dp"
             android:onClick="updateMatch"
             android:text="@string/submitlive"
             android:textColor="@color/black"

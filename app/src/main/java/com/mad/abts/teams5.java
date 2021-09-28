@@ -58,60 +58,7 @@ public class teams5 extends AppCompatActivity {
         cameraPermission =new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
-        venpic1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ActivityCompat.requestPermissions(
-                        teams5.this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                        PICK_IMAGE_REQUEST
-                );
-            }
-        });
 
-        venpic2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ActivityCompat.requestPermissions(
-                        teams5.this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                        PICK_IMAGE_REQUEST
-                );
-            }
-        });
-
-        venpic3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ActivityCompat.requestPermissions(
-                        teams5.this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                        PICK_IMAGE_REQUEST
-                );
-            }
-        });
-
-        venpic4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ActivityCompat.requestPermissions(
-                        teams5.this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                        PICK_IMAGE_REQUEST
-                );
-            }
-        });
-
-        venpic5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ActivityCompat.requestPermissions(
-                        teams5.this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                        PICK_IMAGE_REQUEST
-                );
-            }
-        });
 }
 
     public static byte[] imageViewToByte(ImageView image) {
@@ -183,4 +130,22 @@ public class teams5 extends AppCompatActivity {
             Long inserted = dbHelper.addVenues(imges1, mvenname1, imges2, mvenname2, imges3, mvenname3, imges4, mvenname4, imges5, mvenname5);
         }
     }
+
+    public void teams5(View view) {
+        Intent intent = new Intent(this, teams5.class);
+        startActivity(intent);
+    }
+    public void admin(View view) {
+        Intent intent = new Intent(this, adminhome.class);
+        startActivity(intent);
+    }
+    public void adminsidebar(View view) {
+        Intent intent = new Intent(this, adminsidebar.class);
+        startActivity(intent);
+    }
+    public void teams6(View view) {
+        Intent intent = new Intent(this, teams6.class);
+        startActivity(intent);
+    }
+
 }

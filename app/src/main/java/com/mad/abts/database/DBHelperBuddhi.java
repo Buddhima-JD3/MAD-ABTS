@@ -26,18 +26,20 @@ public class DBHelperBuddhi extends SQLiteOpenHelper {
                 Products.product.COLUMN_NAME_DESCRIPTION+" TEXT,"+
                 Products.product.COLUMN_NAME_QUANTITY+" INTEGER,"+
                 Products.product.COLUMN_NAME_PRICE+" REAL,"+
+                Products.product.COLUMN_NAME_TOTPOFIT+" REAL,"+
                 Products.product.COLUMN_NAME_CATEGORY+" TEXT,"+
                 Products.product.COLUMN_NAME_IMAGE+" BLOB)";
 
         db.execSQL(SQL_CREATE_ENTRIES);
     }
-    public Long addProductShop(String name, String desc, int qty, double price, String category, byte[] img ){
+    public Long addProductShop(String name, String desc, int qty, double price,double totprice, String category, byte[] img ){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values  = new ContentValues();
         values.put(Products.product.COLUMN_NAME_PRODUCTNAME,name);
         values.put(Products.product.COLUMN_NAME_DESCRIPTION,desc);
         values.put(Products.product.COLUMN_NAME_QUANTITY,qty);
         values.put(Products.product.COLUMN_NAME_PRICE,price);
+        values.put(Products.product.COLUMN_NAME_TOTPOFIT,totprice);
         values.put(Products.product.COLUMN_NAME_CATEGORY,category);
         values.put(Products.product.COLUMN_NAME_IMAGE,img);
 
@@ -221,6 +223,79 @@ public class DBHelperBuddhi extends SQLiteOpenHelper {
         return ids;
 
     }
+    public List readProductUserShirt6(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Products.product._ID,
+                Products.product.COLUMN_NAME_PRODUCTNAME,
+                Products.product.COLUMN_NAME_DESCRIPTION,
+                Products.product.COLUMN_NAME_QUANTITY,
+                Products.product.COLUMN_NAME_PRICE,
+                Products.product.COLUMN_NAME_CATEGORY,
+                Products.product.COLUMN_NAME_IMAGE,
+        };
+        String sortOrder = Products.product._ID+" DESC";
+        String selection = Products.product.COLUMN_NAME_CATEGORY+" LIKE ?";
+        String[] selectionArgs = {("Shirt")};
+        Cursor cursor = db.query(
+                Products.product.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder              // The sort order
+        );
+        List names = new ArrayList<>();
+        List qty = new ArrayList<>();
+        List price = new ArrayList<>();
+        List imgs = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String pricess = cursor.getString(cursor.getColumnIndexOrThrow(Products.product.COLUMN_NAME_PRICE));
+            price.add(pricess);
+        }
+        cursor.close();
+        return price;
+
+    }
+
+    public List readProductUserShirt7(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Products.product._ID,
+                Products.product.COLUMN_NAME_PRODUCTNAME,
+                Products.product.COLUMN_NAME_DESCRIPTION,
+                Products.product.COLUMN_NAME_QUANTITY,
+                Products.product.COLUMN_NAME_PRICE,
+                Products.product.COLUMN_NAME_CATEGORY,
+                Products.product.COLUMN_NAME_IMAGE,
+        };
+        String sortOrder = Products.product._ID+" DESC";
+        String selection = Products.product.COLUMN_NAME_CATEGORY+" LIKE ?";
+        String[] selectionArgs = {("Shirt")};
+        Cursor cursor = db.query(
+                Products.product.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder              // The sort order
+        );
+        List names = new ArrayList<>();
+        List qty = new ArrayList<>();
+        List desc = new ArrayList<>();
+        List imgs = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String descss = cursor.getString(cursor.getColumnIndexOrThrow(Products.product.COLUMN_NAME_DESCRIPTION));
+            desc.add(descss);
+        }
+        cursor.close();
+        return desc;
+
+    }
 
     public List readProductUserCap1(){
         SQLiteDatabase db = getReadableDatabase();
@@ -399,11 +474,87 @@ public class DBHelperBuddhi extends SQLiteOpenHelper {
         return ids;
 
     }
-    public void updateProduct(int id, int qty){
+    public List readProductUserCap6(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Products.product._ID,
+                Products.product.COLUMN_NAME_PRODUCTNAME,
+                Products.product.COLUMN_NAME_DESCRIPTION,
+                Products.product.COLUMN_NAME_QUANTITY,
+                Products.product.COLUMN_NAME_PRICE,
+                Products.product.COLUMN_NAME_CATEGORY,
+                Products.product.COLUMN_NAME_IMAGE,
+        };
+        String sortOrder = Products.product._ID+" DESC";
+        String selection = Products.product.COLUMN_NAME_CATEGORY+" LIKE ?";
+        String[] selectionArgs = {("Cap")};
+        Cursor cursor = db.query(
+                Products.product.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder              // The sort order
+        );
+        List names = new ArrayList<>();
+        List qty = new ArrayList<>();
+        List price = new ArrayList<>();
+        List imgs = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String pricess = cursor.getString(cursor.getColumnIndexOrThrow(Products.product.COLUMN_NAME_PRICE));
+            price.add(pricess);
+        }
+        cursor.close();
+        return price;
+
+    }
+
+    public List readProductUserCap7(){
+        SQLiteDatabase db = getReadableDatabase();
+        String[] projection = {
+                Products.product._ID,
+                Products.product.COLUMN_NAME_PRODUCTNAME,
+                Products.product.COLUMN_NAME_DESCRIPTION,
+                Products.product.COLUMN_NAME_QUANTITY,
+                Products.product.COLUMN_NAME_PRICE,
+                Products.product.COLUMN_NAME_CATEGORY,
+                Products.product.COLUMN_NAME_IMAGE,
+        };
+        String sortOrder = Products.product._ID+" DESC";
+        String selection = Products.product.COLUMN_NAME_CATEGORY+" LIKE ?";
+        String[] selectionArgs = {("Cap")};
+        Cursor cursor = db.query(
+                Products.product.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder              // The sort order
+        );
+        List names = new ArrayList<>();
+        List qty = new ArrayList<>();
+        List price = new ArrayList<>();
+        List desc = new ArrayList<>();
+        List imgs = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            String descs = cursor.getString(cursor.getColumnIndexOrThrow(Products.product.COLUMN_NAME_DESCRIPTION));
+            desc.add(descs);
+        }
+        cursor.close();
+        return desc;
+
+    }
+    public void updateProduct(int id, String prdname, int qty, double price){
 
         SQLiteDatabase db = getReadableDatabase();
         ContentValues cv = new ContentValues();
+        cv.put(Products.product.COLUMN_NAME_PRODUCTNAME,prdname);
         cv.put(Products.product.COLUMN_NAME_QUANTITY,qty);
+        cv.put(Products.product.COLUMN_NAME_PRICE,price);
 
         String selection = Products.product._ID+" LIKE ?";
         String[] selectionArgs = {String.valueOf(id)};

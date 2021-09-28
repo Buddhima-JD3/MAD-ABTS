@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/layoutadmin111"
         android:layout_width="413dp"
-        android:layout_height="49dp"
+        android:layout_height="74dp"
         android:background="#808080"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +20,8 @@
 
         <TextView
             android:id="@+id/admin111"
-            android:layout_width="wrap_content"
-            android:layout_height="27dp"
+            android:layout_width="101dp"
+            android:layout_height="57dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -31,12 +31,12 @@
             android:layout_marginStart="174dp"
             android:layout_marginLeft="174dp"
             android:layout_marginTop="11dp"
-            android:layout_marginEnd="172dp"
-            android:layout_marginRight="172dp"
-            android:layout_marginBottom="11dp"
+            android:layout_marginEnd="138dp"
+            android:layout_marginRight="138dp"
+            android:layout_marginBottom="6dp"
             android:text="@string/admin"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="26sp"
             android:textStyle="bold" />
     </RelativeLayout>
 
@@ -75,8 +75,8 @@
 
         <TextView
             android:id="@+id/matchestab"
-            android:layout_width="70dp"
-            android:layout_height="33dp"
+            android:layout_width="79dp"
+            android:layout_height="32dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -86,9 +86,9 @@
             android:layout_marginStart="105dp"
             android:layout_marginLeft="105dp"
             android:layout_marginTop="34dp"
-            android:layout_marginEnd="237dp"
-            android:layout_marginRight="237dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="228dp"
+            android:layout_marginRight="228dp"
+            android:layout_marginBottom="4dp"
             android:onClick="matches"
             android:text="MATCHES"
             android:textColor="#000000"
@@ -339,10 +339,10 @@
             android:layout_marginRight="27dp"
             android:layout_marginBottom="67dp"
             android:ems="10"
-            android:hint="@string/matchdatein"
+            android:hint="year-month-date"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:text="@string/matchdatein"
+            android:text="year-month-date"
             android:textSize="14sp" />
 
         <TextView
@@ -423,20 +423,20 @@
 
         <Button
             android:id="@+id/submitmatch"
-            android:layout_width="95dp"
-            android:layout_height="39dp"
+            android:layout_width="106dp"
+            android:layout_height="36dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="221dp"
-            android:layout_marginLeft="221dp"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="210dp"
             android:layout_marginTop="345dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="13dp"
             android:onClick="saveMatch"
             android:text="@string/submitmatch"
             android:textColor="@color/black"
@@ -516,8 +516,8 @@
         app:layout_constraintVertical_bias="0.18" />
 
     <Button
-        android:layout_width="110dp"
-        android:layout_height="50dp"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
         android:onClick="adminmatches"
         android:text="@string/matches"
         app:backgroundTint="@color/black"

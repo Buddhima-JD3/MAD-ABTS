@@ -1,7 +1,9 @@
 package com.mad.abts;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -40,7 +42,20 @@ public class adminlive extends AppCompatActivity {
         matchno1 = Integer.parseInt(matchno.getText().toString());
 
         DBHelper dbHelper =  new DBHelper(this);
-        dbHelper.deleteMatch(matchno1);
+        AlertDialog alertDialog = new AlertDialog.Builder(adminlive.this).create();
+        alertDialog.setTitle("Alert");
+        alertDialog.setMessage("Do you want to delete?");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        dbHelper.deleteMatch(matchno1);
+                    }
+
+
+                });
+        alertDialog.show();
+
 
     }
     public void editMatch(View view){
@@ -70,9 +85,13 @@ public class adminlive extends AppCompatActivity {
         }else{
             if(batting11.isEmpty()){
                 dbHelper.updateMatch(matchno1,"team2",runs11,runs22,wickets11,wickets22,overs11,overs22);
-            }else{
+                Toast.makeText(this,"Updated", Toast.LENGTH_SHORT).show();
+            }else if(batting22.isEmpty()){
                 dbHelper.updateMatch(matchno1,"team1",runs11,runs22,wickets11,wickets22,overs11,overs22);
-
+                Toast.makeText(this,"Updated", Toast.LENGTH_SHORT).show();
+            }else{
+                dbHelper.updateMatch(matchno1,"",runs11,runs22,wickets11,wickets22,overs11,overs22);
+                Toast.makeText(this,"Updated", Toast.LENGTH_SHORT).show();
             }
 
         }

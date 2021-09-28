@@ -137,7 +137,7 @@
     <string name="productdetails">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
     <string name="productqty">Quantity</string>
     <string name="productqty_number">3</string>
-    <string name="productqtyN">3</string>
+    <string name="productqtyN">0</string>
     <string name="productqtyNhint">quantity</string>
     <string name="productdetailsbtn1">ADD TO CART</string>
     <string name="productdetailsbtn">ADD TO CART</string>
@@ -236,7 +236,7 @@
     <string name="ortext">or</string>
     <string name="remember">REMEMBER MY PASSWORD</string>
     <string name="username1">Username</string>
-    <string name="cartview">Cart (4)</string>
+    <string name="cartview">Cart Items</string>
     <string name="cartproduct1">JAFFNA STALLIONS</string>
     <string name="cartproductprice1">LKR 400</string>
     <string name="cartproduct2">JAFFNA STALLIONS</string>
@@ -387,7 +387,9 @@
     <string name="order2cartstatus">Shirts  5 - Jaffna Stallions</string>
     <string name="order2status2">Caps 5 - Jaffna Stallions</string>
     <string name="shopstab1"><u>Shirts</u></string>
+    <string name="shopstab5">Shirts</string>
     <string name="shopstab2">Caps</string>
+    <string name="shopstab4"><u>Caps</u></string>
     <string name="shopstab3">My Orders</string>
     <string name="shpprdname1">Jaffna Stallions</string>
     <string name="shpprd1price">LKR 400</string>
@@ -413,7 +415,11 @@
     <string name="admindelete">delete  product</string>
     <string name="adminedit">edit product</string>
     <string name="UpdateBtn">Update</string>
+    <string name="prodname">Jaffna Stallions</string>
+    <string name="totprice">Total Price = LKR 1000.00</string>
     <string name="deletebtnanu">Delete</string>
     <string name="bataverage">Average</string>
     <string name="saveplayerid">Save</string>
+    <string name="notification_activity">NotificationView</string>
+    <string name="textViewqty">Qty</string>
 </resources>
