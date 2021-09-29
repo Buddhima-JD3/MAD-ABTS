@@ -340,6 +340,7 @@
             android:layout_marginEnd="120dp"
             android:layout_marginRight="120dp"
             android:layout_marginBottom="363dp"
+            android:onClick="deletePlayers"
             app:srcCompat="@android:drawable/ic_menu_delete" />
 
         <ImageView
@@ -358,6 +359,7 @@
             android:layout_marginEnd="155dp"
             android:layout_marginRight="155dp"
             android:layout_marginBottom="363dp"
+            android:onClick="updatePlayers"
             app:srcCompat="@android:drawable/ic_menu_edit" />
 
         <TextView
@@ -494,6 +496,7 @@
             android:layout_marginEnd="135dp"
             android:layout_marginRight="135dp"
             android:layout_marginBottom="112dp"
+            android:onClick="savePlayers"
             android:text="@string/saveplayerid"
             app:backgroundTint="#22779E" />
 

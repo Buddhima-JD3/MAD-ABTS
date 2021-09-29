@@ -520,7 +520,7 @@
             app:srcCompat="@drawable/money" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/imgplayer2"
             android:layout_width="51dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
