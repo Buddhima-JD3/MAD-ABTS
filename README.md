@@ -10,4 +10,4 @@ Current version uses SQLite database management to manage user data.
  3. Clone
 ```
 
-##Version Output Coming Soon!!!
+## Version Output Coming Soon!!!
